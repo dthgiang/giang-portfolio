@@ -1,0 +1,138 @@
+.intro-background {
+    position: fixed; /* Cố định ảnh nền */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Tràn chiều rộng màn hình */
+    height: auto; /* Chiều cao tự động theo tỉ lệ ảnh */
+    z-index: -1; /* Đảm bảo ảnh ở phía sau các nội dung khác */
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 7vw;
+    color: white;
+}
+
+.logo-name {
+    font-family: 'Lemon', sans-serif; /* Sử dụng font Lemon */
+    font-size: 2vw; /* Font size theo viewport width */
+}
+
+.logo-name:hover {
+    color: #FEB12F; /* Màu chữ khi hover */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2vw; /* Khoảng cách giữa các mục */
+}
+
+.nav-item {
+    color: #FFF8F2;
+    cursor: pointer;
+    font-family: 'SegoeUI', sans-serif;
+    font-size: 1vw; /* Kích thước font, bạn có thể điều chỉnh theo nhu cầu */
+    padding: 1vh 2vh; /* Khoảng cách bên trong */
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 600; /* Đặt trọng số font là semi-bold */
+    line-height: 1; /* Đảm bảo chiều cao dòng nhất quán */
+}
+
+.nav-item:hover {
+    color: #FEB12F; /* Màu chữ khi hover */
+    /* Không thay đổi font-weight ở đây */
+}
+
+.downloadCVButton{
+    background-color: #FEB12F; /* Màu nền */
+    color: #FFF8F2; /* Màu chữ */
+    padding: 1.5vh 3vh; /* Khoảng cách bên trong */
+    border: none; /* Không có viền */
+    border-radius: 3vh;
+    cursor: pointer; /* Con trỏ khi hover */
+    font-weight: 600; /* Trọng số font */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+}
+
+.downloadCVButton:hover {
+    background-color: #FFF8F2; /* Màu nền khi hover */
+    color: #FEB12F; /* Màu chữ khi hover */
+}
+
+.introText {
+    padding: 16vh 8vw 0 8vw; /* top, right, bottom, left */
+    color: #FFF8F2; /* Màu chữ */
+    font-size: 2.8vw; /* Kích thước chữ */
+    font-weight: 600; /* Trọng số chữ */
+    line-height: 1.5; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    text-align: left; /* Căn trái nội dung */
+    max-width: 32%; /* Chiều dài tối đa của đoạn văn bản */
+    font-weight: bold; /* Trọng số font */
+}
+
+.introSubText{
+    padding: 2vh 8vw; /* Padding xung quanh văn bản */
+    color: #FFF8F2; /* Màu chữ */
+    font-size: 1.3vw; /* Kích thước chữ */
+    line-height: 1.5; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    text-align: left; /* Căn trái nội dung */
+    max-width: 38%; /* Chiều dài tối đa của đoạn văn bản */
+}
+
+
+
+.getStartedButton{
+    background-color: #FEB12F; /* Màu nền */
+    color: #FFF8F2; /* Màu chữ */
+    padding: 1.5vh 5vh; /* Khoảng cách bên trong */
+    border: none; /* Không có viền */
+    border-radius: 3vh;
+    cursor: pointer; /* Con trỏ khi hover */
+    font-weight: 600; /* Trọng số font */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+}
+
+.getStartedButton:hover {
+    background-color: #FFF8F2; /* Màu nền khi hover */
+    color: #FEB12F; /* Màu chữ khi hover */
+}
+
+
+.circle-play{
+    position:absolute; /* Tạo vị trí tuyệt đối */
+    width: 2.8vw; /* Chiều rộng */
+    height: 2.8vw; /* Chiều cao */
+    border-radius: 50%; /* Bo tròn */
+    display: flex; /* Hiển thị theo chiều ngang */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    cursor: pointer; /* Con trỏ khi hover */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu */
+}
+
+.buttonGroupIntro {
+    display: flex; /* Hiển thị theo chiều ngang */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    gap: 2.5vw; /* Khoảng cách giữa các nút */
+    padding: 2vh 8vw; /* Padding xung quanh */
+}
+
+.watchDemoGroup {
+    display: flex; /* Hiển thị theo chiều ngang */
+    align-items: center; /* Căn giữa hình tròn và chữ theo chiều dọc */
+}
+
+.watchDemoGroupText {
+    color: #FFF8F2; /* Màu chữ */
+    font-size: 1.3vw; /* Kích thước chữ */
+    line-height: 1.5; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    text-align: left; /* Căn trái nội dung */
+    max-width: 38%; /* Chiều dài tối đa của đoạn văn bản */
+    margin-left: 1vw;
+}
+
