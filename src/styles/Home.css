@@ -1,10 +1,14 @@
-.intro-background {
-    position: fixed; /* Cố định ảnh nền */
+.intro-block {
+    position: relative;
     top: 0;
     left: 0;
-    width: 100vw; /* Tràn chiều rộng màn hình */
-    height: auto; /* Chiều cao tự động theo tỉ lệ ảnh */
-    z-index: -1; /* Đảm bảo ảnh ở phía sau các nội dung khác */
+    background-image: url('../assets/images/intro_background.svg');
+    background-size: contain; /* Sử dụng cover để ảnh bao phủ toàn bộ khối */
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: auto; /* Đặt chiều cao khối là toàn màn hình */
+    width: 100vw; /* Xóa padding để loại bỏ khoảng cách thừa */
 }
 
 .header{
@@ -118,8 +122,9 @@
     display: flex; /* Hiển thị theo chiều ngang */
     align-items: center; /* Căn giữa các phần tử theo chiều dọc */
     gap: 2.5vw; /* Khoảng cách giữa các nút */
-    padding: 2vh 8vw; /* Padding xung quanh */
+    padding: 2vh 8vw 15vh 8vw; /* Padding: trên, phải, dưới, trái */
 }
+
 
 .watchDemoGroup {
     display: flex; /* Hiển thị theo chiều ngang */
@@ -135,4 +140,51 @@
     max-width: 38%; /* Chiều dài tối đa của đoạn văn bản */
     margin-left: 1vw;
 }
+
+.intro-block{
+    margin-bottom: 10vh; /* Khoảng cách dưới */
+    position: relative;
+}
+
+.line-circle-left{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: auto; /* Chiều rộng */
+    height: auto; /* Chiều cao */
+    top: 10%; /* Di chuyển 10% từ cạnh trên */
+    left: 3%; /* Di chuyển 15% từ cạnh trái */
+}
+
+.line-circle-right{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: auto; /* Chiều rộng */
+    height: auto; /* Chiều cao */
+    bottom: 10%; /* Di chuyển 10% từ cạnh trên */
+    right: 3%; /* Di chuyển 15% từ cạnh trái */
+}
+
+.intro-arrow{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: auto; /* Chiều rộng */
+    height: auto; /* Chiều cao */
+    top: 28%; /* Di chuyển 10% từ cạnh trên */
+    left: 45%; /* Di chuyển 15% từ cạnh trái */
+}
+
+.circle-base{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: auto; /* Chiều rộng */
+    height: auto; /* Chiều cao */
+    bottom: 6%; /* Di chuyển 10% từ cạnh trên */
+    right: 10%; /* Di chuyển 15% từ cạnh trái */
+}
+
+.white-sign{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: auto; /* Chiều rộng */
+    height: auto; /* Chiều cao */
+    top: 27%; /* Di chuyển 10% từ cạnh trên */
+    right: 3%; /* Di chuyển 15% từ cạnh trái */
+}
+
+
 
