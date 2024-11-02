@@ -6,6 +6,12 @@ import circleBase from "../../assets/images/base-yellow.svg";
 import introArrow from "../../assets/images/arrow-intro.svg";
 import whiteSign from "../../assets/images/white-sign.svg";
 import lineCircle from "../../assets/images/line-circle.svg";
+import circleService from "../../assets/images/circle-services.svg";
+import purpleCircle from "../../assets/images/purple-circle-service.svg";
+import iconBox1 from "../../assets/images/box-1.svg";
+import iconBox2 from "../../assets/images/box-2.svg";
+import iconBox3 from "../../assets/images/box-3.svg";
+import star from "../../assets/images/star.svg";
 
 const Home = () => {
   return (
@@ -44,12 +50,40 @@ const Home = () => {
       </div>
 
       {/* Service Block */}
-      <div>
-        <div className="service-text">
-          {textContent.servicesText}
+      <div className="service-block">
+        <div className="service-text-block">
+          <div className="service-text">{textContent.servicesText}</div>
           <div className="service-title">{textContent.servicesTitle}</div>
           <div className="service-subtext">{textContent.servicesSubText}</div>
+          <img
+            src={circleService}
+            alt="circleService"
+            className="circle-service"
+          />
+          <img
+            src={purpleCircle}
+            alt="purpleCircle"
+            className="purple-circle-service"
+          />
         </div>
+        <div className="service-box-group">
+          <div className="box box-1">
+            <img src={iconBox1} alt="iconBox1" className="icon-box-1" />
+            <div className="box-title">{textContent.boxTitle1}</div>
+            <div className="box-content">{textContent.boxContent1}</div>
+          </div>
+          <div className="box box-2">
+            <img src={iconBox2} alt="iconBox2" className="icon-box-2" />
+            <div className="box-title-2">{textContent.boxTitle2}</div>
+            <div className="box-content-2">{textContent.boxContent2}</div>
+          </div>
+          <div className="box box-3">
+            <img src={iconBox3} alt="iconBox3" className="icon-box-3" />
+            <div className="box-title">{textContent.boxTitle3}</div>
+            <div className="box-content">{textContent.boxContent3}</div>
+          </div>
+        </div>
+        <img src={star} alt="star" className="star" />
       </div>
     </div>
   );

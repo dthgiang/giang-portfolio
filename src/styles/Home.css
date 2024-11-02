@@ -186,5 +186,189 @@
     right: 3%; /* Di chuyển 15% từ cạnh trái */
 }
 
+.service-block{
+    position: relative; /* Tạo vị trí tương đối */
+    display: flex; /* Hiển thị theo chiều ngang */
+    flex-direction: column;
+    text-align: center; /* Căn giữa theo chiều ngang */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.service-text-block{
+    color: #6E6CE5; /* Màu chữ */
+    font-size: 1.1vw; /* Kích thước chữ */
+    font-weight: bold; /* Trọng số chữ */
+    line-height: 1.4; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    justify-content: space-between;
+    display: flex; /* Hiển thị theo chiều dọc */
+    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+}
 
 
+.service-title{
+    color: #323843; /* Màu chữ */
+    font-size: 2.5vw; /* Kích thước chữ */
+    font-weight: 600; /* Trọng số chữ */
+    line-height: 1.5; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    font-weight: bold; /* Trọng số font */
+}
+
+.service-subtext{
+    color: #464545; /* Màu chữ */
+    font-size: 1.1vw; /* Kích thước chữ */
+    font-weight: 600; /* Trọng số chữ */
+    line-height: 1.4; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    font-weight: lighter; /* Trọng số font */
+    align-self: center;
+    width: 50%;
+    text-align: center; /* Căn giữa văn bản */
+}
+
+
+.circle-service{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: auto; /* Chiều rộng */
+    height: auto; /* Chiều cao */
+    top:-5%; /* Di chuyển 10% từ cạnh trên */
+    left: 13%; /* Di chuyển 15% từ cạnh trái */
+}
+
+.purple-circle-service{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: auto; /* Chiều rộng */
+    height: auto; /* Chiều cao */
+    top: 5%; /* Di chuyển 10% từ cạnh trên */
+    right: 10%; /* Di chuyển 15% từ cạnh trái */
+}
+
+.service-box-group{
+    display: flex; /* Hiển thị theo chiều ngang */
+    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+    gap: 1.5vw; /* Khoảng cách giữa các phần tử */
+    padding: 5vh 10vw; /* Padding: trên, phải, dưới, trái */
+}
+
+.box {
+    padding: 2vh 3vw; /* Khoảng cách bên trong */
+    border-radius: 10px; /* Bo tròn */
+    font-weight: 600; /* Trọng số font */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển đổi màu, kích thước và đổ bóng */
+    display: flex; /* Hiển thị theo chiều dọc */
+    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+}
+
+/* Hiệu ứng khi rê chuột vào */
+.box:hover {
+    transform: scale(1.03); /* Tăng kích thước lên 5% */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng khi hover */
+}
+
+.box-2:hover {
+    box-shadow: 0 4px 40px rgba(63, 63, 228, 0.5); /* Shadow màu tím khi hover */
+    transform: scale(1.05); /* Tăng kích thước khi hover */
+}
+
+/* Đổ bóng cho các hộp khác khi một hộp được hover */
+.box:hover ~ .box {
+    transform: scale(0.9); /* Giảm kích thước của các hộp khác xuống 90% */
+}
+
+/* Hiệu ứng màu nền khi hover */
+
+
+.box-1{
+    background-color: #F8F8F8; /* Màu nền */
+    padding: 4vh 0; /* Khoảng cách bên trong */
+    border-radius: 2vh; /* Bo tròn */
+    width: 25%; /* Chiều rộng */
+    font-weight: 600; /* Trọng số font */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+}
+
+.box-2{
+    background-color: #5D5CDC; /* Màu nền */
+    color: white; /* Màu chữ */
+    padding: 4vh 0; /* Khoảng cách bên trong */
+    border-radius: 2vh; /* Bo tròn */
+    width: 25%; /* Chiều rộng */
+    font-weight: 600; /* Trọng số font */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+}
+
+.box-3{
+    background-color: #F8F8F8; /* Màu nền */
+    padding: 4vh 0; /* Khoảng cách bên trong */
+    border-radius: 2vh; /* Bo tròn */
+    width: 25%; /* Chiều rộng */
+    font-weight: 600; /* Trọng số font */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+}
+
+.box img {
+    width: auto; /* Đặt chiều rộng của hình ảnh bằng 100% chiều rộng của hộp */
+    height: auto; /* Để chiều cao tự động, giữ tỷ lệ khung hình */
+    object-fit: contain; /* Giữ nguyên tỷ lệ hình ảnh mà không bị méo */
+    transition: transform 0.1s; /* Thêm hiệu ứng chuyển đổi cho hình ảnh */
+    margin-bottom: 3vh; /* Khoảng cách dưới hình ảnh */
+    align-items: center; /* Căn giữa theo chiều ngang */
+}
+
+/* Khi hover, phóng to hình ảnh */
+.box:hover img {
+    transform: scale(1.0); /* Tăng kích thước hình ảnh lên 10% */
+}
+
+.box-title{
+    color: #000; /* Màu chữ */
+    font-size: 1.5vw; /* Kích thước chữ */
+    font-weight: 600; /* Trọng số chữ */
+    line-height: 1.5; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    font-weight: bold; /* Trọng số font */
+    margin-bottom: 2vh;
+}
+
+.box-content{
+    color: #464545; /* Màu chữ */
+    font-size: 0.9vw; /* Kích thước chữ */
+    font-weight: 600; /* Trọng số chữ */
+    line-height: 1.4; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    font-weight: 400; /* Trọng số font */
+    text-align: center; /* Căn giữa văn bản */
+    width: 76%; /* Chiều rộng tối đa của văn bản */
+    align-self: center; /* Căn giữa theo chiều ngang */
+}
+
+.box-title-2{
+    font-size: 1.5vw; /* Kích thước chữ */
+    font-weight: 600; /* Trọng số chữ */
+    line-height: 1.5; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    font-weight: bold; /* Trọng số font */
+    margin-bottom: 2vh;
+}
+
+.box-content-2{
+    font-size: 0.9vw; /* Kích thước chữ */
+    font-weight: 600; /* Trọng số chữ */
+    line-height: 1.4; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    font-weight: 400; /* Trọng số font */
+    text-align: center; /* Căn giữa văn bản */
+    width: 76%; /* Chiều rộng tối đa của văn bản */
+    align-self: center; /* Căn giữa theo chiều ngang */
+}
+
+.star{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: auto; /* Chiều rộng */
+    height: auto; /* Chiều cao */
+    bottom: -15%; /* Di chuyển 10% từ cạnh trên */
+    left: 35%; /* Di chuyển 15% từ cạnh trái */
+}
