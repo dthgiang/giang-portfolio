@@ -12,6 +12,10 @@ import iconBox1 from "../../assets/images/box-1.svg";
 import iconBox2 from "../../assets/images/box-2.svg";
 import iconBox3 from "../../assets/images/box-3.svg";
 import star from "../../assets/images/star.svg";
+import blackSign from "../../assets/images/black-sign.svg";
+import yellowCircleArrow from "../../assets/images/arrow-icon-yellow.svg";
+import purpleCircleArrow from "../../assets/images/arrow-icon-purple.svg";
+import aboutMeLeft from "../../assets/images/about-me-left.svg";
 
 const Home = () => {
   return (
@@ -84,6 +88,49 @@ const Home = () => {
           </div>
         </div>
         <img src={star} alt="star" className="star" />
+      </div>
+
+      {/* About Me Block */}
+      <div className="about-me-block">
+        <img src={blackSign} alt="blackSign" className="black-sign" />
+        <div className="left-block">
+          <img src={aboutMeLeft} alt="aboutMeLeft" className="about-me-left" />
+        </div>
+        <div className="right-block">
+          <div className="about-me-title">{textContent.aboutMeText}</div>
+          <div className="about-me-subtitle">{textContent.aboutMeTitle}</div>
+          <div className="about-me-content">{textContent.aboutMeSubText}</div>
+          <div className="about-box-yellow">
+            <img
+              src={yellowCircleArrow}
+              alt="yellowCircleArrow"
+              className="circle-arrow"
+            />
+            <div className="text-block">
+              <div className="box-title">{textContent.boxTitleYellow}</div>
+              <div className="box-content-yellow">
+                {textContent.boxContentYellow}
+              </div>
+            </div>
+          </div>
+          <div className="about-box-purple">
+            <img
+              src={purpleCircleArrow}
+              alt="purpleCircleArrow"
+              className="circle-arrow"
+            />
+            <div className="text-block">
+              <div className="box-title">{textContent.boxTitlePurple}</div>
+              <div className="box-content-purple">
+                {textContent.boxContentPurple}
+              </div>
+            </div>
+          </div>
+          <div className="downloadCVArrow">
+            <span>Download CV</span>
+            <i className="arrow-icon">→</i>
+          </div>
+        </div>
       </div>
     </div>
   );

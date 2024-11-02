@@ -24,6 +24,16 @@ const textContent = {
   boxTitle3: "Product Design",
   boxContent3:
     "Includes research, ideation, prototyping, testing, and refining to deliver a user-centered product.",
+  aboutMeText: "ABOUT ME",
+  aboutMeTitle: "Designing Solutions, Not Just Visuals",
+  aboutMeSubText:
+    "I design engaging, user-centered interfaces, blending creativity with functionality to deliver seamless, responsive experiences.",
+  boxTitleYellow: "UI UX Designer",
+  boxContentYellow:
+    "I create intuitive, user-focused designs that enhance digital experiences seamlessly.",
+  boxTitlePurple: "Frontend Developer",
+  boxContentPurple:
+    "I develop dynamic, responsive solutions for both web and mobile, focusing on smooth, user-friendly experiences.",
 };
 
 export default textContent;
