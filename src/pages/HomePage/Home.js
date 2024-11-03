@@ -5,10 +5,10 @@ import images from "../../constants/images";
 import Lottie from "lottie-react";
 import Email from "../../lotties/email.json";
 import ButtonUp from "../../lotties/button-up.json";
+import Up from "../../lotties/up.json";
+import Cheer from "../../lotties/cheer.json";
 
 const Home = () => {
-  const [selectedButton, setSelectedButton] = useState("all");
-  const [isVisible, setIsVisible] = useState(false);
   const projects = [
     {
       title: textContent.project1Title,
@@ -36,6 +36,11 @@ const Home = () => {
     },
   ];
 
+  const [selectedButton, setSelectedButton] = useState("all");
+  const [isVisible, setIsVisible] = useState(false);
+  const [showUpEffect, setShowUpEffect] = useState(false);
+  const [showCheerEffect, setShowCheerEffect] = useState(false);
+
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
   };
@@ -54,7 +59,24 @@ const Home = () => {
     }
   };
 
+  const scrollToTop = () => {
+    setShowUpEffect(true); // Hiện hiệu ứng up
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Cuộn lên đầu trang
+
+    // Ẩn hiệu ứng 'up' và hiện 'cheer' sau khi cuộn hoàn tất
+    setTimeout(() => {
+      setShowUpEffect(false);
+      setShowCheerEffect(true);
+
+      // Ẩn 'cheer' sau 2 giây (hoặc thời gian bạn muốn)
+      setTimeout(() => {
+        setShowCheerEffect(false);
+      }, 1850);
+    }, 850); // Thời gian để cuộn hoàn tất, có thể điều chỉnh theo ý muốn
+  };
+
   useEffect(() => {
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -328,8 +350,39 @@ const Home = () => {
         <Lottie
           animationData={ButtonUp}
           className="button-up"
-          style={{ bottom: isVisible ? "0" : "-90%" }} // Điều chỉnh vị trí dựa trên trạng thái
+          style={{ bottom: isVisible ? "5%" : "-90%" }} // Điều chỉnh vị trí dựa trên trạng thái
+          onClick={scrollToTop} // Thêm sự kiện click
         />
+
+        {showUpEffect && (
+          <Lottie
+            animationData={Up}
+            className="up"
+            style={{
+              position: "fixed",
+              bottom: "20%",
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "25vw",
+              height: "25vw",
+            }}
+          />
+        )}
+
+        {showCheerEffect && (
+          <Lottie
+            animationData={Cheer}
+            className="cheer"
+            style={{
+              position: "fixed",
+              top: "10%",
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "35vw",
+              height: "35vw",
+            }}
+          />
+        )}
       </div>
     </div>
   );
