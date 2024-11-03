@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/Home.css";
 import textContent from "../../constants/textContent";
 import images from "../../constants/images";
 import Lottie from "lottie-react";
-import animationData from "../../lotties/footer-button.json";
+import Email from "../../lotties/email.json";
+import ButtonUp from "../../lotties/button-up.json";
 
 const Home = () => {
   const [selectedButton, setSelectedButton] = useState("all");
+  const [isVisible, setIsVisible] = useState(false);
   const projects = [
     {
       title: textContent.project1Title,
@@ -33,29 +35,38 @@ const Home = () => {
       subtitle: textContent.project6SubTitle,
     },
   ];
+
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
   };
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    // Kiểm tra xem cuộn đã đến cuối trang chưa
+    if (scrollTop + windowHeight >= documentHeight - 100) {
+      // 100px là khoảng cách an toàn
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div>
       {/* Intro Block */}
       <div className="intro-block">
         <div className="header">
-          <div style={{ textAlign: "center" }}>
-            <div>
-              <Lottie options={defaultOptions} height={400} width={400} />
-            </div>
-          </div>
+          <div style={{ textAlign: "center" }}></div>
           <img
             src={images.lineCircle}
             alt="lineCircle"
@@ -281,6 +292,7 @@ const Home = () => {
               alt="bgSubscribe"
               className="bg-subscribe"
             />
+            <Lottie animationData={Email} className="email-footer" />
             <img src={images.earth} alt="earth" className="earth" />
             <img
               src={images.subscribeArrow}
@@ -313,6 +325,11 @@ const Home = () => {
           <span className="nav-item-footer">{textContent.contact}</span>
         </nav>
         <div class="footer-line"></div>
+        <Lottie
+          animationData={ButtonUp}
+          className="button-up"
+          style={{ bottom: isVisible ? "0" : "-90%" }} // Điều chỉnh vị trí dựa trên trạng thái
+        />
       </div>
     </div>
   );
