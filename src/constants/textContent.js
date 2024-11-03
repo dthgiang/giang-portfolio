@@ -53,6 +53,9 @@ const textContent = {
   project5SubTitle: "Mobile App",
   project6Title: "GameShop Landing Page",
   project6SubTitle: "Website/Landing Page",
+  contactTitle: "Got A Project! Let's Talk",
+  contactContent:
+    "Have a project in mind? Let’s connect and bring your vision to life together!",
 };
 
 export default textContent;

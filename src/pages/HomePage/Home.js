@@ -226,7 +226,26 @@ const Home = () => {
               </div>
             </div>
           ))}
+          <div className="circle-purple-project"></div>
         </div>
+      </div>
+
+      {/* Contact Block */}
+      <div className="contact-block">
+        <div className="circle-yellow-contact-1"></div>
+        <div className="contact-container">
+          <div className="contact-text-block">
+            <div className="contact-title">{textContent.contactTitle}</div>
+            <div className="contact-content">{textContent.contactContent}</div>
+          </div>
+          <div className="contact-button">{textContent.contact}</div>
+        </div>
+        <img
+          src={images.whiteSign}
+          alt="whiteSign"
+          className="white-sign-contact"
+        />
+        <div className="circle-yellow-contact-2"></div>
       </div>
     </div>
   );
