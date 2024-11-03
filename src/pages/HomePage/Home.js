@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../../styles/Home.css";
 import textContent from "../../constants/textContent";
 import images from "../../constants/images";
+import Lottie from "lottie-react";
+import animationData from "../../lotties/footer-button.json";
 
 const Home = () => {
   const [selectedButton, setSelectedButton] = useState("all");
@@ -34,11 +36,26 @@ const Home = () => {
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
   };
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <div>
       {/* Intro Block */}
       <div className="intro-block">
         <div className="header">
+          <div style={{ textAlign: "center" }}>
+            <div>
+              <Lottie options={defaultOptions} height={400} width={400} />
+            </div>
+          </div>
           <img
             src={images.lineCircle}
             alt="lineCircle"
