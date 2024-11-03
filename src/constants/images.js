@@ -13,6 +13,8 @@ import blackSign from "../assets/images/black-sign.svg";
 import yellowCircleArrow from "../assets/images/arrow-icon-yellow.svg";
 import purpleCircleArrow from "../assets/images/arrow-icon-purple.svg";
 import aboutMeLeft from "../assets/images/about-me-left.svg";
+import bluePlant from "../assets/images/project-plant.svg";
+import projectStar from "../assets/images/project-star.svg";
 
 const images = {
   circlePlay,
@@ -30,6 +32,8 @@ const images = {
   yellowCircleArrow,
   purpleCircleArrow,
   aboutMeLeft,
+  bluePlant,
+  projectStar,
 };
 
 export default images;

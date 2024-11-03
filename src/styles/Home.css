@@ -87,8 +87,6 @@
     max-width: 38%; /* Chiều dài tối đa của đoạn văn bản */
 }
 
-
-
 .getStartedButton{
     background-color: #FEB12F; /* Màu nền */
     color: #FFF8F2; /* Màu chữ */
@@ -104,7 +102,6 @@
     background-color: #FFF8F2; /* Màu nền khi hover */
     color: #FEB12F; /* Màu chữ khi hover */
 }
-
 
 .circle-play{
     position:absolute; /* Tạo vị trí tuyệt đối */
@@ -125,7 +122,6 @@
     padding: 2vh 8vw 15vh 8vw; /* Padding: trên, phải, dưới, trái */
 }
 
-
 .watchDemoGroup {
     display: flex; /* Hiển thị theo chiều ngang */
     align-items: center; /* Căn giữa hình tròn và chữ theo chiều dọc */
@@ -140,8 +136,6 @@
     max-width: 38%; /* Chiều dài tối đa của đoạn văn bản */
     margin-left: 1vw;
 }
-
-
 
 .intro-block{
     margin-bottom: 10vh; /* Khoảng cách dưới */
@@ -273,12 +267,6 @@
     transform: scale(1.05); /* Tăng kích thước khi hover */
 }
 
-/* Đổ bóng cho các hộp khác khi một hộp được hover */
-
-
-/* Hiệu ứng màu nền khi hover */
-
-
 .box-1{
     background-color: #F8F8F8; /* Màu nền */
     padding: 4vh 0; /* Khoảng cách bên trong */
@@ -387,7 +375,6 @@
     padding: 10vh 0; /* Padding: trên, phải, dưới, trái */
     gap: 40vw; /* Khoảng cách giữa các phần tử */
 }
-
 
 .left-block{
     position: relative; /* Tạo vị trí tương đối */
@@ -558,3 +545,179 @@
     margin-left: 8px; /* Khoảng cách giữa chữ và mũi tên */
     font-size: 1.2rem;
 }
+
+.project-block{
+    position: relative; /* Tạo vị trí tương đối */
+    display: flex; /* Hiển thị theo chiều ngang */
+    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+    text-align: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+    height: auto; /* Đặt chiều cao khối là to */
+    margin-top: 7vh; /* Khoảng cách trên */
+    gap: 2vh; /* Khoảng cách giữa các phần tử */
+}
+
+.project-title{
+    color: #6E6CE5; /* Màu chữ */
+    font-size: 1.2vw; /* Kích thước chữ */
+    font-weight: 600; /* Trọng số chữ */
+    line-height: 1.4; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    font-weight: bold; /* Trọng số font */
+}
+
+.project-subtitle{
+    color: #323843; /* Màu chữ */
+    font-size: 2.5vw; /* Kích thước chữ */
+    font-weight: 600; /* Trọng số chữ */
+    line-height: 1.5; /* Chiều cao dòng */
+    font-family: 'Segoe UI', sans-serif; /* Font chữ */
+    font-weight: bold; /* Trọng số font */
+    margin-bottom: 2vh;
+}
+
+.blue-plant{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: auto; /* Chiều rộng */
+    height: auto; /* Chiều cao */
+    top: 8%; /* Di chuyển 10% từ cạnh trên */
+    left: 15%; /* Di chuyển 15% từ cạnh trái */
+}
+
+.project-star{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: auto; /* Chiều rộng */
+    height: auto; /* Chiều cao */
+    top: -40%; /* Di chuyển 10% từ cạnh trên */
+    right: 20%; /* Di chuyển 15% từ cạnh trái */
+}
+
+.menu-button{
+    margin-top: 1vw; /* Khoảng cách trên */
+    display: flex; /* Hiển thị theo chiều ngang */
+    justify-content: space-between; /* Căn giữa các phần tử theo chiều ngang */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    gap: 1.1vw; /* Khoảng cách giữa các phần tử */
+}
+
+.button{
+    border: 2px solid #5D5CDC;
+    color: #3D3D40;
+    padding: 1.5vh 2vh; /* Khoảng cách bên trong */
+    border: 2px solid #5D5CDC;
+    border-radius: 1.5vh;
+    cursor: pointer; /* Con trỏ khi hover */
+    font-weight: 600; /* Trọng số font */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+}
+  
+.button.selected {
+    background-color: #5D5CDC;
+    color: #fff;
+    border-color: #5D5CDC;
+}
+
+/* CSS cho nút khi hover */
+.button:hover {
+    background-color: #ececff;
+    color: #5D5CDC;
+    transform: scale(1.05); /* Tăng nhẹ kích thước khi hover */
+  }
+  
+/* CSS cho nút được chọn */
+.button.selected {
+background-color: #5D5CDC;
+color: #fff;
+border-color: #5D5CDC;
+}
+
+/* CSS khi hover vào nút đang được chọn */
+.button.selected:hover {
+background-color: #4c4bbc;
+color: #fff;
+transform: scale(1.05); /* Tăng nhẹ kích thước khi hover */
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các khối xuống dòng */
+    justify-content: space-between; /* Căn giữa các khối */
+    padding: 0 15vw; /* Padding: trên, phải, dưới, trái */
+}
+
+.project-block {
+    flex: 1 1 calc(30% - 0.5vw); /* Chiều rộng 1/3 của container, trừ khoảng cách */
+    display: flex;
+    flex-direction: column;
+    padding: 1vh; /* Padding sử dụng vh để đảm bảo độ cao */
+    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến chiều rộng */
+}
+
+.project-image {
+    width: 100%; /* Chiều rộng 100% để bao phủ hết không gian của khối */
+    height: 16vw; /* Chiều cao */
+    border-radius: 1.5vh; /* Bo tròn */
+    background-color: #e0e0e0;
+}
+
+.project-bottom-block {
+    display: flex; /* Hiển thị theo chiều ngang */
+    justify-content: space-between; /* Căn giữa các phần tử theo chiều ngang */
+    align-items: center; /* Căn giữa dọc */
+    width: 100%; /* Chiều rộng 100% */
+    margin-top: 1vh; /* Thêm khoảng cách giữa hình ảnh và phần chữ */
+}
+
+.project-title-block{
+    display: flex; /* Hiển thị theo chiều ngang */
+    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+    align-items: flex-start; /* Căn giữa theo chiều ngang */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+    text-align: left; /* Căn trái nội dung */
+    color: #000;
+    font-weight: bold; /* Trọng số font */
+    font-size: 1.5vw; /* Kích thước chữ */
+}
+
+.project-subtitle-block{
+    display: flex; /* Hiển thị theo chiều ngang */
+    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+    align-items: flex-start; /* Căn giữa theo chiều ngang */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+    text-align: left; /* Căn trái nội dung */
+    color: #464545;
+    font-size: 1vw; /* Kích thước chữ */
+    font-weight: 400;
+}
+
+.project-button {
+    background-color: #5D5CDC; /* Màu nền */
+    color: #FFF8F2; /* Màu mũi tên */
+    width: 3vw; /* Chiều rộng của nút */
+    height: 3vw; /* Chiều cao của nút */
+    border: none; /* Không có viền */
+    border-radius: 50%; /* Bo tròn */
+    cursor: pointer; /* Con trỏ khi hover */
+    display: flex; /* Hiển thị flex */
+    align-items: center; /* Căn giữa dọc */
+    justify-content: center; /* Căn giữa ngang */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng */
+}
+
+.project-button:hover {
+    background-color: #fcba49; /* Màu nền khi hover */
+    color: #5D5CDC; /* Màu mũi tên khi hover */
+}
+
+.arrow-icon {
+    width: 20px; /* Kích thước mũi tên */
+    height: 20px;
+    stroke: currentColor; /* Màu mũi tên */
+    transition: transform 0.3s ease; /* Hiệu ứng xoay mũi tên */
+}
+
+.project-button:hover .arrow-icon {
+    transform: rotate(45deg); /* Xoay 45 độ khi hover */
+}
+

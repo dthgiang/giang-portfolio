@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/Home.css";
 import textContent from "../../constants/textContent";
 import images from "../../constants/images";
 
 const Home = () => {
+  const [selectedButton, setSelectedButton] = useState("all");
+  const projects = [
+    {
+      title: textContent.project1Title,
+      subtitle: textContent.project1SubTitle,
+    },
+    {
+      title: textContent.project2Title,
+      subtitle: textContent.project2SubTitle,
+    },
+    {
+      title: textContent.project3Title,
+      subtitle: textContent.project3SubTitle,
+    },
+    {
+      title: textContent.project4Title,
+      subtitle: textContent.project4SubTitle,
+    },
+    {
+      title: textContent.project5Title,
+      subtitle: textContent.project5SubTitle,
+    },
+    {
+      title: textContent.project6Title,
+      subtitle: textContent.project6SubTitle,
+    },
+  ];
+  const handleButtonClick = (buttonName) => {
+    setSelectedButton(buttonName);
+  };
   return (
     <div>
       {/* Intro Block */}
@@ -140,6 +170,64 @@ const Home = () => {
       </div>
 
       {/* Project Block */}
+      <div className="project-block">
+        <img src={images.bluePlant} alt="bluePlant" className="blue-plant" />
+        <img
+          src={images.projectStar}
+          alt="projectStar"
+          className="project-star"
+        />
+        <div className="project-title">{textContent.projectTitle}</div>
+        <div className="project-subtitle">{textContent.projectSubTitle}</div>
+        <div className="menu-button">
+          {[
+            { key: "all", text: textContent.all },
+            { key: "landingPage", text: textContent.landingPage },
+            { key: "appDesign", text: textContent.appDesign },
+            { key: "dashboard", text: textContent.dashboard },
+            { key: "posterDesign", text: textContent.posterDesign },
+          ].map((button) => (
+            <div
+              key={button.key}
+              className={`button ${button.key}-button ${
+                selectedButton === button.key ? "selected" : ""
+              }`}
+              onClick={() => handleButtonClick(button.key)}
+            >
+              {button.text}
+            </div>
+          ))}
+        </div>
+        <div className="project-container">
+          {projects.map((project, index) => (
+            <div className="project-block" key={index}>
+              <div className="project-image"></div>
+              <div className="project-bottom-block">
+                <div className="project-title-block">
+                  <div className="project-title">{project.title}</div>
+                  <div className="project-subtitle-block">
+                    {project.subtitle}
+                  </div>
+                </div>
+                <button className="project-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="arrow-icon"
+                  >
+                    <path
+                      d="M4 20 L20 4 M15 4 H20 V9"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

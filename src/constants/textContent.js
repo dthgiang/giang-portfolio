@@ -34,6 +34,25 @@ const textContent = {
   boxTitlePurple: "Frontend Developer",
   boxContentPurple:
     "I develop dynamic, responsive solutions for both web and mobile, focusing on smooth, user-friendly experiences.",
+  projectTitle: "PROJECTS",
+  projectSubTitle: "Digital Product Showcases",
+  all: "All",
+  landingPage: "Landing Page",
+  appDesign: "App Design",
+  dashboard: "Dashboard",
+  posterDesign: "Poster Design",
+  project1Title: "Saas Landing Page",
+  project1SubTitle: "Website/Landing Page",
+  project2Title: "Education Platform",
+  project2SubTitle: "Dashboard Design",
+  project3Title: "Family Mobile App",
+  project3SubTitle: "Mobile App",
+  project4Title: "Furniture Landing Page",
+  project4SubTitle: "Website/Landing Page",
+  project5Title: "Banking App",
+  project5SubTitle: "Mobile App",
+  project6Title: "GameShop Landing Page",
+  project6SubTitle: "Website/Landing Page",
 };
 
 export default textContent;
