@@ -855,3 +855,158 @@ body, html {
     background-color: #FEB12F; /* Màu nền */
     border-radius: 1vw; /* Bo tròn */
 }
+
+.subscribe-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2vw;
+  }
+
+.subscribe-content-wrapper {
+    display: flex;
+    justify-content: space-between; /* Căn cách các phần tử sang hai bên */
+    align-items: center;
+    width: 90%;
+    padding: 5vw 0;
+    gap: 15vw; /* Khoảng cách giữa các phần tử */
+}
+
+.subscribe-text-container {
+    flex: 1; /* Phần chữ bên trái */
+    text-align: left;
+}
+
+.subscribe-title {
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: #6E6CE5;
+    margin-bottom: 1vw;
+}
+
+.subscribe-content {
+    font-size: 2.5vw;
+    color: #323843;
+    font-weight: bold;
+
+}
+
+.enter-email-container {
+    flex: 1; /* Phần bên phải */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+  
+.email-subtext {
+    font-size: 1em;
+    color: #828282;
+    margin-top: 10px;
+    width: 56%;
+    align-self: flex-start;
+}
+
+.email-input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 60vw;
+    margin-top: 1vw;
+    border-radius: 10px 0 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative; /* Đặt vị trí tương đối */
+}
+
+.email-input {
+    padding: 1vw;
+    font-size: 1vw;
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+.subscribe-button {
+    padding: 1vw 2vw;
+    font-size: 1vw;
+    color: white;
+    background-color: #5D5CDC;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0px 0 10px 0px;
+    z-index: 1; /* Đặt chỉ số z-index cao hơn */
+}
+
+.subscribe-button:hover {
+    background-color: #4b4aae;
+}
+
+.bg-subscribe{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: auto; /* Chiều rộng */
+    height: auto; /* Chiều cao */
+    top: 2vw; /* Di chuyển 10% từ cạnh trên */
+    right: 4vw; /* Di chuyển 15% từ cạnh trái */
+    z-index: 1; /* Đặt vị trí phía sau */
+}
+
+.earth{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    width: 3vw; /* Chiều rộng */
+    height: 3vw; /* Chiều cao */
+    top: 20%; /* Di chuyển 10% từ cạnh trên */
+    left: 40%; /* Di chuyển 15% từ cạnh trái */
+}
+
+.subscribe-arrow {
+    position: absolute;
+    width: 13vw; /* Chiều rộng */
+    height: 13vw; /* Chiều cao */
+    top: 35%; /* Di chuyển 10% từ cạnh trên */
+    left: 38%; /* Di chuyển 15% từ cạnh trái */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 8vw;
+    font-size: 1vw;
+    text-align: center;
+    color: #616161;
+    margin-bottom: 5vw;
+    position: relative;
+}
+
+.nav-item-footer {
+    color: #616161; /* Màu chữ */
+    cursor: pointer; /* Hiển thị con trỏ khi hover */
+    font-family: 'SegoeUI', sans-serif; /* Font chữ */
+    font-size: 1vw; /* Kích thước font */
+    padding: 1vh 2vh; /* Khoảng cách bên trong */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+    line-height: 1; /* Chiều cao dòng */
+    font-weight: 600; /* Trọng số font */
+}
+
+.nav-item-footer:hover {
+    color: #FEB12F; /* Màu chữ khi hover */
+}
+
+
+.footer-line {
+    width: 85%; /* Độ dài của đường kẻ */
+    border-bottom: 1px solid #A8A6A6;
+    position: absolute;
+    bottom: 0; /* Đặt đường kẻ ở cạnh dưới của footer-container */
+    margin-top: 2vh; /* Điều chỉnh khoảng cách so với nội dung footer */
+    margin-bottom: -3vh;
+}
+
+

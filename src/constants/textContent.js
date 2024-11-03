@@ -56,6 +56,12 @@ const textContent = {
   contactTitle: "Got A Project! Let's Talk",
   contactContent:
     "Have a project in mind? Let’s connect and bring your vision to life together!",
+  SUBSCRIBE: "SUBSCRIBE",
+  subscribe: "Subscribe",
+  subscribeContent: "Subscribe To Get Latest Update From Me",
+  enterEmailSubtext:
+    "Enter your email to stay updated with the latest news and exclusive insights from me.",
+  enterEmail: "Enter your email",
 };
 
 export default textContent;

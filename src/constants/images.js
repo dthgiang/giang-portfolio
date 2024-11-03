@@ -15,6 +15,9 @@ import purpleCircleArrow from "../assets/images/arrow-icon-purple.svg";
 import aboutMeLeft from "../assets/images/about-me-left.svg";
 import bluePlant from "../assets/images/project-plant.svg";
 import projectStar from "../assets/images/project-star.svg";
+import bgSubscribe from "../assets/images/subcribe-background.svg";
+import earth from "../assets/images/earth.svg";
+import subscribeArrow from "../assets/images/subcribe-arrow.svg";
 
 const images = {
   circlePlay,
@@ -34,6 +37,9 @@ const images = {
   aboutMeLeft,
   bluePlant,
   projectStar,
+  bgSubscribe,
+  earth,
+  subscribeArrow,
 };
 
 export default images;
