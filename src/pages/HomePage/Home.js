@@ -88,7 +88,6 @@ const Home = () => {
       {/* Intro Block */}
       <div className="intro-block">
         <div className="header">
-          <div style={{ textAlign: "center" }}></div>
           <img
             src={images.lineCircle}
             alt="lineCircle"
@@ -112,9 +111,7 @@ const Home = () => {
           />
           <div className="logo-name">{textContent.logoName}</div>
           <nav className="nav-menu">
-            <span className="nav-item">{textContent.home}</span>
             <span className="nav-item">{textContent.about}</span>
-            <span className="nav-item">{textContent.services}</span>
             <span className="nav-item">{textContent.projects}</span>
             <span className="nav-item">{textContent.contact}</span>
           </nav>
@@ -123,7 +120,7 @@ const Home = () => {
         <div className="introText">{textContent.introText}</div>
         <div className="introSubText">{textContent.introSubText}</div>
         <div className="buttonGroupIntro">
-          <div className="getStartedButton">{textContent.getStarted}</div>
+          <div className="myFigmaButton">{textContent.myFigma}</div>
           <div className="watchDemoGroup">
             <img
               src={images.circlePlay}
@@ -340,9 +337,7 @@ const Home = () => {
       <div className="footer-container">
         <div className="logo-name">{textContent.logoName}</div>
         <nav className="nav-menu">
-          <span className="nav-item-footer">{textContent.home}</span>
           <span className="nav-item-footer">{textContent.about}</span>
-          <span className="nav-item-footer">{textContent.services}</span>
           <span className="nav-item-footer">{textContent.projects}</span>
           <span className="nav-item-footer">{textContent.contact}</span>
         </nav>

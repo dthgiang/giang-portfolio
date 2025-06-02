@@ -22,6 +22,7 @@
 .logo-name {
     font-family: 'Lemon', sans-serif; /* Sử dụng font Lemon */
     font-size: 2vw; /* Font size theo viewport width */
+    
 }
 
 .logo-name:hover {
@@ -31,6 +32,7 @@
 .nav-menu {
     display: flex;
     gap: 2vw; /* Khoảng cách giữa các mục */
+    margin-left: 30vw; /* Khoảng cách bên trái */
 }
 
 .nav-item {
@@ -87,7 +89,7 @@
     max-width: 38%; /* Chiều dài tối đa của đoạn văn bản */
 }
 
-.getStartedButton{
+.myFigmaButton{
     background-color: #FEB12F; /* Màu nền */
     color: #FFF8F2; /* Màu chữ */
     padding: 1.5vh 5vh; /* Khoảng cách bên trong */
