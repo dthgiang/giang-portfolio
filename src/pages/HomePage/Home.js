@@ -361,7 +361,7 @@ const Home = () => {
         <div class="footer-line"></div>
         <Lottie
           animationData={ButtonUp}
-          className="button-up"
+          className="button-up hoverable"
           style={{ bottom: isVisible ? "5%" : "-90%" }} // Điều chỉnh vị trí dựa trên trạng thái
           onClick={scrollToTop} // Thêm sự kiện click
         />

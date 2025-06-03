@@ -1032,15 +1032,24 @@ html {
   height: 15vw; /* Chiều cao */
   position: fixed; /* Để nút luôn ở vị trí cố định */
   bottom: -90%; /* Bắt đầu ở dưới ngoài màn hình */
-  left: 50%; /* Căn giữa theo chiều ngang */
-  transform: translateX(
-    -50%
-  ); /* Đẩy nút sang trái một nửa chiều rộng của nó để căn giữa */
+  left: 40%; /* Căn giữa theo chiều ngang */
   padding: 1vh 2vh; /* Khoảng cách bên trong */
   border: none; /* Không có viền */
   border-radius: 1vh; /* Bo tròn */
   cursor: pointer; /* Con trỏ khi hover */
   transition: bottom 0.8s ease; /* Hiệu ứng chuyển đổi cho vị trí */
+}
+
+.hoverable {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  filter: brightness(1);
+  transform-origin: center; /* ✅ Giúp xoay tại tâm */
+}
+
+.hoverable:hover {
+  filter: brightness(1.2) drop-shadow(0 0 10px #ffcc00);
+  transform: scale(1.05) rotate(-5deg);
 }
 
 body {
