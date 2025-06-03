@@ -1,1038 +1,1048 @@
 .intro-block {
-    position: relative;
-    top: 0;
-    left: 0;
-    background-image: url('../assets/images/intro_background.svg');
-    background-size: contain; /* Sử dụng cover để ảnh bao phủ toàn bộ khối */
-    background-position: center top;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: auto; /* Đặt chiều cao khối là toàn màn hình */
-    width: 100vw; /* Xóa padding để loại bỏ khoảng cách thừa */
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url("../assets/images/intro_background.svg");
+  background-size: contain; /* Sử dụng cover để ảnh bao phủ toàn bộ khối */
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: auto; /* Đặt chiều cao khối là toàn màn hình */
+  width: 100vw; /* Xóa padding để loại bỏ khoảng cách thừa */
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3vh 7vw;
-    color: white;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh 7vw;
+  color: white;
 }
 
 .logo-name {
-    font-family: 'Lemon', sans-serif; /* Sử dụng font Lemon */
-    font-size: 2vw; /* Font size theo viewport width */
-    
+  font-family: "Lemon", sans-serif; /* Sử dụng font Lemon */
+  font-size: 2vw; /* Font size theo viewport width */
 }
 
 .logo-name:hover {
-    color: #FEB12F; /* Màu chữ khi hover */
+  color: #feb12f; /* Màu chữ khi hover */
 }
 
 .nav-menu {
-    display: flex;
-    gap: 2vw; /* Khoảng cách giữa các mục */
-    margin-left: 30vw; /* Khoảng cách bên trái */
+  display: flex;
+  gap: 2vw; /* Khoảng cách giữa các mục */
+  margin-left: 30vw; /* Khoảng cách bên trái */
 }
 
 .nav-item {
-    color: #FFF8F2;
-    cursor: pointer;
-    font-family: 'SegoeUI', sans-serif;
-    font-size: 1vw; /* Kích thước font, bạn có thể điều chỉnh theo nhu cầu */
-    padding: 1vh 2vh; /* Khoảng cách bên trong */
-    transition: background-color 0.3s, color 0.3s;
-    font-weight: 600; /* Đặt trọng số font là semi-bold */
-    line-height: 1; /* Đảm bảo chiều cao dòng nhất quán */
+  color: #fff8f2;
+  cursor: pointer;
+  font-family: "SegoeUI", sans-serif;
+  font-size: 1vw; /* Kích thước font, bạn có thể điều chỉnh theo nhu cầu */
+  padding: 1vh 2vh; /* Khoảng cách bên trong */
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 600; /* Đặt trọng số font là semi-bold */
+  line-height: 1; /* Đảm bảo chiều cao dòng nhất quán */
 }
 
 .nav-item:hover {
-    color: #FEB12F; /* Màu chữ khi hover */
-    /* Không thay đổi font-weight ở đây */
+  color: #feb12f; /* Màu chữ khi hover */
+  /* Không thay đổi font-weight ở đây */
 }
 
-.downloadCVButton{
-    background-color: #FEB12F; /* Màu nền */
-    color: #FFF8F2; /* Màu chữ */
-    padding: 1.5vh 3vh; /* Khoảng cách bên trong */
-    border: none; /* Không có viền */
-    border-radius: 3vh;
-    cursor: pointer; /* Con trỏ khi hover */
-    font-weight: 600; /* Trọng số font */
-    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+.downloadCVButton {
+  background-color: #feb12f; /* Màu nền */
+  color: #fff8f2; /* Màu chữ */
+  padding: 1.5vh 3vh; /* Khoảng cách bên trong */
+  border: none; /* Không có viền */
+  border-radius: 3vh;
+  cursor: pointer; /* Con trỏ khi hover */
+  font-weight: 600; /* Trọng số font */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
 }
 
 .downloadCVButton:hover {
-    background-color: #FFF8F2; /* Màu nền khi hover */
-    color: #FEB12F; /* Màu chữ khi hover */
+  background-color: #fff8f2; /* Màu nền khi hover */
+  color: #feb12f; /* Màu chữ khi hover */
 }
 
 .introText {
-    padding: 16vh 8vw 0 8vw; /* top, right, bottom, left */
-    color: #FFF8F2; /* Màu chữ */
-    font-size: 2.8vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.5; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    text-align: left; /* Căn trái nội dung */
-    max-width: 32%; /* Chiều dài tối đa của đoạn văn bản */
-    font-weight: bold; /* Trọng số font */
+  padding: 16vh 8vw 0 8vw; /* top, right, bottom, left */
+  color: #fff8f2; /* Màu chữ */
+  font-size: 2.8vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  text-align: left; /* Căn trái nội dung */
+  max-width: 32%; /* Chiều dài tối đa của đoạn văn bản */
+  font-weight: bold; /* Trọng số font */
 }
 
-.introSubText{
-    padding: 2vh 8vw; /* Padding xung quanh văn bản */
-    color: #FFF8F2; /* Màu chữ */
-    font-size: 1.3vw; /* Kích thước chữ */
-    line-height: 1.5; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    text-align: left; /* Căn trái nội dung */
-    max-width: 38%; /* Chiều dài tối đa của đoạn văn bản */
+.introSubText {
+  padding: 2vh 8vw; /* Padding xung quanh văn bản */
+  color: #fff8f2; /* Màu chữ */
+  font-size: 1.3vw; /* Kích thước chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  text-align: left; /* Căn trái nội dung */
+  max-width: 38%; /* Chiều dài tối đa của đoạn văn bản */
 }
 
-.myFigmaButton{
-    background-color: #FEB12F; /* Màu nền */
-    color: #FFF8F2; /* Màu chữ */
-    padding: 1.5vh 5vh; /* Khoảng cách bên trong */
-    border: none; /* Không có viền */
-    border-radius: 3vh;
-    cursor: pointer; /* Con trỏ khi hover */
-    font-weight: 600; /* Trọng số font */
-    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+.myFigmaButton {
+  background-color: #feb12f; /* Màu nền */
+  color: #fff8f2; /* Màu chữ */
+  padding: 1.5vh 5vh; /* Khoảng cách bên trong */
+  border: none; /* Không có viền */
+  border-radius: 3vh;
+  cursor: pointer; /* Con trỏ khi hover */
+  font-weight: 600; /* Trọng số font */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+  font-size: 1.2vw; /* Kích thước chữ */
+}
+
+.myFigmaButton:hover {
+  background-color: #fff8f2; /* Màu nền khi hover */
+  color: #feb12f; /* Màu chữ khi hover */
 }
 
 .getStartedButton:hover {
-    background-color: #FFF8F2; /* Màu nền khi hover */
-    color: #FEB12F; /* Màu chữ khi hover */
+  background-color: #fff8f2; /* Màu nền khi hover */
+  color: #feb12f; /* Màu chữ khi hover */
 }
 
-.circle-play{
-    position:absolute; /* Tạo vị trí tuyệt đối */
-    width: 2.8vw; /* Chiều rộng */
-    height: 2.8vw; /* Chiều cao */
-    border-radius: 50%; /* Bo tròn */
-    display: flex; /* Hiển thị theo chiều ngang */
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    cursor: pointer; /* Con trỏ khi hover */
-    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu */
+.circle-play {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: 2.8vw; /* Chiều rộng */
+  height: 2.8vw; /* Chiều cao */
+  border-radius: 50%; /* Bo tròn */
+  display: flex; /* Hiển thị theo chiều ngang */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  cursor: pointer; /* Con trỏ khi hover */
+  transition: transform 0.3s ease;
+}
+
+.circle-play:hover {
+  transform: scale(1.5);
 }
 
 .buttonGroupIntro {
-    display: flex; /* Hiển thị theo chiều ngang */
-    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
-    gap: 2.5vw; /* Khoảng cách giữa các nút */
-    padding: 2vh 8vw 15vh 8vw; /* Padding: trên, phải, dưới, trái */
+  display: flex; /* Hiển thị theo chiều ngang */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  gap: 2.5vw; /* Khoảng cách giữa các nút */
+  padding: 2vh 8vw 15vh 8vw; /* Padding: trên, phải, dưới, trái */
 }
 
 .watchDemoGroup {
-    display: flex; /* Hiển thị theo chiều ngang */
-    align-items: center; /* Căn giữa hình tròn và chữ theo chiều dọc */
+  display: flex; /* Hiển thị theo chiều ngang */
+  align-items: center; /* Căn giữa hình tròn và chữ theo chiều dọc */
 }
 
 .watchDemoGroupText {
-    color: #FFF8F2; /* Màu chữ */
-    font-size: 1.3vw; /* Kích thước chữ */
-    line-height: 1.5; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    text-align: left; /* Căn trái nội dung */
-    max-width: 38%; /* Chiều dài tối đa của đoạn văn bản */
-    margin-left: 1vw;
+  color: #fff8f2; /* Màu chữ */
+  font-size: 1.3vw; /* Kích thước chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  text-align: left; /* Căn trái nội dung */
+  max-width: 38%; /* Chiều dài tối đa của đoạn văn bản */
+  margin-left: 1vw;
 }
 
-.intro-block{
-    margin-bottom: 10vh; /* Khoảng cách dưới */
-    position: relative;
+.intro-block {
+  margin-bottom: 10vh; /* Khoảng cách dưới */
+  position: relative;
 }
 
-.line-circle-left{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    top: 10%; /* Di chuyển 10% từ cạnh trên */
-    left: 3%; /* Di chuyển 15% từ cạnh trái */
+.line-circle-left {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  top: 10%; /* Di chuyển 10% từ cạnh trên */
+  left: 3%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.line-circle-right{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    bottom: 10%; /* Di chuyển 10% từ cạnh trên */
-    right: 3%; /* Di chuyển 15% từ cạnh trái */
+.line-circle-right {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  bottom: 10%; /* Di chuyển 10% từ cạnh trên */
+  right: 3%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.intro-arrow{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    top: 28%; /* Di chuyển 10% từ cạnh trên */
-    left: 45%; /* Di chuyển 15% từ cạnh trái */
+.intro-arrow {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  top: 28%; /* Di chuyển 10% từ cạnh trên */
+  left: 45%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.circle-base{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    bottom: 6%; /* Di chuyển 10% từ cạnh trên */
-    right: 10%; /* Di chuyển 15% từ cạnh trái */
+.circle-base {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  bottom: 6%; /* Di chuyển 10% từ cạnh trên */
+  right: 10%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.white-sign{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    top: 27%; /* Di chuyển 10% từ cạnh trên */
-    right: 3%; /* Di chuyển 15% từ cạnh trái */
+.white-sign {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  top: 27%; /* Di chuyển 10% từ cạnh trên */
+  right: 3%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.service-block{
-    position: relative; /* Tạo vị trí tương đối */
-    display: flex; /* Hiển thị theo chiều ngang */
-    flex-direction: column;
-    text-align: center; /* Căn giữa theo chiều ngang */
-    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+.service-block {
+  position: relative; /* Tạo vị trí tương đối */
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: column;
+  text-align: center; /* Căn giữa theo chiều ngang */
+  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
 }
 
-.service-text-block{
-    color: #6E6CE5; /* Màu chữ */
-    font-size: 1.1vw; /* Kích thước chữ */
-    font-weight: bold; /* Trọng số chữ */
-    line-height: 1.4; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    justify-content: space-between;
-    display: flex; /* Hiển thị theo chiều dọc */
-    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
-    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+.service-text-block {
+  color: #6e6ce5; /* Màu chữ */
+  font-size: 1.1vw; /* Kích thước chữ */
+  font-weight: bold; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  justify-content: space-between;
+  display: flex; /* Hiển thị theo chiều dọc */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  align-items: center; /* Căn giữa các phần tử theo chiều ngang */
 }
 
-.service-title{
-    color: #323843; /* Màu chữ */
-    font-size: 2.5vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.5; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: bold; /* Trọng số font */
+.service-title {
+  color: #323843; /* Màu chữ */
+  font-size: 2.5vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
 }
 
-.service-subtext{
-    color: #464545; /* Màu chữ */
-    font-size: 1.1vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.4; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: lighter; /* Trọng số font */
-    align-self: center;
-    width: 50%;
-    text-align: center; /* Căn giữa văn bản */
+.service-subtext {
+  color: #464545; /* Màu chữ */
+  font-size: 1.1vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: lighter; /* Trọng số font */
+  align-self: center;
+  width: 50%;
+  text-align: center; /* Căn giữa văn bản */
 }
 
-.circle-service{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    top:-5%; /* Di chuyển 10% từ cạnh trên */
-    left: 13%; /* Di chuyển 15% từ cạnh trái */
+.circle-service {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  top: -5%; /* Di chuyển 10% từ cạnh trên */
+  left: 13%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.purple-circle-service{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    top: 5%; /* Di chuyển 10% từ cạnh trên */
-    right: 10%; /* Di chuyển 15% từ cạnh trái */
+.purple-circle-service {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  top: 5%; /* Di chuyển 10% từ cạnh trên */
+  right: 10%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.service-box-group{
-    display: flex; /* Hiển thị theo chiều ngang */
-    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
-    gap: 1.5vw; /* Khoảng cách giữa các phần tử */
-    padding: 5vh 10vw; /* Padding: trên, phải, dưới, trái */
+.service-box-group {
+  display: flex; /* Hiển thị theo chiều ngang */
+  justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+  gap: 1.5vw; /* Khoảng cách giữa các phần tử */
+  padding: 5vh 10vw; /* Padding: trên, phải, dưới, trái */
 }
 
 .box {
-    padding: 2vh 3vw; /* Khoảng cách bên trong */
-    border-radius: 10px; /* Bo tròn */
-    font-weight: 600; /* Trọng số font */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi */
-    display: flex; /* Hiển thị theo chiều dọc */
-    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
-    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+  padding: 2vh 3vw; /* Khoảng cách bên trong */
+  border-radius: 10px; /* Bo tròn */
+  font-weight: 600; /* Trọng số font */
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi */
+  display: flex; /* Hiển thị theo chiều dọc */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  align-items: center; /* Căn giữa các phần tử theo chiều ngang */
 }
 
 /* Hiệu ứng khi rê chuột vào */
 .box:hover {
-    transform: scale(1.03); /* Tăng kích thước lên 5% */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng khi hover */
+  transform: scale(1.03); /* Tăng kích thước lên 5% */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng khi hover */
 }
 
 .box-2:hover {
-    box-shadow: 0 4px 40px rgba(63, 63, 228, 0.5); /* Shadow màu tím khi hover */
-    transform: scale(1.05); /* Tăng kích thước khi hover */
+  box-shadow: 0 4px 40px rgba(63, 63, 228, 0.5); /* Shadow màu tím khi hover */
+  transform: scale(1.05); /* Tăng kích thước khi hover */
 }
 
-.box-1{
-    background-color: #F8F8F8; /* Màu nền */
-    padding: 4vh 0; /* Khoảng cách bên trong */
-    border-radius: 2vh; /* Bo tròn */
-    width: 25%; /* Chiều rộng */
-    font-weight: 600; /* Trọng số font */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
+.box-1 {
+  background-color: #f8f8f8; /* Màu nền */
+  padding: 4vh 0; /* Khoảng cách bên trong */
+  border-radius: 2vh; /* Bo tròn */
+  width: 25%; /* Chiều rộng */
+  font-weight: 600; /* Trọng số font */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
 }
 
-.box-2{
-    background-color: #5D5CDC; /* Màu nền */
-    color: white; /* Màu chữ */
-    padding: 4vh 0; /* Khoảng cách bên trong */
-    border-radius: 2vh; /* Bo tròn */
-    width: 25%; /* Chiều rộng */
-    font-weight: 600; /* Trọng số font */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
+.box-2 {
+  background-color: #5d5cdc; /* Màu nền */
+  color: white; /* Màu chữ */
+  padding: 4vh 0; /* Khoảng cách bên trong */
+  border-radius: 2vh; /* Bo tròn */
+  width: 25%; /* Chiều rộng */
+  font-weight: 600; /* Trọng số font */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
 }
 
-.box-3{
-    background-color: #F8F8F8; /* Màu nền */
-    padding: 4vh 0; /* Khoảng cách bên trong */
-    border-radius: 2vh; /* Bo tròn */
-    width: 25%; /* Chiều rộng */
-    font-weight: 600; /* Trọng số font */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
+.box-3 {
+  background-color: #f8f8f8; /* Màu nền */
+  padding: 4vh 0; /* Khoảng cách bên trong */
+  border-radius: 2vh; /* Bo tròn */
+  width: 25%; /* Chiều rộng */
+  font-weight: 600; /* Trọng số font */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
 }
 
 .box img {
-    width: auto; /* Đặt chiều rộng của hình ảnh bằng 100% chiều rộng của hộp */
-    height: auto; /* Để chiều cao tự động, giữ tỷ lệ khung hình */
-    object-fit: contain; /* Giữ nguyên tỷ lệ hình ảnh mà không bị méo */
-    transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi cho hình ảnh */
-    margin-bottom: 3vh; /* Khoảng cách dưới hình ảnh */
-    align-items: center; /* Căn giữa theo chiều ngang */
-
+  width: auto; /* Đặt chiều rộng của hình ảnh bằng 100% chiều rộng của hộp */
+  height: auto; /* Để chiều cao tự động, giữ tỷ lệ khung hình */
+  object-fit: contain; /* Giữ nguyên tỷ lệ hình ảnh mà không bị méo */
+  transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi cho hình ảnh */
+  margin-bottom: 3vh; /* Khoảng cách dưới hình ảnh */
+  align-items: center; /* Căn giữa theo chiều ngang */
 }
 
 /* Khi hover, phóng to hình ảnh */
 .box:hover img {
-    transform: scale(1.08); /* Tăng kích thước hình ảnh lên 10% */
+  transform: scale(1.08); /* Tăng kích thước hình ảnh lên 10% */
 }
 
-.box-title{
-    color: #000; /* Màu chữ */
-    font-size: 1.5vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.5; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: bold; /* Trọng số font */
-    margin-bottom: 1vh;
+.box-title {
+  color: #000; /* Màu chữ */
+  font-size: 1.5vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
+  margin-bottom: 1vh;
 }
 
-.box-content{
-    color: #464545; /* Màu chữ */
-    font-size: 0.9vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.4; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: 400; /* Trọng số font */
-    text-align: center; /* Căn giữa văn bản */
-    width: 76%; /* Chiều rộng tối đa của văn bản */
-    align-self: center; /* Căn giữa theo chiều ngang */
+.box-content {
+  color: #464545; /* Màu chữ */
+  font-size: 0.9vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: 400; /* Trọng số font */
+  text-align: center; /* Căn giữa văn bản */
+  width: 76%; /* Chiều rộng tối đa của văn bản */
+  align-self: center; /* Căn giữa theo chiều ngang */
 }
 
-.box-title-2{
-    font-size: 1.5vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.5; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: bold; /* Trọng số font */
-    margin-bottom: 2vh;
+.box-title-2 {
+  font-size: 1.5vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
+  margin-bottom: 2vh;
 }
 
-.box-content-2{
-    font-size: 0.9vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.4; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: 400; /* Trọng số font */
-    text-align: center; /* Căn giữa văn bản */
-    width: 76%; /* Chiều rộng tối đa của văn bản */
-    align-self: center; /* Căn giữa theo chiều ngang */
+.box-content-2 {
+  font-size: 0.9vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: 400; /* Trọng số font */
+  text-align: center; /* Căn giữa văn bản */
+  width: 76%; /* Chiều rộng tối đa của văn bản */
+  align-self: center; /* Căn giữa theo chiều ngang */
 }
 
-.star{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    bottom: -15%; /* Di chuyển 10% từ cạnh trên */
-    left: 35%; /* Di chuyển 15% từ cạnh trái */
+.star {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  bottom: -15%; /* Di chuyển 10% từ cạnh trên */
+  left: 35%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.about-me-block{
-    margin-top: 20vh; /* Khoảng cách trên */
-    position: relative; /* Tạo vị trí tương đối */
-    display: flex; /* Hiển thị theo chiều ngang */
-    flex-direction: row; /* Đặt chiều dọc cho phần tử con */
-    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
-    background-image: url('../assets/images/about-me-background.svg');
-    background-size: contain; /* Sử dụng cover để ảnh bao phủ toàn bộ khối */
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: auto; /* Đặt chiều cao khối là toàn màn hình */
-    width: auto; /* Xóa padding để loại bỏ khoảng cách thừa */
-    padding: 10vh 0; /* Padding: trên, phải, dưới, trái */
-    gap: 40vw; /* Khoảng cách giữa các phần tử */
+.about-me-block {
+  margin-top: 20vh; /* Khoảng cách trên */
+  position: relative; /* Tạo vị trí tương đối */
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: row; /* Đặt chiều dọc cho phần tử con */
+  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+  background-image: url("../assets/images/about-me-background.svg");
+  background-size: contain; /* Sử dụng cover để ảnh bao phủ toàn bộ khối */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: auto; /* Đặt chiều cao khối là toàn màn hình */
+  width: auto; /* Xóa padding để loại bỏ khoảng cách thừa */
+  padding: 10vh 0; /* Padding: trên, phải, dưới, trái */
+  gap: 40vw; /* Khoảng cách giữa các phần tử */
 }
 
-.left-block{
-    position: relative; /* Tạo vị trí tương đối */
-    margin-left: 8vw; /* Khoảng cách trái */
-    width: 100%; /* Đặt kích thước phù hợp */
-    height: 100%; /* Đặt kích thước phù hợp */
+.left-block {
+  position: relative; /* Tạo vị trí tương đối */
+  margin-left: 8vw; /* Khoảng cách trái */
+  width: 100%; /* Đặt kích thước phù hợp */
+  height: 100%; /* Đặt kích thước phù hợp */
 }
 
-.right-block{
-    display: flex; /* Hiển thị theo chiều ngang */
-    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
-    align-items: flex-start; /* Căn giữa theo chiều ngang */
-    justify-content: flex-start; /* Căn giữa các phần tử theo chiều dọc */
-    text-align: left; /* Căn trái nội dung */
-    margin-right: 8vw; /* Khoảng cách phải */
+.right-block {
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  align-items: flex-start; /* Căn giữa theo chiều ngang */
+  justify-content: flex-start; /* Căn giữa các phần tử theo chiều dọc */
+  text-align: left; /* Căn trái nội dung */
+  margin-right: 8vw; /* Khoảng cách phải */
 }
 
-.black-sign{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    top: -7%; /* Di chuyển 10% từ cạnh trên */
-    right: 8%; /* Di chuyển 15% từ cạnh trái */
+.black-sign {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  top: -7%; /* Di chuyển 10% từ cạnh trên */
+  right: 8%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.about-me-title{
-    color: #6E6CE5; /* Màu chữ */
-    font-size: 1.1vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.4; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: bold; /* Trọng số font */
-    margin-bottom: 2vh;
-    width: 50%; /* Chiều rộng */
+.about-me-title {
+  color: #6e6ce5; /* Màu chữ */
+  font-size: 1.1vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
+  margin-bottom: 2vh;
+  width: 50%; /* Chiều rộng */
 }
 
-.about-me-subtitle{
-    color: #323843; /* Màu chữ */
-    font-size: 2.5vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.5; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: bold; /* Trọng số font */
-    margin-bottom: 2vh;
-    width: 30vw; /* Chiều rộng */
+.about-me-subtitle {
+  color: #323843; /* Màu chữ */
+  font-size: 2.5vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
+  margin-bottom: 2vh;
+  width: 30vw; /* Chiều rộng */
 }
 
-.about-me-content{
-    color: #464545; /* Màu chữ */
-    font-size: 1.2vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.4; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: 400; /* Trọng số font */
-    text-align: left; /* Căn trái nội dung */
-    width: 32vw; /* Chiều rộng */
+.about-me-content {
+  color: #464545; /* Màu chữ */
+  font-size: 1.2vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: 400; /* Trọng số font */
+  text-align: left; /* Căn trái nội dung */
+  width: 32vw; /* Chiều rộng */
 }
 
-.about-box-yellow{
-    display: flex; /* Hiển thị theo chiều ngang */
-    flex-direction: row; /* Đặt chiều dọc cho phần tử con */
-    gap: 2vw; /* Khoảng cách giữa các phần tử */
-    padding: 2vh 2vw; /* Padding: trên, phải, dưới, trái */
-    width: 30vw;/* Căn giữa các phần tử theo chiều ngang */
-    align-items: flex-start; /* Căn trái các phần tử bên trong */
-    background-color: #FDEDDD;
-    margin-top: 3vh; /* Khoảng cách trên */
-    border-radius: 1vh; /* Bo tròn */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.about-box-yellow {
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: row; /* Đặt chiều dọc cho phần tử con */
+  gap: 2vw; /* Khoảng cách giữa các phần tử */
+  padding: 2vh 2vw; /* Padding: trên, phải, dưới, trái */
+  width: 30vw; /* Căn giữa các phần tử theo chiều ngang */
+  align-items: flex-start; /* Căn trái các phần tử bên trong */
+  background-color: #fdeddd;
+  margin-top: 3vh; /* Khoảng cách trên */
+  border-radius: 1vh; /* Bo tròn */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-box-yellow:hover {
-    transform: scale(1.05); /* Phóng to box khi hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Đổ bóng đậm hơn */
+  transform: scale(1.05); /* Phóng to box khi hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Đổ bóng đậm hơn */
 }
 
-.about-box-purple{
-    display: flex; /* Hiển thị theo chiều ngang */
-    flex-direction: row; /* Đặt chiều dọc cho phần tử con */
-    gap: 2vw; /* Khoảng cách giữa các phần tử */
-    padding: 2vh 2vw; /* Padding: trên, phải, dưới, trái */
-    width: 30vw;/* Căn giữa các phần tử theo chiều ngang */
-    align-items: flex-start; /* Căn trái các phần tử bên trong */
-    background-color: #EFE9F7;
-    margin-top: 3vh; /* Khoảng cách trên */
-    border-radius: 1vh; /* Bo tròn */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.about-box-purple {
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: row; /* Đặt chiều dọc cho phần tử con */
+  gap: 2vw; /* Khoảng cách giữa các phần tử */
+  padding: 2vh 2vw; /* Padding: trên, phải, dưới, trái */
+  width: 30vw; /* Căn giữa các phần tử theo chiều ngang */
+  align-items: flex-start; /* Căn trái các phần tử bên trong */
+  background-color: #efe9f7;
+  margin-top: 3vh; /* Khoảng cách trên */
+  border-radius: 1vh; /* Bo tròn */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-box-purple:hover {
-    transform: scale(1.05); /* Phóng to box khi hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Đổ bóng đậm hơn */
+  transform: scale(1.05); /* Phóng to box khi hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Đổ bóng đậm hơn */
 }
 
 .text-block {
-    display: flex; /* Hiển thị theo chiều ngang */
-    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
-    align-items: flex-start; /* Căn trái cho các phần tử con */
-    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
-    width: 32vw; /* Chiều rộng */
-    text-align: left; /* Căn trái nội dung */
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  align-items: flex-start; /* Căn trái cho các phần tử con */
+  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+  width: 32vw; /* Chiều rộng */
+  text-align: left; /* Căn trái nội dung */
 }
 
-.box-title{
-    color: #323843; /* Màu chữ */
-    font-size: 1.5vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.5; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: 500; /* Trọng số font */
-    text-align: left; /* Căn trái nội dung */ 
+.box-title {
+  color: #323843; /* Màu chữ */
+  font-size: 1.5vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: 500; /* Trọng số font */
+  text-align: left; /* Căn trái nội dung */
 }
 
-.box-content-yellow{
-    color: #464545; /* Màu chữ */
-    font-size: 0.9vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.4; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: 400; /* Trọng số font */
-    text-align: left; /* Căn trái nội dung */
-    width: 80%; /* Chiều rộng tối đa của văn bản */
+.box-content-yellow {
+  color: #464545; /* Màu chữ */
+  font-size: 0.9vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: 400; /* Trọng số font */
+  text-align: left; /* Căn trái nội dung */
+  width: 80%; /* Chiều rộng tối đa của văn bản */
 }
 
-.box-content-purple{
-    color: #464545; /* Màu chữ */
-    font-size: 0.9vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.4; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: 400; /* Trọng số font */
-    text-align: left; /* Căn trái nội dung */
-    width: 87%; /* Chiều rộng tối đa của văn bản */
+.box-content-purple {
+  color: #464545; /* Màu chữ */
+  font-size: 0.9vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: 400; /* Trọng số font */
+  text-align: left; /* Căn trái nội dung */
+  width: 87%; /* Chiều rộng tối đa của văn bản */
 }
 
-.about-me-left{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    top: 13vh; /* Điều chỉnh khoảng cách từ trên xuống */
-    left: 1vw; /* Điều chỉnh khoảng cách từ trái sang */
+.about-me-left {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  top: 13vh; /* Điều chỉnh khoảng cách từ trên xuống */
+  left: 1vw; /* Điều chỉnh khoảng cách từ trái sang */
 }
 
 .downloadCVArrow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5vh 1.5vw;
-    background-color: #FEB12F;
-    color: #FFF8F2;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 2vh;
-    font-weight: 600;
-    border-radius: 3vh;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    margin-top: 5vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5vh 1.5vw;
+  background-color: #feb12f;
+  color: #fff8f2;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 2vh;
+  font-weight: 600;
+  border-radius: 3vh;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 5vh;
 }
 
 .downloadCVArrow:hover {
-    background-color: #FFF8F2;
-    color: #FEB12F;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #fff8f2;
+  color: #feb12f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .downloadCVArrow .arrow-icon {
-    margin-left: 0.5vw;
-    font-size: 3vh; /* Icon lớn hơn chữ */
-    display: flex;
-    align-items: center;
-    transform: translateY(-0.2vh); /* Điều chỉnh vị trí icon lên chút */
+  margin-left: 0.5vw;
+  font-size: 3vh; /* Icon lớn hơn chữ */
+  display: flex;
+  align-items: center;
+  transform: translateY(-0.2vh); /* Điều chỉnh vị trí icon lên chút */
 }
 
-
-.project-block{
-    position: relative; /* Tạo vị trí tương đối */
-    display: flex; /* Hiển thị theo chiều ngang */
-    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
-    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
-    text-align: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
-    height: auto; /* Đặt chiều cao khối là to */
-    margin-top: 7vh; /* Khoảng cách trên */
-    gap: 2vh; /* Khoảng cách giữa các phần tử */
+.project-block {
+  position: relative; /* Tạo vị trí tương đối */
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+  text-align: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+  height: auto; /* Đặt chiều cao khối là to */
+  margin-top: 7vh; /* Khoảng cách trên */
+  gap: 2vh; /* Khoảng cách giữa các phần tử */
 }
 
-.project-title{
-    color: #6E6CE5; /* Màu chữ */
-    font-size: 1.2vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.4; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: bold; /* Trọng số font */
+.project-title {
+  color: #6e6ce5; /* Màu chữ */
+  font-size: 1.2vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
 }
 
-.project-subtitle{
-    color: #323843; /* Màu chữ */
-    font-size: 2.5vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.5; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: bold; /* Trọng số font */
-    margin-bottom: 2vh;
+.project-subtitle {
+  color: #323843; /* Màu chữ */
+  font-size: 2.5vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
+  margin-bottom: 2vh;
 }
 
-.blue-plant{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: 5vw; /* Chiều rộng */
-    height: 5vw; /* Chiều cao */
-    top: 5%; /* Di chuyển 10% từ cạnh trên */
-    left: 20%; /* Di chuyển 15% từ cạnh trái */
+.blue-plant {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: 5vw; /* Chiều rộng */
+  height: 5vw; /* Chiều cao */
+  top: 5%; /* Di chuyển 10% từ cạnh trên */
+  left: 20%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.project-star{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    top: 0; /* Di chuyển 10% từ cạnh trên */
-    right: 20%; /* Di chuyển 15% từ cạnh trái */
+.project-star {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  top: 0; /* Di chuyển 10% từ cạnh trên */
+  right: 20%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.menu-button{
-    margin-top: 1vw; /* Khoảng cách trên */
-    display: flex; /* Hiển thị theo chiều ngang */
-    justify-content: space-between; /* Căn giữa các phần tử theo chiều ngang */
-    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
-    gap: 1.1vw; /* Khoảng cách giữa các phần tử */
+.menu-button {
+  margin-top: 1vw; /* Khoảng cách trên */
+  display: flex; /* Hiển thị theo chiều ngang */
+  justify-content: space-between; /* Căn giữa các phần tử theo chiều ngang */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  gap: 1.1vw; /* Khoảng cách giữa các phần tử */
 }
 
-.button{
-    border: 2px solid #5D5CDC;
-    color: #3D3D40;
-    padding: 1.5vh 2vh; /* Khoảng cách bên trong */
-    border: 2px solid #5D5CDC;
-    border-radius: 1.5vh;
-    cursor: pointer; /* Con trỏ khi hover */
-    font-weight: 600; /* Trọng số font */
-    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+.button {
+  border: 2px solid #5d5cdc;
+  color: #3d3d40;
+  padding: 1.5vh 2vh; /* Khoảng cách bên trong */
+  border: 2px solid #5d5cdc;
+  border-radius: 1.5vh;
+  cursor: pointer; /* Con trỏ khi hover */
+  font-weight: 600; /* Trọng số font */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
 }
-  
+
 .button.selected {
-    background-color: #5D5CDC;
-    color: #fff;
-    border-color: #5D5CDC;
+  background-color: #5d5cdc;
+  color: #fff;
+  border-color: #5d5cdc;
 }
 
 /* CSS cho nút khi hover */
 .button:hover {
-    background-color: #ececff;
-    color: #5D5CDC;
-    transform: scale(1.05); /* Tăng nhẹ kích thước khi hover */
-  }
-  
+  background-color: #ececff;
+  color: #5d5cdc;
+  transform: scale(1.05); /* Tăng nhẹ kích thước khi hover */
+}
+
 /* CSS cho nút được chọn */
 .button.selected {
-background-color: #5D5CDC;
-color: #fff;
-border-color: #5D5CDC;
+  background-color: #5d5cdc;
+  color: #fff;
+  border-color: #5d5cdc;
 }
 
 /* CSS khi hover vào nút đang được chọn */
 .button.selected:hover {
-background-color: #4c4bbc;
-color: #fff;
-transform: scale(1.05); /* Tăng nhẹ kích thước khi hover */
+  background-color: #4c4bbc;
+  color: #fff;
+  transform: scale(1.05); /* Tăng nhẹ kích thước khi hover */
 }
 
 .project-container {
-    display: flex;
-    flex-wrap: wrap; /* Cho phép các khối xuống dòng */
-    justify-content: space-between; /* Căn giữa các khối */
-    padding: 0 15vw 5vw 15vw;/* Padding: trên, phải, dưới, trái */
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các khối xuống dòng */
+  justify-content: space-between; /* Căn giữa các khối */
+  padding: 0 15vw 5vw 15vw; /* Padding: trên, phải, dưới, trái */
 }
 
 .project-block {
-    flex: 1 1 calc(30% - 0.5vw); /* Chiều rộng 1/3 của container, trừ khoảng cách */
-    display: flex;
-    flex-direction: column;
-    padding: 1vh; /* Padding sử dụng vh để đảm bảo độ cao */
-    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến chiều rộng */
+  flex: 1 1 calc(30% - 0.5vw); /* Chiều rộng 1/3 của container, trừ khoảng cách */
+  display: flex;
+  flex-direction: column;
+  padding: 1vh; /* Padding sử dụng vh để đảm bảo độ cao */
+  box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến chiều rộng */
 }
 
 .project-image {
-    width: 100%; /* Chiều rộng 100% để bao phủ hết không gian của khối */
-    height: 16vw; /* Chiều cao */
-    border-radius: 1.5vh; /* Bo tròn */
-    background-color: #e0e0e0;
+  width: 100%; /* Chiều rộng 100% để bao phủ hết không gian của khối */
+  height: 16vw; /* Chiều cao */
+  border-radius: 1.5vh; /* Bo tròn */
+  background-color: #e0e0e0;
 }
 
 .project-bottom-block {
-    display: flex; /* Hiển thị theo chiều ngang */
-    justify-content: space-between; /* Căn giữa các phần tử theo chiều ngang */
-    align-items: center; /* Căn giữa dọc */
-    width: 100%; /* Chiều rộng 100% */
-    margin-top: 1vh; /* Thêm khoảng cách giữa hình ảnh và phần chữ */
+  display: flex; /* Hiển thị theo chiều ngang */
+  justify-content: space-between; /* Căn giữa các phần tử theo chiều ngang */
+  align-items: center; /* Căn giữa dọc */
+  width: 100%; /* Chiều rộng 100% */
+  margin-top: 1vh; /* Thêm khoảng cách giữa hình ảnh và phần chữ */
 }
 
-.project-title-block{
-    display: flex; /* Hiển thị theo chiều ngang */
-    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
-    align-items: flex-start; /* Căn giữa theo chiều ngang */
-    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
-    text-align: left; /* Căn trái nội dung */
-    color: #000;
-    font-weight: bold; /* Trọng số font */
-    font-size: 1.5vw; /* Kích thước chữ */
+.project-title-block {
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  align-items: flex-start; /* Căn giữa theo chiều ngang */
+  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+  text-align: left; /* Căn trái nội dung */
+  color: #000;
+  font-weight: bold; /* Trọng số font */
+  font-size: 1.5vw; /* Kích thước chữ */
 }
 
-.project-subtitle-block{
-    display: flex; /* Hiển thị theo chiều ngang */
-    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
-    align-items: flex-start; /* Căn giữa theo chiều ngang */
-    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
-    text-align: left; /* Căn trái nội dung */
-    color: #464545;
-    font-size: 1vw; /* Kích thước chữ */
-    font-weight: 400;
+.project-subtitle-block {
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  align-items: flex-start; /* Căn giữa theo chiều ngang */
+  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+  text-align: left; /* Căn trái nội dung */
+  color: #464545;
+  font-size: 1vw; /* Kích thước chữ */
+  font-weight: 400;
 }
 
 .project-button {
-    background-color: #5D5CDC; /* Màu nền */
-    color: #FFF8F2; /* Màu mũi tên */
-    width: 3vw; /* Chiều rộng của nút */
-    height: 3vw; /* Chiều cao của nút */
-    border: none; /* Không có viền */
-    border-radius: 50%; /* Bo tròn */
-    cursor: pointer; /* Con trỏ khi hover */
-    display: flex; /* Hiển thị flex */
-    align-items: center; /* Căn giữa dọc */
-    justify-content: center; /* Căn giữa ngang */
-    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng */
+  background-color: #5d5cdc; /* Màu nền */
+  color: #fff8f2; /* Màu mũi tên */
+  width: 3vw; /* Chiều rộng của nút */
+  height: 3vw; /* Chiều cao của nút */
+  border: none; /* Không có viền */
+  border-radius: 50%; /* Bo tròn */
+  cursor: pointer; /* Con trỏ khi hover */
+  display: flex; /* Hiển thị flex */
+  align-items: center; /* Căn giữa dọc */
+  justify-content: center; /* Căn giữa ngang */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng */
 }
 
 .project-button:hover {
-    background-color: #fcba49; /* Màu nền khi hover */
-    color: #5D5CDC; /* Màu mũi tên khi hover */
+  background-color: #fcba49; /* Màu nền khi hover */
+  color: #5d5cdc; /* Màu mũi tên khi hover */
 }
 
 .arrow-icon {
-    width: 20px; /* Kích thước mũi tên */
-    height: 20px;
-    stroke: currentColor; /* Màu mũi tên */
-    transition: transform 0.3s ease; /* Hiệu ứng xoay mũi tên */
+  width: 20px; /* Kích thước mũi tên */
+  height: 20px;
+  stroke: currentColor; /* Màu mũi tên */
+  transition: transform 0.3s ease; /* Hiệu ứng xoay mũi tên */
 }
 
 .project-button:hover .arrow-icon {
-    transform: rotate(45deg); /* Xoay 45 độ khi hover */
+  transform: rotate(45deg); /* Xoay 45 độ khi hover */
 }
 
-.circle-purple-project{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: 1vw; /* Chiều rộng */
-    height: 1vw; /* Chiều cao */
-    bottom: 1%; /* Di chuyển 10% từ cạnh trên */
-    left: 32%; /* Di chuyển 15% từ cạnh trái */
-    background-color: #5D5CDC; /* Màu nền */
-    border-radius: 2vw; /* Bo tròn */
-}
-
-.contact-block{
-    margin-top: 10vh; /* Khoảng cách trên */
-    position: relative; /* Tạo vị trí tương đối */
-    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
-    background-image: url('../assets/images/bottom-background.svg');
-    background-size: contain;/* Sử dụng cover để ảnh bao phủ toàn bộ khối */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 40vh; /* Đặt chiều cao khối là toàn màn hình */
-    width: 100%; /* Xóa padding để loại bỏ khoảng cách thừa */
-    padding: 10vh 0; /* Padding: trên, phải, dưới, trái */
+.circle-purple-project {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: 1vw; /* Chiều rộng */
+  height: 1vw; /* Chiều cao */
+  bottom: 1%; /* Di chuyển 10% từ cạnh trên */
+  left: 32%; /* Di chuyển 15% từ cạnh trái */
+  background-color: #5d5cdc; /* Màu nền */
+  border-radius: 2vw; /* Bo tròn */
 }
 
 .contact-block {
-    margin-top: 10vh; /* Khoảng cách trên */
-    position: relative;
-    display: flex; /* Thiết lập chế độ hiển thị flex */
-    flex-direction: row; /* Đặt chiều dọc cho phần tử con */
-    justify-content: flex-start; /* Căn trái các phần tử */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    background-image: url('../assets/images/bottom-background.svg');
-    background-size: cover; /* Sử dụng cover để ảnh bao phủ toàn bộ khối */
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 40vh; /* Đặt chiều cao khối cụ thể */
-    width: 100%; /* Đặt chiều rộng khối là 100% */
-    padding: 0; /* Xóa padding để loại bỏ khoảng cách thừa */
-    gap: 40vw; /* Khoảng cách giữa các phần tử, nếu cần */
+  margin-top: 10vh; /* Khoảng cách trên */
+  position: relative; /* Tạo vị trí tương đối */
+  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+  background-image: url("../assets/images/bottom-background.svg");
+  background-size: contain; /* Sử dụng cover để ảnh bao phủ toàn bộ khối */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 40vh; /* Đặt chiều cao khối là toàn màn hình */
+  width: 100%; /* Xóa padding để loại bỏ khoảng cách thừa */
+  padding: 10vh 0; /* Padding: trên, phải, dưới, trái */
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+.contact-block {
+  margin-top: 10vh; /* Khoảng cách trên */
+  position: relative;
+  display: flex; /* Thiết lập chế độ hiển thị flex */
+  flex-direction: row; /* Đặt chiều dọc cho phần tử con */
+  justify-content: flex-start; /* Căn trái các phần tử */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  background-image: url("../assets/images/bottom-background.svg");
+  background-size: cover; /* Sử dụng cover để ảnh bao phủ toàn bộ khối */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 40vh; /* Đặt chiều cao khối cụ thể */
+  width: 100%; /* Đặt chiều rộng khối là 100% */
+  padding: 0; /* Xóa padding để loại bỏ khoảng cách thừa */
+  gap: 40vw; /* Khoảng cách giữa các phần tử, nếu cần */
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .circle-yellow-contact-1 {
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: 1.5vw; /* Chiều rộng */
-    height: 1.5vw; /* Chiều cao */
-    top: 10%; /* Di chuyển 10% từ cạnh trên */
-    left: 5%; /* Di chuyển 15% từ cạnh trái */
-    background-color: #FEB12F; /* Màu nền */
-    border-radius: 3vw; /* Bo tròn */
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: 1.5vw; /* Chiều rộng */
+  height: 1.5vw; /* Chiều cao */
+  top: 10%; /* Di chuyển 10% từ cạnh trên */
+  left: 5%; /* Di chuyển 15% từ cạnh trái */
+  background-color: #feb12f; /* Màu nền */
+  border-radius: 3vw; /* Bo tròn */
 }
 
 .contact-text-block {
-    display: flex; /* Hiển thị theo chiều ngang */
-    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
-    justify-content: center; /* Căn giữa theo chiều dọc */
-    text-align: left; /* Căn trái văn bản */
-    margin-left: 20px; /* Khoảng cách giữa chữ và cạnh trái, có thể điều chỉnh */
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  text-align: left; /* Căn trái văn bản */
+  margin-left: 20px; /* Khoảng cách giữa chữ và cạnh trái, có thể điều chỉnh */
 }
 
 .contact-title {
-    color: #FFFFFF; /* Màu chữ */
-    font-size: 2.5vw; /* Kích thước chữ */
-    font-weight: 600; /* Trọng số chữ */
-    line-height: 1.4; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    font-weight: bold; /* Trọng số font */
-    margin-bottom: 2vh; /* Khoảng cách dưới */
+  color: #ffffff; /* Màu chữ */
+  font-size: 2.5vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
+  margin-bottom: 2vh; /* Khoảng cách dưới */
 }
 
 .contact-content {
-    color: #FFFFFF; /* Màu chữ */
-    font-size: 1.2vw; /* Kích thước chữ */
-    font-weight: 400; /* Trọng số chữ */
-    line-height: 1.4; /* Chiều cao dòng */
-    font-family: 'Segoe UI', sans-serif; /* Font chữ */
-    text-align: left; /* Căn trái văn bản */
-    width: 32vw; /* Chiều rộng */
+  color: #ffffff; /* Màu chữ */
+  font-size: 1.2vw; /* Kích thước chữ */
+  font-weight: 400; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  text-align: left; /* Căn trái văn bản */
+  width: 32vw; /* Chiều rộng */
 }
 
-.contact-button{
-    font-size: 1.2vw;
-    margin-left: 2vh;
-    margin-top: 2vh;
-    background-color: #FEB12F; /* Màu nền */
-    color: #FFF8F2; /* Màu chữ */
-    padding: 1.5vh 4vh; /* Khoảng cách bên trong */
-    border: 2px solid #FEB12F; /* Viền */
-    border-radius: 1vh; /* Bo tròn */
-    cursor: pointer; /* Con trỏ khi hover */
-    font-weight: 600; /* Trọng số font */
-    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+.contact-button {
+  font-size: 1.2vw;
+  margin-left: 2vh;
+  margin-top: 2vh;
+  background-color: #feb12f; /* Màu nền */
+  color: #fff8f2; /* Màu chữ */
+  padding: 1.5vh 4vh; /* Khoảng cách bên trong */
+  border: 2px solid #feb12f; /* Viền */
+  border-radius: 1vh; /* Bo tròn */
+  cursor: pointer; /* Con trỏ khi hover */
+  font-weight: 600; /* Trọng số font */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
 }
 
 .contact-button:hover {
-    background-color: #FFF8F2; /* Màu nền khi hover */
-    color: #FEB12F; /* Màu chữ khi hover */
+  background-color: #fff8f2; /* Màu nền khi hover */
+  color: #feb12f; /* Màu chữ khi hover */
 }
 
-.contact-container{
-    display: flex; /* Hiển thị theo chiều ngang */
-    flex-direction: column; /* Đặt chiều dọc cho phần tử con */
-    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
-    align-items: flex-start; /* Căn giữa các phần tử theo chiều ngang */
-    gap: 2vh; /* Khoảng cách giữa các phần tử */
-    padding: 5vh 10vw; /* Padding: trên, phải, dưới, trái */
+.contact-container {
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+  align-items: flex-start; /* Căn giữa các phần tử theo chiều ngang */
+  gap: 2vh; /* Khoảng cách giữa các phần tử */
+  padding: 5vh 10vw; /* Padding: trên, phải, dưới, trái */
 }
 
-.white-sign-contact{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    bottom: 35%; /* Di chuyển 10% từ cạnh trên */
-    right: 35%; /* Di chuyển 15% từ cạnh trái */
+.white-sign-contact {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  bottom: 35%; /* Di chuyển 10% từ cạnh trên */
+  right: 35%; /* Di chuyển 15% từ cạnh trái */
 }
 
 .circle-yellow-contact-2 {
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: 0.75vw; /* Chiều rộng */
-    height: 0.75vw; /* Chiều cao */
-    bottom: 20%; /* Di chuyển 10% từ cạnh trên */
-    right: 5%; /* Di chuyển 15% từ cạnh trái */
-    background-color: #FEB12F; /* Màu nền */
-    border-radius: 1vw; /* Bo tròn */
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: 0.75vw; /* Chiều rộng */
+  height: 0.75vw; /* Chiều cao */
+  bottom: 20%; /* Di chuyển 10% từ cạnh trên */
+  right: 5%; /* Di chuyển 15% từ cạnh trái */
+  background-color: #feb12f; /* Màu nền */
+  border-radius: 1vw; /* Bo tròn */
 }
 
 .subscribe-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2vw;
-    position: relative;
-    overflow: hidden;
-    margin-top: 2vw;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  position: relative;
+  overflow: hidden;
+  margin-top: 2vw;
+}
 
 .subscribe-content-wrapper {
-    display: flex;
-    justify-content: space-between; /* Căn cách các phần tử sang hai bên */
-    align-items: center;
-    width: 90%;
-    padding: 5vw 0;
-    gap: 15vw; /* Khoảng cách giữa các phần tử */
+  display: flex;
+  justify-content: space-between; /* Căn cách các phần tử sang hai bên */
+  align-items: center;
+  width: 90%;
+  padding: 5vw 0;
+  gap: 15vw; /* Khoảng cách giữa các phần tử */
 }
 
 .subscribe-text-container {
-    flex: 1; /* Phần chữ bên trái */
-    text-align: left;
+  flex: 1; /* Phần chữ bên trái */
+  text-align: left;
 }
 
 .subscribe-title {
-    font-size: 1.2vw;
-    font-weight: bold;
-    color: #6E6CE5;
-    margin-bottom: 1vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: #6e6ce5;
+  margin-bottom: 1vw;
 }
 
 .subscribe-content {
-    font-size: 2.5vw;
-    color: #323843;
-    font-weight: bold;
-
+  font-size: 2.5vw;
+  color: #323843;
+  font-weight: bold;
 }
 
 .enter-email-container {
-    flex: 1; /* Phần bên phải */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
+  flex: 1; /* Phần bên phải */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
 }
-  
+
 .email-subtext {
-    font-size: 1em;
-    color: #828282;
-    margin-top: 10px;
-    width: 56%;
-    align-self: flex-start;
+  font-size: 1em;
+  color: #828282;
+  margin-top: 10px;
+  width: 56%;
+  align-self: flex-start;
 }
 
 .email-input-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 60vw;
-    margin-top: 1vw;
-    border-radius: 10px 0 10px 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    position: relative; /* Đặt vị trí tương đối */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 60vw;
+  margin-top: 1vw;
+  border-radius: 10px 0 10px 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative; /* Đặt vị trí tương đối */
 }
 
 .email-input {
-    padding: 1vw;
-    font-size: 1vw;
-    flex: 1;
-    border: none;
-    outline: none;
+  padding: 1vw;
+  font-size: 1vw;
+  flex: 1;
+  border: none;
+  outline: none;
 }
 
 .subscribe-button {
-    padding: 1vw 2vw;
-    font-size: 1vw;
-    color: white;
-    background-color: #5D5CDC;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 0px 0 10px 0px;
-    z-index: 1; /* Đặt chỉ số z-index cao hơn */
+  padding: 1vw 2vw;
+  font-size: 1vw;
+  color: white;
+  background-color: #5d5cdc;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 0px 0 10px 0px;
+  z-index: 1; /* Đặt chỉ số z-index cao hơn */
 }
 
 .subscribe-button:hover {
-    background-color: #4b4aae;
+  background-color: #4b4aae;
 }
 
-.bg-subscribe{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: auto; /* Chiều rộng */
-    height: auto; /* Chiều cao */
-    top: 2vw; /* Di chuyển 10% từ cạnh trên */
-    right: 4vw; /* Di chuyển 15% từ cạnh trái */
-    z-index: 2; /* Đặt vị trí phía sau */
+.bg-subscribe {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  top: 2vw; /* Di chuyển 10% từ cạnh trên */
+  right: 4vw; /* Di chuyển 15% từ cạnh trái */
+  z-index: 2; /* Đặt vị trí phía sau */
 }
 
-.earth{
-    position: absolute; /* Tạo vị trí tuyệt đối */
-    width: 3vw; /* Chiều rộng */
-    height: 3vw; /* Chiều cao */
-    top: 20%; /* Di chuyển 10% từ cạnh trên */
-    left: 40%; /* Di chuyển 15% từ cạnh trái */
+.earth {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: 3vw; /* Chiều rộng */
+  height: 3vw; /* Chiều cao */
+  top: 20%; /* Di chuyển 10% từ cạnh trên */
+  left: 40%; /* Di chuyển 15% từ cạnh trái */
 }
 
 .subscribe-arrow {
-    position: absolute;
-    width: 13vw; /* Chiều rộng */
-    height: 13vw; /* Chiều cao */
-    top: 35%; /* Di chuyển 10% từ cạnh trên */
-    left: 38%; /* Di chuyển 15% từ cạnh trái */
+  position: absolute;
+  width: 13vw; /* Chiều rộng */
+  height: 13vw; /* Chiều cao */
+  top: 35%; /* Di chuyển 10% từ cạnh trên */
+  left: 38%; /* Di chuyển 15% từ cạnh trái */
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3vh 8vw;
-    font-size: 1vw;
-    text-align: center;
-    color: #616161;
-    margin-bottom: 5vw;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh 8vw;
+  font-size: 1vw;
+  text-align: center;
+  color: #616161;
+  margin-bottom: 5vw;
+  position: relative;
 }
 
 .nav-item-footer {
-    color: #616161; /* Màu chữ */
-    cursor: pointer; /* Hiển thị con trỏ khi hover */
-    font-family: 'SegoeUI', sans-serif; /* Font chữ */
-    font-size: 1vw; /* Kích thước font */
-    padding: 1vh 2vh; /* Khoảng cách bên trong */
-    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
-    line-height: 1; /* Chiều cao dòng */
-    font-weight: 600; /* Trọng số font */
+  color: #616161; /* Màu chữ */
+  cursor: pointer; /* Hiển thị con trỏ khi hover */
+  font-family: "SegoeUI", sans-serif; /* Font chữ */
+  font-size: 1vw; /* Kích thước font */
+  padding: 1vh 2vh; /* Khoảng cách bên trong */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+  line-height: 1; /* Chiều cao dòng */
+  font-weight: 600; /* Trọng số font */
 }
 
 .nav-item-footer:hover {
-    color: #FEB12F; /* Màu chữ khi hover */
+  color: #feb12f; /* Màu chữ khi hover */
 }
 
 .footer-line {
-    width: 85%; /* Độ dài của đường kẻ */
-    border-bottom: 1px solid #A8A6A6;
-    position: absolute;
-    bottom: 0; /* Đặt đường kẻ ở cạnh dưới của footer-container */
-    margin-top: 2vh; /* Điều chỉnh khoảng cách so với nội dung footer */
-    margin-bottom: -3vh;
+  width: 85%; /* Độ dài của đường kẻ */
+  border-bottom: 1px solid #a8a6a6;
+  position: absolute;
+  bottom: 0; /* Đặt đường kẻ ở cạnh dưới của footer-container */
+  margin-top: 2vh; /* Điều chỉnh khoảng cách so với nội dung footer */
+  margin-bottom: -3vh;
 }
 
 .email-footer {
-    position: absolute;
-    width: 18vw;
-    height: auto;
-    top: -15%;
-    right: 5%;
-    z-index: 1;
+  position: absolute;
+  width: 18vw;
+  height: auto;
+  top: -15%;
+  right: 5%;
+  z-index: 1;
 }
 
 .button-up {
-    width: 15vw; /* Chiều rộng */
-    height: 15vw; /* Chiều cao */
-    position: fixed; /* Để nút luôn ở vị trí cố định */
-    bottom: -90%; /* Bắt đầu ở dưới ngoài màn hình */
-    left: 50%; /* Căn giữa theo chiều ngang */
-    transform: translateX(-50%); /* Đẩy nút sang trái một nửa chiều rộng của nó để căn giữa */
-    padding: 1vh 2vh; /* Khoảng cách bên trong */
-    border: none; /* Không có viền */
-    border-radius: 1vh; /* Bo tròn */
-    cursor: pointer; /* Con trỏ khi hover */
-    transition: bottom 0.8s ease; /* Hiệu ứng chuyển đổi cho vị trí */
+  width: 15vw; /* Chiều rộng */
+  height: 15vw; /* Chiều cao */
+  position: fixed; /* Để nút luôn ở vị trí cố định */
+  bottom: -90%; /* Bắt đầu ở dưới ngoài màn hình */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translateX(
+    -50%
+  ); /* Đẩy nút sang trái một nửa chiều rộng của nó để căn giữa */
+  padding: 1vh 2vh; /* Khoảng cách bên trong */
+  border: none; /* Không có viền */
+  border-radius: 1vh; /* Bo tròn */
+  cursor: pointer; /* Con trỏ khi hover */
+  transition: bottom 0.8s ease; /* Hiệu ứng chuyển đổi cho vị trí */
 }
 
 body {
-    overflow: hidden; /* Ẩn thanh cuộn */
+  overflow: hidden; /* Ẩn thanh cuộn */
 }

@@ -120,8 +120,25 @@ const Home = () => {
         <div className="introText">{textContent.introText}</div>
         <div className="introSubText">{textContent.introSubText}</div>
         <div className="buttonGroupIntro">
-          <div className="myFigmaButton">{textContent.myFigma}</div>
-          <div className="watchDemoGroup">
+          <div
+            className="myFigmaButton"
+            onClick={() =>
+              window.open("https://www.figma.com/@zangah", "_blank")
+            }
+            style={{ cursor: "pointer" }}
+          >
+            {textContent.myFigma}
+          </div>
+          <div
+            className="watchDemoGroup"
+            onClick={() =>
+              window.open(
+                "https://www.youtube.com/playlist?list=PLvqkFY2s9yAlXKugsCGWyBD1jNJtgXTLf",
+                "_blank"
+              )
+            }
+            style={{ cursor: "pointer" }}
+          >
             <img
               src={images.circlePlay}
               alt="circlePlay"
@@ -135,9 +152,9 @@ const Home = () => {
       {/* Service Block */}
       <div className="service-block">
         <div className="service-text-block">
-          <div className="service-text">{textContent.servicesText}</div>
-          <div className="service-title">{textContent.servicesTitle}</div>
-          <div className="service-subtext">{textContent.servicesSubText}</div>
+          <div className="service-text">{textContent.journeyText}</div>
+          <div className="service-title">{textContent.journeyTitle}</div>
+          <div className="service-subtext">{textContent.journeySubText}</div>
           <img
             src={images.circleService}
             alt="circleService"

@@ -11,19 +11,19 @@ const textContent = {
     "I am dedicated to creating visually appealing designs that enhance usability and provide a memorable user experience.",
   myFigma: "My Figma",
   watchDemo: "Watch some demo",
-  servicesText: "SERVICES",
-  servicesTitle: "Expertise Service! Let's check it out",
-  servicesSubText:
-    "I offer design services focused on delivering visually engaging, user-friendly interfaces that enhance brand identity and improve overall user satisfaction.",
+  journeyText: "JOURNEY",
+  journeyTitle: "What I’m learning and working on",
+  journeySubText:
+    "I’m focusing on building a strong foundation in design and development through self-learning, personal projects, and practical experimentation.",
   boxTitle1: "UI UX Design",
   boxContent1:
-    "The process involves research, wireframing, prototyping, and testing for optimal user experiences.",
+    "Designing intuitive, user-focused interfaces through research, wireframing, and testing.",
   boxTitle2: "Webflow Develop",
   boxContent2:
-    "Combines design and coding for building responsive websites visually without extensive coding knowledge.",
+    "Exploring visual web development by building responsive websites without deep coding knowledge.",
   boxTitle3: "Product Design",
   boxContent3:
-    "Includes research, ideation, prototyping, testing, and refining to deliver a user-centered product.",
+    "Learning product design by combining research, testing, and ideas.",
   aboutMeText: "ABOUT ME",
   aboutMeTitle: "Designing Solutions, Not Just Visuals",
   aboutMeSubText:
