@@ -449,7 +449,6 @@ const Home = () => {
           <span className="nav-item-footer">{textContent.projects}</span>
           <span className="nav-item-footer">{textContent.contact}</span>
         </nav>
-        <div class="footer-line"></div>
         <Lottie
           animationData={ButtonUp}
           className="button-up hoverable"
