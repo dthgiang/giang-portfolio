@@ -317,7 +317,7 @@ const Home = () => {
             </div>
           </div>
           <div className="downloadCVArrow">
-            <span>{textContent.downloadCV}</span>
+            <span>{textContent.readMore}</span>
             <i className="arrow-icon">→</i>
           </div>
         </div>

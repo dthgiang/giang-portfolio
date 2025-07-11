@@ -5,6 +5,7 @@ const textContent = {
   services: "Services",
   contact: "Contact",
   downloadCV: "Download CV",
+  readMore: "Read More",
   coderTitle: "<coder>",
   coderSubText:
     "Front end developer who writes clean, elegant and efficient code.",
