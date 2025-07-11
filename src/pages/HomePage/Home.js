@@ -94,7 +94,7 @@ const Home = () => {
       const x = e.clientX - containerRect.left;
       const y = e.clientY - containerRect.top;
 
-      const leftLimit = containerRect.width * 0.1;
+      const leftLimit = containerRect.width * 0.3;
       const rightLimit = containerRect.width * 0.9;
 
       const isInsideY =
@@ -148,6 +148,12 @@ const Home = () => {
             alt="lineCircle"
             className="line-circle-left"
           />
+          <img src={images.whiteSign} alt="whiteSign" className="white-sign" />
+          <img
+            src={images.coderBackground}
+            alt="coderBackground"
+            className="coder-background"
+          />
           <img
             src={images.lineCircle}
             alt="lineCircle"
@@ -159,6 +165,22 @@ const Home = () => {
             <span className="nav-item">{textContent.contact}</span>
           </nav>
           <div className="downloadCVButton">{textContent.downloadCV}</div>
+        </div>
+
+        <div className="coder-title-wrapper">
+          <div className="coder-title-block">
+            <div className="intro-title">{textContent.coderTitle}</div>
+            <div className="coder-subtext">{textContent.coderSubText}</div>
+          </div>
+        </div>
+
+        <div className="designer-title-wrapper">
+          <div className="designer-title-block">
+            <div className="intro-title">{textContent.designerTitle}</div>
+            <div className="designer-subtext">
+              {textContent.designerSubText}
+            </div>
+          </div>
         </div>
 
         <div className="split-image-wrapper">

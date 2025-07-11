@@ -5,9 +5,12 @@ const textContent = {
   services: "Services",
   contact: "Contact",
   downloadCV: "Download CV",
-  introText: "Hello, I'm Thanh Giang An Frontend Developer And UI UX Designer.",
-  introSubText:
-    "I am dedicated to creating visually appealing designs that enhance usability and provide a memorable user experience.",
+  coderTitle: "<coder>",
+  coderSubText:
+    "Front end developer who writes clean, elegant and efficient code.",
+  designerTitle: "designer",
+  designerSubText:
+    "UI/UX designer who creates engaging, user-centered interfaces.",
   myFigma: "My Figma",
   watchDemo: "Watch some demo",
   journeyText: "JOURNEY",

@@ -20,6 +20,7 @@ import earth from "../assets/images/earth.svg";
 import subscribeArrow from "../assets/images/subscribe-arrow.svg";
 import real from "../assets/images/real.svg";
 import abstract from "../assets/images/abstract.svg";
+import coderBackground from "../assets/images/coder-background.svg";
 
 const images = {
   circlePlay,
@@ -44,6 +45,7 @@ const images = {
   subscribeArrow,
   real,
   abstract,
+  coderBackground,
 };
 
 export default images;

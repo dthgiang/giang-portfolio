@@ -1,31 +1,5 @@
 /* INTRO BLOCK */
 
-/* .intro-block {
-  position: relative;
-  top: 0;
-  left: 0;
-  background-image: url("../assets/images/intro_background.svg");
-  background-position: center top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  height: 60vh; 
-  width: 100vw; 
-} 
-*/
-/* .intro-block {
-  position: relative;
-  top: 0;
-  left: 0;
-  background-image: url("../assets/images/intro_background.svg");
-  background-size: contain;
-  background-position: center top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  width: 100vw;
-  padding-bottom: 60vh; /* Dành khoảng trống phía dưới cho ảnh 
-} 
-*/
-
 .intro-block {
   position: relative;
   width: 100vw;
@@ -34,10 +8,9 @@
   background-position: center top;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  padding-bottom: 60vh; /* chừa chỗ cho hình */
+  padding-bottom: 55vh; /* chừa chỗ cho hình */
   overflow: hidden;
   margin-bottom: 10vh; /* Khoảng cách dưới */
-  /* position: relative; */
 }
 
 .header {
@@ -46,6 +19,7 @@
   align-items: center;
   padding: 3vh 7vw;
   color: white;
+  margin-bottom: 4vh; /* Khoảng cách dưới */
 }
 
 .logo-name {
@@ -119,6 +93,7 @@
   z-index: 1;
   width: auto;
   height: auto;
+  transition: clip-path 0.6s ease, filter 0.6s ease, transform 0.6s ease;
 }
 
 /* Ảnh ảo */
@@ -130,11 +105,9 @@
   width: auto;
   height: auto;
   clip-path: inset(0 0 0 50%); /* Hiển thị nửa phải */
-  transition: clip-path 0.4s ease, filter 0.4s ease, transform 0.4s ease;
+  transition: clip-path 0.6s ease, filter 0.6s ease, transform 0.6s ease;
   pointer-events: none;
 }
-
-/* INTRO BLOCK END*/
 
 .line-circle-left {
   position: absolute; /* Tạo vị trí tuyệt đối */
@@ -152,29 +125,89 @@
   right: 3%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.intro-arrow {
-  position: absolute; /* Tạo vị trí tuyệt đối */
-  width: auto; /* Chiều rộng */
-  height: auto; /* Chiều cao */
-  top: 28%; /* Di chuyển 10% từ cạnh trên */
-  left: 45%; /* Di chuyển 15% từ cạnh trái */
-}
-
-.circle-base {
-  position: absolute; /* Tạo vị trí tuyệt đối */
-  width: auto; /* Chiều rộng */
-  height: auto; /* Chiều cao */
-  bottom: 6%; /* Di chuyển 10% từ cạnh trên */
-  right: 10%; /* Di chuyển 15% từ cạnh trái */
-}
-
 .white-sign {
   position: absolute; /* Tạo vị trí tuyệt đối */
   width: auto; /* Chiều rộng */
   height: auto; /* Chiều cao */
-  top: 27%; /* Di chuyển 10% từ cạnh trên */
-  right: 3%; /* Di chuyển 15% từ cạnh trái */
+  bottom: 18%; /* Di chuyển 10% từ cạnh trên */
+  right: 26%; /* Di chuyển 15% từ cạnh trái */
+  z-index: 20;
 }
+
+.coder-background {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  bottom: 6%; /* Di chuyển 10% từ cạnh trên */
+  left: 27.5%; /* Di chuyển 15% từ cạnh trái */
+  z-index: 1; /* Đặt dưới các phần tử khác */
+}
+
+.coder-title-wrapper {
+  position: absolute;
+  top: 40%;
+  height: calc(100% - 55vh);
+  left: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+}
+
+.coder-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh; /* Khoảng cách giữa title và subtext */
+  max-width: 38vw;
+}
+
+.designer-title-wrapper {
+  position: absolute;
+  top: 40%;
+  height: calc(100% - 55vh);
+  right: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+}
+
+.designer-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh; /* Khoảng cách giữa title và subtext */
+  max-width: 38vw;
+}
+
+.intro-title {
+  font-size: 4vw; /* Kích thước chữ */
+  font-weight: bold;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff8f2;
+  text-align: left;
+}
+
+.coder-subtext {
+  color: #fff8f2; /* Màu chữ */
+  font-size: 1vw; /* Kích thước chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  max-width: 55%; /* Chiều dài tối đa của đoạn văn bản */
+  font-weight: 350;
+  text-align: left;
+}
+
+.designer-subtext {
+  color: #fff8f2; /* Màu chữ */
+  font-size: 1vw; /* Kích thước chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  max-width: 65%; /* Chiều dài tối đa của đoạn văn bản */
+  font-weight: 350;
+  text-align: left;
+}
+
+/* INTRO BLOCK END*/
 
 .service-block {
   position: relative; /* Tạo vị trí tương đối */
