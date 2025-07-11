@@ -79,29 +79,33 @@ const Home = () => {
     handleScroll();
     window.addEventListener("scroll", handleScroll);
 
-    const container = document.querySelector(".split-image-container");
     const rightImage = document.querySelector(".image-right");
+    const imageWrapper = document.querySelector(".split-image-wrapper");
 
     const handleMouseMove = (e) => {
-      const rect = container.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const percent = (x / rect.width) * 100;
+      const wrapperRect = imageWrapper.getBoundingClientRect();
+      const x = e.clientX - wrapperRect.left;
+      const percent = Math.min(Math.max((x / wrapperRect.width) * 100, 0), 100);
 
-      // Cắt bên phải ảnh ảo để lộ ảnh thật
-      rightImage.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+      // Càng kéo sang trái → ảnh thật hiện nhiều hơn (ảnh ảo bị cắt trái nhiều hơn)
+      rightImage.style.clipPath = `inset(0 0 0 ${percent}%)`;
+    };
+
+    const resetToHalf = () => {
+      rightImage.style.clipPath = `inset(0 0 0 50%)`;
     };
 
     const handleMouseLeave = () => {
-      rightImage.style.clipPath = `inset(0 50% 0 0)`; // Reset về giữa
+      resetToHalf();
     };
 
-    container?.addEventListener("mousemove", handleMouseMove);
-    container?.addEventListener("mouseleave", handleMouseLeave);
+    imageWrapper?.addEventListener("mousemove", handleMouseMove);
+    imageWrapper?.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      container?.removeEventListener("mousemove", handleMouseMove);
-      container?.removeEventListener("mouseleave", handleMouseLeave);
+      imageWrapper?.removeEventListener("mousemove", handleMouseMove);
+      imageWrapper?.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
