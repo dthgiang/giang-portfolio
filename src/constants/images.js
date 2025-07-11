@@ -15,9 +15,11 @@ import purpleCircleArrow from "../assets/images/arrow-icon-purple.svg";
 import aboutMeLeft from "../assets/images/about-me-left.svg";
 import bluePlant from "../assets/images/project-plant.svg";
 import projectStar from "../assets/images/project-star.svg";
-import bgSubscribe from "../assets/images/subcribe-background.svg";
+import bgSubscribe from "../assets/images/subscribe-background.svg";
 import earth from "../assets/images/earth.svg";
-import subscribeArrow from "../assets/images/subcribe-arrow.svg";
+import subscribeArrow from "../assets/images/subscribe-arrow.svg";
+import real from "../assets/images/real.svg";
+import abstract from "../assets/images/abstract.svg";
 
 const images = {
   circlePlay,
@@ -40,6 +42,8 @@ const images = {
   bgSubscribe,
   earth,
   subscribeArrow,
+  real,
+  abstract,
 };
 
 export default images;

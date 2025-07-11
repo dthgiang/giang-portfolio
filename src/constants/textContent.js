@@ -1,9 +1,8 @@
 const textContent = {
-  logoName: "giangAh",
+  logoName: "zangAh",
   home: "Home",
   about: "About",
   services: "Services",
-  projects: "Projects",
   contact: "Contact",
   downloadCV: "Download CV",
   introText: "Hello, I'm Thanh Giang An Frontend Developer And UI UX Designer.",

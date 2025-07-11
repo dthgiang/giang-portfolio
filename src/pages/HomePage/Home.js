@@ -78,8 +78,30 @@ const Home = () => {
   useEffect(() => {
     handleScroll();
     window.addEventListener("scroll", handleScroll);
+
+    const container = document.querySelector(".split-image-container");
+    const rightImage = document.querySelector(".image-right");
+
+    const handleMouseMove = (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const percent = (x / rect.width) * 100;
+
+      // Cắt bên phải ảnh ảo để lộ ảnh thật
+      rightImage.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+    };
+
+    const handleMouseLeave = () => {
+      rightImage.style.clipPath = `inset(0 50% 0 0)`; // Reset về giữa
+    };
+
+    container?.addEventListener("mousemove", handleMouseMove);
+    container?.addEventListener("mouseleave", handleMouseLeave);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      container?.removeEventListener("mousemove", handleMouseMove);
+      container?.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
@@ -94,17 +116,6 @@ const Home = () => {
             className="line-circle-left"
           />
           <img
-            src={images.introArrow}
-            alt="introArrow"
-            className="intro-arrow"
-          />
-          <img src={images.whiteSign} alt="whiteSign" className="white-sign" />
-          <img
-            src={images.circleBase}
-            alt="circleBase"
-            className="circle-base"
-          />
-          <img
             src={images.lineCircle}
             alt="lineCircle"
             className="line-circle-right"
@@ -112,40 +123,20 @@ const Home = () => {
           <div className="logo-name">{textContent.logoName}</div>
           <nav className="nav-menu">
             <span className="nav-item">{textContent.about}</span>
-            <span className="nav-item">{textContent.projects}</span>
             <span className="nav-item">{textContent.contact}</span>
           </nav>
           <div className="downloadCVButton">{textContent.downloadCV}</div>
         </div>
-        <div className="introText">{textContent.introText}</div>
-        <div className="introSubText">{textContent.introSubText}</div>
-        <div className="buttonGroupIntro">
-          <div
-            className="myFigmaButton"
-            onClick={() =>
-              window.open("https://www.figma.com/@zangah", "_blank")
-            }
-            style={{ cursor: "pointer" }}
-          >
-            {textContent.myFigma}
-          </div>
-          <div
-            className="watchDemoGroup"
-            onClick={() =>
-              window.open(
-                "https://www.youtube.com/playlist?list=PLvqkFY2s9yAlXKugsCGWyBD1jNJtgXTLf",
-                "_blank"
-              )
-            }
-            style={{ cursor: "pointer" }}
-          >
+
+        <div className="split-image-wrapper">
+          <div className="split-image-container">
+            <img src={images.real} alt="Real" className="image image-left" />
             <img
-              src={images.circlePlay}
-              alt="circlePlay"
-              className="circle-play"
+              src={images.abstract}
+              alt="Abstract"
+              className="image image-right"
             />
           </div>
-          <div className="watchDemoGroupText">{textContent.watchDemo}</div>
         </div>
       </div>
 
