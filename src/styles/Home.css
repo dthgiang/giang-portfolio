@@ -37,7 +37,7 @@
   padding-bottom: 60vh; /* chừa chỗ cho hình */
   overflow: hidden;
   margin-bottom: 10vh; /* Khoảng cách dưới */
-  position: relative;
+  /* position: relative; */
 }
 
 .header {
@@ -95,7 +95,7 @@
   color: #feb12f; /* Màu chữ khi hover */
 }
 
-/* Giữ lại, chỉ chỉnh sửa nhẹ */
+/* Wrapper giữ nguyên kích thước ảnh */
 .split-image-wrapper {
   position: absolute;
   bottom: 0;
@@ -104,31 +104,32 @@
   z-index: 10;
 }
 
-/* Không cần inline-block nữa */
+/* Container ảnh */
 .split-image-container {
   position: relative;
   display: block;
+  width: auto;
+  height: auto;
 }
 
-/* Ảnh thật nằm dưới */
-/* Ảnh thật nằm dưới */
+/* Ảnh thật */
 .image-left {
   display: block;
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: auto;
   height: auto;
 }
 
-/* Ảnh ảo nằm trên và bị cắt */
+/* Ảnh ảo */
 .image-right {
   position: absolute;
   top: 0;
-  left: 0; /* ✅ bên trái ảnh ảo, nhưng sẽ bị clip-path cắt bên trái */
+  left: 0;
   z-index: 2;
-  width: 100%;
+  width: auto;
   height: auto;
-  clip-path: inset(0 0 0 50%); /* ✅ Hiện nửa bên phải (ẩn trái) */
+  clip-path: inset(0 0 0 50%); /* Hiển thị nửa phải */
   transition: clip-path 0.4s ease-out;
   pointer-events: none;
 }

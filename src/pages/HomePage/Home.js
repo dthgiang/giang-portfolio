@@ -79,33 +79,53 @@ const Home = () => {
     handleScroll();
     window.addEventListener("scroll", handleScroll);
 
-    const rightImage = document.querySelector(".image-right");
+    const container = document.querySelector(".intro-block");
     const imageWrapper = document.querySelector(".split-image-wrapper");
+    const rightImage = document.querySelector(".image-right");
 
     const handleMouseMove = (e) => {
       const wrapperRect = imageWrapper.getBoundingClientRect();
-      const x = e.clientX - wrapperRect.left;
-      const percent = Math.min(Math.max((x / wrapperRect.width) * 100, 0), 100);
+      const containerRect = container.getBoundingClientRect();
 
-      // Càng kéo sang trái → ảnh thật hiện nhiều hơn (ảnh ảo bị cắt trái nhiều hơn)
+      const x = e.clientX - containerRect.left;
+      const y = e.clientY - containerRect.top;
+
+      const leftLimit = containerRect.width * 0.1;
+      const rightLimit = containerRect.width * 0.9;
+
+      const isInsideY =
+        y >= wrapperRect.top - containerRect.top &&
+        y <= wrapperRect.bottom - containerRect.top;
+
+      if (!isInsideY) {
+        rightImage.style.clipPath = `inset(0 0 0 50%)`;
+        return;
+      }
+
+      let percent;
+      if (x <= leftLimit) {
+        percent = 0;
+      } else if (x >= rightLimit) {
+        percent = 100;
+      } else {
+        const relativeX = x - leftLimit;
+        percent = (relativeX / (rightLimit - leftLimit)) * 100;
+      }
+
       rightImage.style.clipPath = `inset(0 0 0 ${percent}%)`;
     };
 
-    const resetToHalf = () => {
+    const handleMouseLeave = () => {
       rightImage.style.clipPath = `inset(0 0 0 50%)`;
     };
 
-    const handleMouseLeave = () => {
-      resetToHalf();
-    };
-
-    imageWrapper?.addEventListener("mousemove", handleMouseMove);
-    imageWrapper?.addEventListener("mouseleave", handleMouseLeave);
+    container.addEventListener("mousemove", handleMouseMove);
+    container.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      imageWrapper?.removeEventListener("mousemove", handleMouseMove);
-      imageWrapper?.removeEventListener("mouseleave", handleMouseLeave);
+      container.removeEventListener("mousemove", handleMouseMove);
+      container.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
