@@ -76,12 +76,16 @@ const Home = () => {
   };
 
   useEffect(() => {
+    // Gọi scroll ban đầu
     handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     const container = document.querySelector(".intro-block");
     const imageWrapper = document.querySelector(".split-image-wrapper");
     const rightImage = document.querySelector(".image-right");
+
+    // Nếu phần tử chưa sẵn sàng → dừng
+    if (!container || !imageWrapper || !rightImage) return;
 
     const handleMouseMove = (e) => {
       const wrapperRect = imageWrapper.getBoundingClientRect();
@@ -98,8 +102,8 @@ const Home = () => {
         y <= wrapperRect.bottom - containerRect.top;
 
       if (!isInsideY) {
-        // ✅ Reset đúng chiều: che bên trái 50%
-        rightImage.style.clipPath = `inset(0 0 0 50%)`;
+        // ✅ Reset khi ra ngoài chiều cao ảnh
+        rightImage.style.clipPath = `polygon(50% 0, 100% 0, 100% 100%, 50% 100%)`;
         return;
       }
 
@@ -113,18 +117,20 @@ const Home = () => {
         percent = 100 - (relativeX / (rightLimit - leftLimit)) * 100;
       }
 
-      // ✅ clip bên phải để ảnh thật hiện khi rê trái
-      rightImage.style.clipPath = `inset(0 ${percent}% 0 0)`;
+      // ✅ Áp dụng polygon để tạo hiệu ứng cắt
+      rightImage.style.clipPath = `polygon(${percent}% 0, 100% 0, 100% 100%, ${percent}% 100%)`;
     };
 
     const handleMouseLeave = () => {
-      // ✅ Reset đúng: ảnh thật bên trái, ảnh ảo bên phải
-      rightImage.style.clipPath = `inset(0 0 0 50%)`;
+      // ✅ Reset về giữa
+      rightImage.style.clipPath = `polygon(50% 0, 100% 0, 100% 100%, 50% 100%)`;
     };
 
+    // Gán sự kiện
     container.addEventListener("mousemove", handleMouseMove);
     container.addEventListener("mouseleave", handleMouseLeave);
 
+    // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
       container.removeEventListener("mousemove", handleMouseMove);

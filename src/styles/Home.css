@@ -130,7 +130,7 @@
   width: auto;
   height: auto;
   clip-path: inset(0 0 0 50%); /* Hiển thị nửa phải */
-  transition: clip-path 0.4s ease-out;
+  transition: clip-path 0.4s ease, filter 0.4s ease, transform 0.4s ease;
   pointer-events: none;
 }
 
