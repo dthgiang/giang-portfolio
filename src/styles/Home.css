@@ -84,6 +84,7 @@
   display: block;
   width: auto;
   height: auto;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 /* Ảnh thật */
@@ -132,7 +133,7 @@
   bottom: 18%; /* Di chuyển 10% từ cạnh trên */
   right: 26%; /* Di chuyển 15% từ cạnh trái */
   z-index: 20;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .coder-background {
@@ -142,7 +143,7 @@
   bottom: 6%; /* Di chuyển 10% từ cạnh trên */
   left: 27.5%; /* Di chuyển 15% từ cạnh trái */
   z-index: 1; /* Đặt dưới các phần tử khác */
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .coder-title-wrapper {
@@ -161,7 +162,7 @@
   flex-direction: column;
   gap: 1vh; /* Khoảng cách giữa title và subtext */
   max-width: 38vw;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .designer-title-wrapper {
@@ -180,7 +181,7 @@
   flex-direction: column;
   gap: 1vh; /* Khoảng cách giữa title và subtext */
   max-width: 38vw;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .intro-title {
