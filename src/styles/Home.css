@@ -661,52 +661,6 @@
   right: 20%; /* Di chuyển 15% từ cạnh trái */
 }
 
-.menu-button {
-  margin-top: 1vw; /* Khoảng cách trên */
-  display: flex; /* Hiển thị theo chiều ngang */
-  justify-content: space-between; /* Căn giữa các phần tử theo chiều ngang */
-  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
-  gap: 1.1vw; /* Khoảng cách giữa các phần tử */
-}
-
-.button {
-  border: 2px solid #5d5cdc;
-  color: #3d3d40;
-  padding: 1.5vh 2vh; /* Khoảng cách bên trong */
-  border: 2px solid #5d5cdc;
-  border-radius: 1.5vh;
-  cursor: pointer; /* Con trỏ khi hover */
-  font-weight: 600; /* Trọng số font */
-  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
-}
-
-.button.selected {
-  background-color: #5d5cdc;
-  color: #fff;
-  border-color: #5d5cdc;
-}
-
-/* CSS cho nút khi hover */
-.button:hover {
-  background-color: #ececff;
-  color: #5d5cdc;
-  transform: scale(1.05); /* Tăng nhẹ kích thước khi hover */
-}
-
-/* CSS cho nút được chọn */
-.button.selected {
-  background-color: #5d5cdc;
-  color: #fff;
-  border-color: #5d5cdc;
-}
-
-/* CSS khi hover vào nút đang được chọn */
-.button.selected:hover {
-  background-color: #4c4bbc;
-  color: #fff;
-  transform: scale(1.05); /* Tăng nhẹ kích thước khi hover */
-}
-
 .project-container {
   display: flex;
   flex-wrap: wrap; /* Cho phép các khối xuống dòng */
@@ -801,20 +755,6 @@
 
 .contact-block {
   margin-top: 10vh; /* Khoảng cách trên */
-  position: relative; /* Tạo vị trí tương đối */
-  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
-  background-image: url("../assets/images/bottom-background.svg");
-  background-size: contain; /* Sử dụng cover để ảnh bao phủ toàn bộ khối */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 40vh; /* Đặt chiều cao khối là toàn màn hình */
-  width: 100%; /* Xóa padding để loại bỏ khoảng cách thừa */
-  padding: 10vh 0; /* Padding: trên, phải, dưới, trái */
-}
-
-.contact-block {
-  margin-top: 10vh; /* Khoảng cách trên */
   position: relative;
   display: flex; /* Thiết lập chế độ hiển thị flex */
   flex-direction: row; /* Đặt chiều dọc cho phần tử con */
@@ -824,10 +764,18 @@
   background-size: cover; /* Sử dụng cover để ảnh bao phủ toàn bộ khối */
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 40vh; /* Đặt chiều cao khối cụ thể */
+  height: 42.5vh; /* Đặt chiều cao khối cụ thể */
   width: 100%; /* Đặt chiều rộng khối là 100% */
   padding: 0; /* Xóa padding để loại bỏ khoảng cách thừa */
   gap: 40vw; /* Khoảng cách giữa các phần tử, nếu cần */
+}
+
+.real-image-contact {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  bottom: 0%; /* Di chuyển 10% từ cạnh trên */
+  right: 0%; /* Di chuyển 15% từ cạnh trái */
 }
 
 body,
@@ -907,8 +855,17 @@ html {
   position: absolute; /* Tạo vị trí tuyệt đối */
   width: auto; /* Chiều rộng */
   height: auto; /* Chiều cao */
-  bottom: 35%; /* Di chuyển 10% từ cạnh trên */
-  right: 35%; /* Di chuyển 15% từ cạnh trái */
+  top: 10%; /* Di chuyển 10% từ cạnh trên */
+  right: 18%; /* Di chuyển 15% từ cạnh trái */
+  z-index: 1; /* Đặt vị trí phía sau */
+}
+
+.intro-arrow {
+  position: absolute; /* Tạo vị trí tuyệt đối */
+  width: auto; /* Chiều rộng */
+  height: auto; /* Chiều cao */
+  bottom: 23%; /* Di chuyển 10% từ cạnh trên */
+  left: 23%; /* Di chuyển 15% từ cạnh trái */
 }
 
 .circle-yellow-contact-2 {

@@ -333,7 +333,7 @@ const Home = () => {
         />
         <div className="project-title">{textContent.projectTitle}</div>
         <div className="project-subtitle">{textContent.projectSubTitle}</div>
-        <div className="menu-button">
+        {/* <div className="menu-button">
           {[
             { key: "all", text: textContent.all },
             { key: "landingPage", text: textContent.landingPage },
@@ -351,7 +351,7 @@ const Home = () => {
               {button.text}
             </div>
           ))}
-        </div>
+        </div> */}
         <div className="project-container">
           {projects.map((project, index) => (
             <div className="project-block" key={index}>
@@ -394,16 +394,17 @@ const Home = () => {
           </div>
           <div className="contact-button">{textContent.contact}</div>
         </div>
+        <img src={images.introArrow} alt="introArrow" className="intro-arrow" />
         <img
           src={images.whiteSign}
           alt="whiteSign"
           className="white-sign-contact"
         />
-        <div className="circle-yellow-contact-2"></div>
+        <img src={images.real} alt="real" className="real-image-contact" />
       </div>
 
       {/* Contact Block */}
-      <div className="subscribe-block">
+      {/* <div className="subscribe-block">
         <div className="subscribe-content-wrapper">
           <div className="subscribe-text-container">
             <div className="subscribe-title">{textContent.SUBSCRIBE}</div>
@@ -438,7 +439,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Footer */}
       <div className="footer-container">
