@@ -98,24 +98,27 @@ const Home = () => {
         y <= wrapperRect.bottom - containerRect.top;
 
       if (!isInsideY) {
+        // ✅ Reset đúng chiều: che bên trái 50%
         rightImage.style.clipPath = `inset(0 0 0 50%)`;
         return;
       }
 
       let percent;
       if (x <= leftLimit) {
-        percent = 0;
-      } else if (x >= rightLimit) {
         percent = 100;
+      } else if (x >= rightLimit) {
+        percent = 0;
       } else {
         const relativeX = x - leftLimit;
-        percent = (relativeX / (rightLimit - leftLimit)) * 100;
+        percent = 100 - (relativeX / (rightLimit - leftLimit)) * 100;
       }
 
-      rightImage.style.clipPath = `inset(0 0 0 ${percent}%)`;
+      // ✅ clip bên phải để ảnh thật hiện khi rê trái
+      rightImage.style.clipPath = `inset(0 ${percent}% 0 0)`;
     };
 
     const handleMouseLeave = () => {
+      // ✅ Reset đúng: ảnh thật bên trái, ảnh ảo bên phải
       rightImage.style.clipPath = `inset(0 0 0 50%)`;
     };
 
