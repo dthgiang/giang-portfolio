@@ -76,7 +76,6 @@ const Home = () => {
   };
 
   useEffect(() => {
-    // Gọi scroll ban đầu
     handleScroll();
     window.addEventListener("scroll", handleScroll);
 
@@ -84,7 +83,12 @@ const Home = () => {
     const imageWrapper = document.querySelector(".split-image-wrapper");
     const rightImage = document.querySelector(".image-right");
 
-    // Nếu phần tử chưa sẵn sàng → dừng
+    const whiteSign = document.querySelector(".white-sign");
+    const coderBg = document.querySelector(".coder-background");
+    const coderBlock = document.querySelector(".coder-title-block");
+    const designerBlock = document.querySelector(".designer-title-block");
+    const imageContainer = document.querySelector(".split-image-container");
+
     if (!container || !imageWrapper || !rightImage) return;
 
     const handleMouseMove = (e) => {
@@ -102,8 +106,8 @@ const Home = () => {
         y <= wrapperRect.bottom - containerRect.top;
 
       if (!isInsideY) {
-        // ✅ Reset khi ra ngoài chiều cao ảnh
         rightImage.style.clipPath = `polygon(50% 0, 100% 0, 100% 100%, 50% 100%)`;
+        resetAnimations();
         return;
       }
 
@@ -117,20 +121,60 @@ const Home = () => {
         percent = 100 - (relativeX / (rightLimit - leftLimit)) * 100;
       }
 
-      // ✅ Áp dụng polygon để tạo hiệu ứng cắt
       rightImage.style.clipPath = `polygon(${percent}% 0, 100% 0, 100% 100%, ${percent}% 100%)`;
+
+      if (percent >= 90) {
+        // 👉 Chuột trái: real visible, designer mờ
+        designerBlock.classList.add("fade-opacity");
+        coderBlock.classList.remove("fade-opacity");
+
+        whiteSign.classList.add("fade-out", "shift-left");
+        whiteSign.classList.remove("shift-right");
+
+        coderBg.classList.remove("fade-opacity");
+        coderBg.classList.add("shift-right");
+        coderBg.classList.remove("shift-left");
+
+        imageContainer.classList.add("image-shift-right");
+        imageContainer.classList.remove("image-shift-left");
+      } else if (percent <= 10) {
+        // 👉 Chuột phải: abstract visible, coder mờ
+        coderBlock.classList.add("fade-opacity");
+        designerBlock.classList.remove("fade-opacity");
+
+        coderBg.classList.add("fade-opacity", "shift-left");
+        coderBg.classList.remove("shift-right");
+
+        whiteSign.classList.remove("fade-out");
+        whiteSign.classList.add("shift-left");
+        whiteSign.classList.remove("shift-right");
+
+        imageContainer.classList.add("image-shift-left");
+        imageContainer.classList.remove("image-shift-right");
+      } else {
+        resetAnimations();
+      }
+    };
+
+    const resetAnimations = () => {
+      coderBlock.classList.remove("fade-opacity");
+      designerBlock.classList.remove("fade-opacity");
+
+      whiteSign.classList.remove("fade-out", "shift-left", "shift-right");
+      coderBg.classList.remove("fade-opacity", "shift-left", "shift-right");
+
+      const imageContainer = document.querySelector(".split-image-container");
+      imageContainer?.classList.remove("image-shift-left", "image-shift-right");
     };
 
     const handleMouseLeave = () => {
-      // ✅ Reset về giữa
       rightImage.style.clipPath = `polygon(50% 0, 100% 0, 100% 100%, 50% 100%)`;
+      resetAnimations();
     };
 
-    // Gán sự kiện
     container.addEventListener("mousemove", handleMouseMove);
     container.addEventListener("mouseleave", handleMouseLeave);
 
-    // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
       container.removeEventListener("mousemove", handleMouseMove);

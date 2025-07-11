@@ -132,6 +132,7 @@
   bottom: 18%; /* Di chuyển 10% từ cạnh trên */
   right: 26%; /* Di chuyển 15% từ cạnh trái */
   z-index: 20;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .coder-background {
@@ -141,6 +142,7 @@
   bottom: 6%; /* Di chuyển 10% từ cạnh trên */
   left: 27.5%; /* Di chuyển 15% từ cạnh trái */
   z-index: 1; /* Đặt dưới các phần tử khác */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .coder-title-wrapper {
@@ -159,6 +161,7 @@
   flex-direction: column;
   gap: 1vh; /* Khoảng cách giữa title và subtext */
   max-width: 38vw;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .designer-title-wrapper {
@@ -177,6 +180,7 @@
   flex-direction: column;
   gap: 1vh; /* Khoảng cách giữa title và subtext */
   max-width: 38vw;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .intro-title {
@@ -205,6 +209,39 @@
   max-width: 65%; /* Chiều dài tối đa của đoạn văn bản */
   font-weight: 350;
   text-align: left;
+}
+
+/* Dịch sang trái hoặc phải */
+.shift-left {
+  transform: translateX(-4vw);
+  transition: transform 0.6s ease;
+}
+
+.shift-right {
+  transform: translateX(4vw);
+  transition: transform 0.6s ease;
+}
+
+.fade-opacity {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* Mờ dần riêng white-sign */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* Dịch toàn bộ ảnh */
+.image-shift-left {
+  transform: translateX(-2vw);
+  transition: transform 0.6s ease;
+}
+
+.image-shift-right {
+  transform: translateX(2vw);
+  transition: transform 0.6s ease;
 }
 
 /* INTRO BLOCK END*/
