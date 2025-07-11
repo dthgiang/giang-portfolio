@@ -99,7 +99,7 @@ const Home = () => {
       const y = e.clientY - containerRect.top;
 
       const leftLimit = containerRect.width * 0.3;
-      const rightLimit = containerRect.width * 0.3;
+      const rightLimit = containerRect.width * 0.7;
 
       const isInsideY =
         y >= wrapperRect.top - containerRect.top &&
