@@ -63,6 +63,7 @@ const textContent = {
   enterEmailSubtext:
     "Enter your email to stay updated with the latest news and exclusive insights from me.",
   enterEmail: "Enter your email",
+  viewFigma: "View Figma",
 };
 
 export default textContent;

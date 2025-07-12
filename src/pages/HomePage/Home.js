@@ -40,6 +40,7 @@ const Home = () => {
   const [showUpEffect, setShowUpEffect] = useState(false);
   const [showCheerEffect, setShowCheerEffect] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
@@ -379,9 +380,24 @@ const Home = () => {
               className="project-overlay-content"
               onClick={(e) => e.stopPropagation()}
             >
-              <h2>{activeProject.title}</h2>
-              <p>{activeProject.subtitle}</p>
-              {/* Bạn có thể thêm ảnh, mô tả chi tiết... */}
+              <div className="header-overlay">
+                <div className="title-overlay">
+                  <div>{activeProject.title}</div>
+                  <div>{activeProject.subtitle}</div>
+                </div>
+                <div
+                  className="view-figma-button"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  <img
+                    src={isHovered ? images.figmaPurple : images.figmaWhite}
+                    alt="Figma Icon"
+                    className="figma-icon"
+                  />
+                  <div>{textContent.viewFigma}</div>
+                </div>
+              </div>
             </div>
           </div>
         )}
