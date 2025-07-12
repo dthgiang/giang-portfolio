@@ -438,6 +438,7 @@
   width: auto; /* Xóa padding để loại bỏ khoảng cách thừa */
   padding: 10vh 0; /* Padding: trên, phải, dưới, trái */
   gap: 40vw; /* Khoảng cách giữa các phần tử */
+  margin-bottom: 15vh; /* Khoảng cách dưới */
 }
 
 .left-block {
@@ -613,19 +614,16 @@
   transform: translateY(-0.2vh); /* Điều chỉnh vị trí icon lên chút */
 }
 
-.project-block {
-  position: relative; /* Tạo vị trí tương đối */
-  display: flex; /* Hiển thị theo chiều ngang */
-  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
-  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
-  text-align: center; /* Căn giữa theo chiều ngang */
-  align-items: center; /* Căn giữa các phần tử theo chiều ngang */
-  height: auto; /* Đặt chiều cao khối là to */
-  margin-top: 7vh; /* Khoảng cách trên */
-  gap: 2vh; /* Khoảng cách giữa các phần tử */
+.project-title-small {
+  color: #323843; /* Màu chữ */
+  font-size: 1.2vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
 }
 
-.project-title {
+.project-title-big {
   color: #6e6ce5; /* Màu chữ */
   font-size: 1.2vw; /* Kích thước chữ */
   font-weight: 600; /* Trọng số chữ */
@@ -641,7 +639,7 @@
   line-height: 1.5; /* Chiều cao dòng */
   font-family: "Segoe UI", sans-serif; /* Font chữ */
   font-weight: bold; /* Trọng số font */
-  margin-bottom: 2vh;
+  margin-bottom: 6vh;
 }
 
 .blue-plant {
@@ -661,25 +659,37 @@
 }
 
 .project-container {
-  display: flex;
-  flex-wrap: wrap; /* Cho phép các khối xuống dòng */
-  justify-content: space-between; /* Căn giữa các khối */
-  padding: 0 15vw 5vw 15vw; /* Padding: trên, phải, dưới, trái */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột */
+  gap: 2vw; /* Khoảng cách giữa các item */
+  padding: 0vh 1vw;
+  position: relative;
+  margin-bottom: 10vh; /* Khoảng cách dưới */
 }
 
 .project-block {
-  flex: 1 1 calc(30% - 0.5vw); /* Chiều rộng 1/3 của container, trừ khoảng cách */
-  display: flex;
-  flex-direction: column;
-  padding: 1vh; /* Padding sử dụng vh để đảm bảo độ cao */
-  box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến chiều rộng */
+  position: relative; /* Tạo vị trí tương đối */
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+  text-align: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+  gap: 1vh; /* Khoảng cách giữa các phần tử */
+  padding: 2vh 0vw; /* Padding: trên, phải, dưới, trái */
 }
 
 .project-image {
-  width: 100%; /* Chiều rộng 100% để bao phủ hết không gian của khối */
-  height: 16vw; /* Chiều cao */
+  width: 24vw; /* Chiều rộng 100% để bao phủ hết không gian của khối */
+  height: 13vw; /* Chiều cao */
   border-radius: 1.5vh; /* Bo tròn */
   background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.project-image:hover {
+  transform: scale(1.05); /* Phóng to hình ảnh khi hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng khi hover */
 }
 
 .project-bottom-block {
@@ -715,8 +725,8 @@
 .project-button {
   background-color: #5d5cdc; /* Màu nền */
   color: #fff8f2; /* Màu mũi tên */
-  width: 3vw; /* Chiều rộng của nút */
-  height: 3vw; /* Chiều cao của nút */
+  width: 2.5vw; /* Chiều rộng của nút */
+  height: 2.5vw; /* Chiều cao của nút */
   border: none; /* Không có viền */
   border-radius: 50%; /* Bo tròn */
   cursor: pointer; /* Con trỏ khi hover */
@@ -746,8 +756,8 @@
   position: absolute; /* Tạo vị trí tuyệt đối */
   width: 1vw; /* Chiều rộng */
   height: 1vw; /* Chiều cao */
-  bottom: 1%; /* Di chuyển 10% từ cạnh trên */
-  left: 32%; /* Di chuyển 15% từ cạnh trái */
+  bottom: -10%; /* Di chuyển 10% từ cạnh trên */
+  left: 22%; /* Di chuyển 15% từ cạnh trái */
   background-color: #5d5cdc; /* Màu nền */
   border-radius: 2vw; /* Bo tròn */
 }
@@ -931,4 +941,16 @@ html {
 
 body {
   overflow: hidden; /* Ẩn thanh cuộn */
+}
+
+@media (max-width: 1200px) {
+  .project-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -21,6 +21,9 @@ import subscribeArrow from "../assets/images/subscribe-arrow.svg";
 import real from "../assets/images/real.svg";
 import abstract from "../assets/images/abstract.svg";
 import coderBackground from "../assets/images/coder-background.svg";
+import project1 from "../assets/images/project1.png";
+import project3 from "../assets/images/project3.png";
+import project4 from "../assets/images/project4.png";
 
 const images = {
   circlePlay,
@@ -46,6 +49,9 @@ const images = {
   real,
   abstract,
   coderBackground,
+  project1,
+  project3,
+  project4,
 };
 
 export default images;
