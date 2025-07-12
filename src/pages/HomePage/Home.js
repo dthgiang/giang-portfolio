@@ -39,6 +39,7 @@ const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showUpEffect, setShowUpEffect] = useState(false);
   const [showCheerEffect, setShowCheerEffect] = useState(false);
+  const [activeProject, setActiveProject] = useState(null);
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
@@ -330,7 +331,11 @@ const Home = () => {
         <div className="project-subtitle">{textContent.projectSubTitle}</div>
         <div className="project-container">
           {projects.slice(0, 5).map((project, index) => (
-            <div className="project-block" key={index}>
+            <div
+              className="project-block"
+              key={index}
+              onClick={() => setActiveProject(project)}
+            >
               <div
                 className="project-image"
                 style={{
@@ -365,6 +370,21 @@ const Home = () => {
           ))}
           <div className="circle-purple-project"></div>
         </div>
+        {activeProject && (
+          <div
+            className="project-overlay"
+            onClick={() => setActiveProject(null)}
+          >
+            <div
+              className="project-overlay-content"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <h2>{activeProject.title}</h2>
+              <p>{activeProject.subtitle}</p>
+              {/* Bạn có thể thêm ảnh, mô tả chi tiết... */}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Contact Block */}

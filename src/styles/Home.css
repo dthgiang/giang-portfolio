@@ -762,6 +762,44 @@
   border-radius: 2vw; /* Bo tròn */
 }
 
+/* OVERLAY START */
+.project-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* Overlay mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.project-overlay-content {
+  background: white;
+  width: 60vw;
+  height: 80vh;
+  border-radius: 10px;
+  padding: 3vh 3vw;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* OVERLAY END */
+
 .contact-block {
   margin-top: 10vh; /* Khoảng cách trên */
   position: relative;
