@@ -246,6 +246,7 @@
 
 /* INTRO BLOCK END*/
 
+/* SERVICE BLOCK START*/
 .service-block {
   position: relative; /* Tạo vị trí tương đối */
   display: flex; /* Hiển thị theo chiều ngang */
@@ -424,6 +425,9 @@
   left: 35%; /* Di chuyển 15% từ cạnh trái */
 }
 
+/* SERVICE BLOCK END*/
+
+/* ABOUT ME BLOCK START*/
 .about-me-block {
   margin-top: 20vh; /* Khoảng cách trên */
   position: relative; /* Tạo vị trí tương đối */
@@ -613,7 +617,9 @@
   align-items: center;
   transform: translateY(-0.2vh); /* Điều chỉnh vị trí icon lên chút */
 }
+/* ABOUT ME BLOCK END*/
 
+/* PROJECT BLOCK START*/
 .project-title-small {
   color: #323843; /* Màu chữ */
   font-size: 1.2vw; /* Kích thước chữ */
@@ -843,8 +849,28 @@
   transition: all 0.3s ease;
 }
 
-/* OVERLAY END */
+.title-text-overlay {
+  color: #333333; /* Màu chữ */
+  font-size: 1.5vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
+}
 
+.subtext-text-overlay {
+  color: #5d5cdc; /* Màu chữ */
+  font-size: 1vw; /* Kích thước chữ */
+  font-weight: 300; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  margin-bottom: 2vh;
+}
+
+/* OVERLAY END */
+/* PROJECT BLOCK END*/
+
+/* CONTACT BLOCK START*/
 .contact-block {
   margin-top: 10vh; /* Khoảng cách trên */
   position: relative;
@@ -970,6 +996,9 @@ html {
   border-radius: 1vw; /* Bo tròn */
 }
 
+/* CONTACT BLOCK END*/
+
+/* FOOTER BLOCK START*/
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -1022,6 +1051,9 @@ html {
   transform: scale(1.05) rotate(-5deg);
 }
 
+/* FOOTER BLOCK END*/
+
+/* GLOBAL STYLES START */
 body {
   overflow: hidden; /* Ẩn thanh cuộn */
 }
@@ -1037,3 +1069,4 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+/* GLOBAL STYLES END */

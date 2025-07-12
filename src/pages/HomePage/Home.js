@@ -382,8 +382,12 @@ const Home = () => {
             >
               <div className="header-overlay">
                 <div className="title-overlay">
-                  <div>{activeProject.title}</div>
-                  <div>{activeProject.subtitle}</div>
+                  <div className="title-text-overlay">
+                    {activeProject.title}
+                  </div>
+                  <div className="subtext-text-overlay">
+                    {activeProject.subtitle}
+                  </div>
                 </div>
                 <div
                   className="view-figma-button"
