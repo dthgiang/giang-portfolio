@@ -780,17 +780,29 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .project-overlay-content {
   background: white;
-  width: 60vw;
-  height: 80vh;
-  border-radius: 10px;
-  padding: 3vh 3vw;
+  background-image: url("../assets/images/bg-project.svg");
+  background-size: cover;
+  background-position: center;
+  width: 65vw;
+  height: 85vh;
+  border-radius: 20px;
   overflow-y: auto;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  overflow-x: hidden; /* Tắt thanh cuộn ngang */
   animation: fadeIn 0.3s ease;
+}
+
+.project-overlay-content * {
+  max-width: 100%;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-x: hidden !important;
 }
 
 @keyframes fadeIn {
@@ -808,7 +820,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2vh;
+  padding: 2vh 3vw;
 }
 
 .title-overlay {
@@ -841,6 +853,7 @@
   border: 2px solid #5d5cdc; /* Viền */
   border-radius: 3vh; /* Bo tròn */
   font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .figma-icon {
@@ -851,7 +864,7 @@
 
 .title-text-overlay {
   color: #333333; /* Màu chữ */
-  font-size: 1.5vw; /* Kích thước chữ */
+  font-size: 1.875vw; /* Kích thước chữ */
   font-weight: 600; /* Trọng số chữ */
   line-height: 1.5; /* Chiều cao dòng */
   font-family: "Segoe UI", sans-serif; /* Font chữ */
@@ -861,10 +874,240 @@
 .subtext-text-overlay {
   color: #5d5cdc; /* Màu chữ */
   font-size: 1vw; /* Kích thước chữ */
+  font-weight: 400; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+}
+
+.overlay-line {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0; /* Màu đường kẻ */
+  margin: 1vh 2vw; /* Khoảng cách trên và dưới */
+}
+
+.project-overview-container {
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  justify-content: space-between; /* Căn giữa các phần tử theo chiều ngang */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  padding: 2vh 3vw; /* Padding: trên, phải, dưới, trái */
+}
+
+.project-overview-title-container {
+  display: flex; /* Hiển thị theo chiều ngang */
+  justify-content: space-between; /* Căn giữa các phần tử theo chiều dọc */
+  align-items: center; /* Căn trái các phần tử */
+  width: 100%; /* Chiều rộng 100% */
+}
+
+.project-overview-title {
+  color: #333333; /* Màu chữ */
+  font-size: 1.35vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
+}
+
+.project-overview-time {
+  color: #5d5cdc; /* Màu chữ */
+  font-size: 1vw; /* Kích thước chữ */
+  font-weight: 400; /* Trọng số chữ */
+  line-height: 1.4; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  align-items: center; /* Căn giữa các phần tử */
+  display: flex; /* Hiển thị theo chiều ngang */
+  gap: 0.5vw; /* Khoảng cách giữa các phần tử */
+}
+
+.project-detail {
+  color: #616161; /* Màu chữ */
+  font-size: 1.041vw; /* Kích thước chữ */
   font-weight: 300; /* Trọng số chữ */
   line-height: 1.4; /* Chiều cao dòng */
   font-family: "Segoe UI", sans-serif; /* Font chữ */
-  margin-bottom: 2vh;
+  text-align: left; /* Căn trái nội dung */
+  margin-top: 2vh; /* Khoảng cách trên */
+}
+
+.project-middle-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* ✅ Đổi từ space-between → center */
+  align-items: flex-start; /* Căn top nếu 2 khối cao khác nhau */
+  padding: 2vh 3vw;
+  gap: 4vw; /* Tăng khoảng cách giữa 2 khối */
+}
+
+.project-tech-block {
+  display: flex; /* Hiển thị theo chiều ngang */
+  flex-direction: column; /* Đặt chiều dọc cho phần tử con */
+  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+  width: 60%; /* Chiều rộng */
+  text-align: left; /* Căn trái nội dung */
+}
+
+.technologies-text {
+  color: #333333; /* Màu chữ */
+  font-size: 1.35vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
+}
+
+.key-responsibilities-text {
+  color: #333333; /* Màu chữ */
+  font-size: 1.35vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
+  text-align: left;
+}
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* Khoảng cách giữa các công nghệ */
+  margin-top: 1.25vw; /* Khoảng cách trên */
+  padding: 0;
+  list-style: none;
+}
+
+.technology-list li {
+  background: linear-gradient(
+    90deg,
+    rgba(93, 92, 220, 0.7) 0%,
+    rgba(163, 129, 145, 0.61) 51.44%,
+    rgba(254, 177, 47, 0.5) 100%
+  );
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 0.94vw;
+  font-weight: 400;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.technology-list li::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  padding: 2px; /* độ dày stroke */
+  border-radius: 24px;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 92, 220, 0.7) 0%,
+    rgba(163, 129, 145, 0.61) 51.44%,
+    rgba(254, 177, 47, 0.5) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.responsibilities-list {
+  list-style-type: disc;
+  list-style-position: outside; /* Đẩy dấu chấm ra ngoài, chữ sát trái hơn */
+  padding-left: 20px; /* Tạo khoảng cách hợp lý giữa chấm và chữ */
+  margin-top: 1.25vw;
+  color: #333;
+}
+
+.responsibilities-list li {
+  font-size: 1.041vw; /* Kích thước chữ */
+  font-weight: 300;
+  margin-bottom: 6px;
+  color: #333;
+  position: relative;
+  text-align: left;
+}
+
+.responsibilities-list li::marker {
+  color: #5d5cdc; /* Màu tím */
+}
+
+.project-visual-container {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  padding: 24px 0;
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.slide-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 200%; /* 2 ảnh => 200% */
+}
+
+.slide-wrapper > div {
+  flex: 0 0 100%;
+}
+
+.slide-wrapper img {
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+/* Navigation arrows */
+#prev,
+#next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#prev {
+  left: 15px;
+}
+
+#next {
+  right: 15px;
+}
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
 }
 
 /* OVERLAY END */

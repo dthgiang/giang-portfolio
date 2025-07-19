@@ -13,26 +13,121 @@ const Home = () => {
       title: textContent.project1Title,
       subtitle: textContent.project1SubTitle,
       image: images.project1,
+      time: "12/2024 - 01/2025",
+      detail: textContent.projectDetail1,
+      technologies: [
+        "Figma",
+        "TypeScript",
+        "Javascript",
+        "Bun",
+        "Tailwind CSS",
+        "React",
+        "HTML",
+      ],
+      responsibilities: [
+        "Developed responsive frontend for web and mobile platform",
+        "Created app logo and ensured consistent visual identity.",
+        "Converted designs into clean, scalable code.",
+        "Designed full UI/UX for both web and mobile, from wireframes to final mockups.",
+      ],
+      projectVisuals1: images.famfundVisual1,
+      projectVisuals2: images.famfundVisual2,
     },
     {
       title: textContent.project2Title,
       subtitle: textContent.project2SubTitle,
       image: images.project2,
+      time: "2 weeks",
+      detail: textContent.projectDetail2,
+      technologies: [
+        "Figma",
+        "TypeScript",
+        "Javascript",
+        "Bun",
+        "Tailwind CSS",
+        "React",
+        "HTML",
+      ],
+      responsibilities: [
+        "Developed responsive frontend for web and mobile platform",
+        "Created app logo and ensured consistent visual identity.",
+        "Converted designs into clean, scalable code.",
+        "Designed full UI/UX for both web and mobile, from wireframes to final mockups.",
+      ],
+      projectVisuals1: images.famfundVisual1,
+      projectVisuals2: images.famfundVisual2,
     },
     {
       title: textContent.project3Title,
       subtitle: textContent.project3SubTitle,
       image: images.project3,
+      time: "01/2024 - 08/2024",
+      detail: textContent.projectDetail3,
+      technologies: [
+        "Figma",
+        "TypeScript",
+        "Javascript",
+        "Bun",
+        "Tailwind CSS",
+        "React",
+        "HTML",
+      ],
+      responsibilities: [
+        "Developed responsive frontend for web and mobile platform",
+        "Created app logo and ensured consistent visual identity.",
+        "Converted designs into clean, scalable code.",
+        "Designed full UI/UX for both web and mobile, from wireframes to final mockups.",
+      ],
+      projectVisuals1: images.famfundVisual1,
+      projectVisuals2: images.famfundVisual2,
     },
     {
       title: textContent.project4Title,
       subtitle: textContent.project4SubTitle,
       image: images.project4,
+      time: "01/2024 - 02/2025",
+      detail: textContent.projectDetail4,
+      technologies: [
+        "Figma",
+        "TypeScript",
+        "Javascript",
+        "Bun",
+        "Tailwind CSS",
+        "React",
+        "HTML",
+      ],
+      responsibilities: [
+        "Developed responsive frontend for web and mobile platform",
+        "Created app logo and ensured consistent visual identity.",
+        "Converted designs into clean, scalable code.",
+        "Designed full UI/UX for both web and mobile, from wireframes to final mockups.",
+      ],
+      projectVisuals1: images.famfundVisual1,
+      projectVisuals2: images.famfundVisual2,
     },
     {
       title: textContent.project5Title,
       subtitle: textContent.project5SubTitle,
       image: images.project5,
+      time: "03/2025 - 06/2025",
+      detail: textContent.projectDetail5,
+      technologies: [
+        "Figma",
+        "TypeScript",
+        "Javascript",
+        "Bun",
+        "Tailwind CSS",
+        "React",
+        "HTML",
+      ],
+      responsibilities: [
+        "Developed responsive frontend for web and mobile platform",
+        "Created app logo and ensured consistent visual identity.",
+        "Converted designs into clean, scalable code.",
+        "Designed full UI/UX for both web and mobile, from wireframes to final mockups.",
+      ],
+      projectVisuals1: images.famfundVisual1,
+      projectVisuals2: images.famfundVisual2,
     },
   ];
 
@@ -88,6 +183,7 @@ const Home = () => {
 
     if (!container || !imageWrapper || !rightImage) return;
 
+    // 👉 Hover Split Image
     const handleMouseMove = (e) => {
       const wrapperRect = imageWrapper.getBoundingClientRect();
       const containerRect = container.getBoundingClientRect();
@@ -121,7 +217,6 @@ const Home = () => {
       rightImage.style.clipPath = `polygon(${percent}% 0, 100% 0, 100% 100%, ${percent}% 100%)`;
 
       if (percent >= 90) {
-        // 👉 Chuột trái: real visible, designer mờ
         designerBlock.classList.add("fade-opacity");
         coderBlock.classList.remove("fade-opacity");
 
@@ -135,7 +230,6 @@ const Home = () => {
         imageContainer.classList.add("image-shift-right");
         imageContainer.classList.remove("image-shift-left");
       } else if (percent <= 10) {
-        // 👉 Chuột phải: abstract visible, coder mờ
         coderBlock.classList.add("fade-opacity");
         designerBlock.classList.remove("fade-opacity");
 
@@ -160,7 +254,6 @@ const Home = () => {
       whiteSign.classList.remove("fade-out", "shift-left", "shift-right");
       coderBg.classList.remove("fade-opacity", "shift-left", "shift-right");
 
-      const imageContainer = document.querySelector(".split-image-container");
       imageContainer?.classList.remove("image-shift-left", "image-shift-right");
     };
 
@@ -172,10 +265,56 @@ const Home = () => {
     container.addEventListener("mousemove", handleMouseMove);
     container.addEventListener("mouseleave", handleMouseLeave);
 
+    // 👉 Thêm hiệu ứng slide ảnh
+    const slidesContainer = document.querySelector(".slide-container");
+    const slidesWrapper = document.querySelector(".slide-wrapper");
+    const dots = document.querySelectorAll(".dot");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    let currentIndex = 0;
+
+    const showSlide = (index) => {
+      const slideWidth = slidesContainer?.offsetWidth || 0;
+      if (slidesWrapper) {
+        slidesWrapper.style.transform = `translateX(-${index * slideWidth}px)`;
+      }
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    };
+
+    const handlePrev = () => {
+      currentIndex =
+        (currentIndex - 1 + (slidesWrapper?.children.length || 1)) %
+        (slidesWrapper?.children.length || 1);
+      showSlide(currentIndex);
+    };
+
+    const handleNext = () => {
+      currentIndex = (currentIndex + 1) % (slidesWrapper?.children.length || 1);
+      showSlide(currentIndex);
+    };
+
+    prev?.addEventListener("click", handlePrev);
+    next?.addEventListener("click", handleNext);
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        currentIndex = i;
+        showSlide(currentIndex);
+      });
+    });
+
+    window.addEventListener("resize", () => showSlide(currentIndex));
+    showSlide(currentIndex);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       container.removeEventListener("mousemove", handleMouseMove);
       container.removeEventListener("mouseleave", handleMouseLeave);
+      prev?.removeEventListener("click", handlePrev);
+      next?.removeEventListener("click", handleNext);
+      window.removeEventListener("resize", () => showSlide(currentIndex));
     };
   }, []);
 
@@ -400,6 +539,63 @@ const Home = () => {
                     className="figma-icon"
                   />
                   <div>{textContent.viewFigma}</div>
+                </div>
+              </div>
+              <div className="overlay-line"></div>
+              <div className="project-overview-container">
+                <div className="project-overview-title-container">
+                  <div className="project-overview-title">
+                    {textContent.projectOverviewTitle}
+                  </div>
+                  <div className="project-overview-time">
+                    <img
+                      src={images.calendarIcon}
+                      alt="Time Icon"
+                      className="time-icon"
+                    />
+                    {activeProject.time}
+                  </div>
+                </div>
+                <div className="project-detail">{activeProject.detail}</div>
+              </div>
+              <div className="project-middle-container">
+                <div className="project-tech-block">
+                  <div className="technologies-text">
+                    {textContent.technologiesUsed}
+                  </div>
+                  <div className="technologies-list-container">
+                    <ul className="technology-list">
+                      {activeProject.technologies?.map((tech, index) => (
+                        <li key={index}>{tech}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div className="key-responsibilities-text">
+                  {textContent.keyResponsibilities}
+                  <ul className="responsibilities-list">
+                    {activeProject.responsibilities?.map((resp, index) => (
+                      <li key={index}>{resp}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div class="slide-container">
+                <div class="slide-wrapper">
+                  <div>
+                    <img src={images.famfundVisual1} alt="Project Visual 1" />
+                  </div>
+                  <div>
+                    <img src={images.famfundVisual2} alt="Project Visual 2" />
+                  </div>
+                </div>
+
+                <div id="prev">&#10094;</div>
+                <div id="next">&#10095;</div>
+
+                <div class="dots">
+                  <span class="dot" data-index="0"></span>
+                  <span class="dot" data-index="1"></span>
                 </div>
               </div>
             </div>

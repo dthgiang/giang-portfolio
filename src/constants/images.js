@@ -26,6 +26,10 @@ import project3 from "../assets/images/project3.png";
 import project4 from "../assets/images/project4.png";
 import figmaWhite from "../assets/images/figmaWhite.svg";
 import figmaPurple from "../assets/images/figmaPurple.svg";
+import bgProject from "../assets/images/bg-project.svg";
+import calendarIcon from "../assets/images/icon-calendar.svg";
+import famfundVisual1 from "../assets/images/project-visual-famfund1.svg";
+import famfundVisual2 from "../assets/images/project-visual-famfund2.svg";
 
 const images = {
   circlePlay,
@@ -56,6 +60,10 @@ const images = {
   project4,
   figmaWhite,
   figmaPurple,
+  bgProject,
+  calendarIcon,
+  famfundVisual1,
+  famfundVisual2,
 };
 
 export default images;
