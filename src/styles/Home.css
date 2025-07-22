@@ -780,8 +780,6 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .project-overlay-content {
@@ -796,13 +794,14 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   overflow-x: hidden; /* Tắt thanh cuộn ngang */
   animation: fadeIn 0.3s ease;
+  position: relative;
 }
 
 .project-overlay-content * {
   max-width: 100%;
   box-sizing: border-box;
   word-break: break-word;
-  overflow-x: hidden !important;
+  /* overflow-x: hidden !important; */
 }
 
 @keyframes fadeIn {
@@ -1045,49 +1044,87 @@
   margin-bottom: 16px;
 }
 
+.project-visual-title {
+  color: #333333; /* Màu chữ */
+  font-size: 1.35vw; /* Kích thước chữ */
+  font-weight: 600; /* Trọng số chữ */
+  line-height: 1.5; /* Chiều cao dòng */
+  font-family: "Segoe UI", sans-serif; /* Font chữ */
+  font-weight: bold; /* Trọng số font */
+  margin-bottom: 1.5vw; /* Khoảng cách dưới */
+  text-align: left;
+  margin-left: 3vw; /* Căn trái */
+}
+
 .slide-container {
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  max-width: 100%;
   overflow: hidden;
 }
 
 .slide-wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 200%; /* 2 ảnh => 200% */
+  width: 200%; /* 2 ảnh = 200% */
 }
 
 .slide-wrapper > div {
   flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide-wrapper img {
   width: auto;
   height: auto;
+  max-width: 100%;
+  max-height: 100%;
   display: block;
+  margin: 0 auto;
 }
 
-/* Navigation arrows */
-#prev,
-#next {
+.arrow-button {
   position: absolute;
   top: 50%;
+  width: 4vh;
+  height: 4vh;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 12px;
-  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.425);
+  font-size: 2vh;
+  border-radius: 100%;
   cursor: pointer;
-  z-index: 2;
+  z-index: 10;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* Màu chữ */
 }
 
-#prev {
-  left: 15px;
+.arrow-button:hover {
+  background-color: rgba(0, 0, 0, 0.158);
 }
 
-#next {
-  right: 15px;
+/* Trái và phải */
+.arrow-left {
+  left: 4vw;
+  color: #fff;
+}
+
+.arrow-left:hover {
+  color: #3f3c3c; /* Màu khi hover */
+}
+
+.arrow-right {
+  right: 4vw;
+  color: #fff;
+}
+
+.arrow-right:hover {
+  color: #3f3c3c; /* Màu khi hover */
 }
 
 /* Dots */
@@ -1100,14 +1137,15 @@
   height: 12px;
   width: 12px;
   margin: 0 6px;
-  background-color: #bbb;
+  background-color: #4c4c83;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .dot.active {
-  background-color: #333;
+  background-color: #dc6b5c;
 }
 
 /* OVERLAY END */

@@ -69,6 +69,7 @@ const textContent = {
     "ProHire is a recruitment web platform that simplifies hiring for businesses and agencies. It features job listings, candidate profiles, CV builder, and tracking tools, offering a clean and user-friendly experience for both recruiters and applicants.",
   technologiesUsed: "Technologies Used",
   keyResponsibilities: "Key Responsibilities",
+  projectVisuals: "Project Visuals",
 };
 
 export default textContent;

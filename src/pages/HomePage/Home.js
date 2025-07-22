@@ -136,6 +136,8 @@ const Home = () => {
   const [showCheerEffect, setShowCheerEffect] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const imagesArray = [images.famfundVisual1, images.famfundVisual2];
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
@@ -165,6 +167,14 @@ const Home = () => {
         setShowCheerEffect(false);
       }, 1850);
     }, 850); // Thời gian để cuộn hoàn tất, có thể điều chỉnh theo ý muốn
+  };
+
+  const showPrevImage = () => {
+    setCurrentSlide((prev) => (prev === 0 ? imagesArray.length - 1 : prev - 1));
+  };
+
+  const showNextImage = () => {
+    setCurrentSlide((prev) => (prev === imagesArray.length - 1 ? 0 : prev + 1));
   };
 
   useEffect(() => {
@@ -253,7 +263,6 @@ const Home = () => {
 
       whiteSign.classList.remove("fade-out", "shift-left", "shift-right");
       coderBg.classList.remove("fade-opacity", "shift-left", "shift-right");
-
       imageContainer?.classList.remove("image-shift-left", "image-shift-right");
     };
 
@@ -265,12 +274,13 @@ const Home = () => {
     container.addEventListener("mousemove", handleMouseMove);
     container.addEventListener("mouseleave", handleMouseLeave);
 
-    // 👉 Thêm hiệu ứng slide ảnh
+    // 👉 Slide Image Logic
     const slidesContainer = document.querySelector(".slide-container");
     const slidesWrapper = document.querySelector(".slide-wrapper");
     const dots = document.querySelectorAll(".dot");
-    const prev = document.getElementById("prev");
-    const next = document.getElementById("next");
+    const prev = document.querySelector(".arrow-button.arrow-left");
+    const next = document.querySelector(".arrow-button.arrow-right");
+
     let currentIndex = 0;
 
     const showSlide = (index) => {
@@ -284,14 +294,14 @@ const Home = () => {
     };
 
     const handlePrev = () => {
-      currentIndex =
-        (currentIndex - 1 + (slidesWrapper?.children.length || 1)) %
-        (slidesWrapper?.children.length || 1);
+      const totalSlides = slidesWrapper?.children.length || 1;
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
       showSlide(currentIndex);
     };
 
     const handleNext = () => {
-      currentIndex = (currentIndex + 1) % (slidesWrapper?.children.length || 1);
+      const totalSlides = slidesWrapper?.children.length || 1;
+      currentIndex = (currentIndex + 1) % totalSlides;
       showSlide(currentIndex);
     };
 
@@ -580,22 +590,42 @@ const Home = () => {
                   </ul>
                 </div>
               </div>
-              <div class="slide-container">
-                <div class="slide-wrapper">
-                  <div>
-                    <img src={images.famfundVisual1} alt="Project Visual 1" />
-                  </div>
-                  <div>
-                    <img src={images.famfundVisual2} alt="Project Visual 2" />
-                  </div>
+              <div className="slide-container">
+                <div className="project-visual-title">Project Visuals</div>
+                <div className="slide-wrapper">
+                  {imagesArray.map((imgSrc, index) => (
+                    <div
+                      key={index}
+                      className={`slide ${
+                        index === currentSlide ? "active" : ""
+                      }`}
+                    >
+                      <img src={imgSrc} alt={`Project Visual ${index + 1}`} />
+                    </div>
+                  ))}
                 </div>
-
-                <div id="prev">&#10094;</div>
-                <div id="next">&#10095;</div>
-
-                <div class="dots">
-                  <span class="dot" data-index="0"></span>
-                  <span class="dot" data-index="1"></span>
+                <div
+                  className="arrow-button arrow-left"
+                  onClick={showPrevImage}
+                >
+                  &#10094;
+                </div>
+                <div
+                  className="arrow-button arrow-right"
+                  onClick={showNextImage}
+                >
+                  &#10095;
+                </div>
+                <div className="dots">
+                  {imagesArray.map((_, index) => (
+                    <span
+                      key={index}
+                      className={`dot ${
+                        index === currentSlide ? "active" : ""
+                      }`}
+                      onClick={() => setCurrentSlide(index)}
+                    ></span>
+                  ))}
                 </div>
               </div>
             </div>
