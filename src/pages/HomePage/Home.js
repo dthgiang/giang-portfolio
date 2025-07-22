@@ -134,10 +134,16 @@ const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showUpEffect, setShowUpEffect] = useState(false);
   const [showCheerEffect, setShowCheerEffect] = useState(false);
-  const [activeProject, setActiveProject] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
+
+  const [activeProject, setActiveProject] = useState(projects[0]);
+  const imagesArray = activeProject
+    ? [activeProject.projectVisuals1, activeProject.projectVisuals2].filter(
+        Boolean
+      )
+    : [];
+
   const [currentSlide, setCurrentSlide] = useState(0);
-  const imagesArray = [images.famfundVisual1, images.famfundVisual2];
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
@@ -169,12 +175,18 @@ const Home = () => {
     }, 850); // Thời gian để cuộn hoàn tất, có thể điều chỉnh theo ý muốn
   };
 
-  const showPrevImage = () => {
-    setCurrentSlide((prev) => (prev === 0 ? imagesArray.length - 1 : prev - 1));
+  const showNextImage = () => {
+    setCurrentSlide((prev) => (prev + 1) % imagesArray.length);
+    console.log("projects:", projects);
+    console.log("Visual 1:", projects.projectVisuals1);
+    console.log("Visual 2:", projects.projectVisuals2);
   };
 
-  const showNextImage = () => {
-    setCurrentSlide((prev) => (prev === imagesArray.length - 1 ? 0 : prev + 1));
+  const showPrevImage = () => {
+    setCurrentSlide((prev) => (prev === 0 ? imagesArray.length - 1 : prev - 1));
+    console.log("projects:", projects);
+    console.log("Visual 1:", projects.projectVisuals1);
+    console.log("Visual 2:", projects.projectVisuals2);
   };
 
   useEffect(() => {
