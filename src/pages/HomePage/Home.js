@@ -149,7 +149,8 @@ const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showUpEffect, setShowUpEffect] = useState(false);
   const [showCheerEffect, setShowCheerEffect] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isFigmaHovered, setIsFigmaHovered] = useState(false);
+  const [isGithubHovered, setIsGithubHovered] = useState(false);
 
   const [activeProject, setActiveProject] = useState(projects[0]);
   const imagesArray = activeProject
@@ -565,17 +566,64 @@ const Home = () => {
                     {activeProject.subtitle}
                   </div>
                 </div>
-                <div
+                {/* <a
+                  href={activeProject.figmaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="view-figma-button"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
+                  onMouseEnter={() => setIsFigmaHovered(true)}
+                  onMouseLeave={() => setIsFigmaHovered(false)}
                 >
                   <img
-                    src={isHovered ? images.figmaPurple : images.figmaWhite}
+                    src={
+                      isFigmaHovered ? images.figmaPurple : images.figmaWhite
+                    }
                     alt="Figma Icon"
                     className="figma-icon"
                   />
                   <div>{textContent.viewFigma}</div>
+                </a> */}
+                <div className="button-group">
+                  {/* View Github button */}
+                  {activeProject.githubUrl && (
+                    <a
+                      href={activeProject.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="view-github-button"
+                      onMouseEnter={() => setIsGithubHovered(true)}
+                      onMouseLeave={() => setIsGithubHovered(false)}
+                    >
+                      <img
+                        src={
+                          isGithubHovered
+                            ? images.githubYellow
+                            : images.githubWhite
+                        }
+                        alt="Github Icon"
+                        className="github-icon"
+                      />
+                      <div>{textContent.viewGithub}</div>
+                    </a>
+                  )}
+                  {/* View Figma button */}
+                  <a
+                    href={activeProject.figmaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="view-figma-button"
+                    onMouseEnter={() => setIsFigmaHovered(true)}
+                    onMouseLeave={() => setIsFigmaHovered(false)}
+                  >
+                    <img
+                      src={
+                        isFigmaHovered ? images.figmaPurple : images.figmaWhite
+                      }
+                      alt="Figma Icon"
+                      className="figma-icon"
+                    />
+                    <div>{textContent.viewFigma}</div>
+                  </a>
                 </div>
               </div>
               <div className="overlay-line"></div>

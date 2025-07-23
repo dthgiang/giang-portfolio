@@ -30,6 +30,8 @@ import bgProject from "../assets/images/bg-project.svg";
 import calendarIcon from "../assets/images/icon-calendar.svg";
 import famfundVisual1 from "../assets/images/project-visual-famfund1.svg";
 import famfundVisual2 from "../assets/images/project-visual-famfund2.svg";
+import githubYellow from "../assets/images/github-yellow.svg";
+import githubWhite from "../assets/images/github-white.svg";
 
 const images = {
   circlePlay,
@@ -64,6 +66,8 @@ const images = {
   calendarIcon,
   famfundVisual1,
   famfundVisual2,
+  githubYellow,
+  githubWhite,
 };
 
 export default images;

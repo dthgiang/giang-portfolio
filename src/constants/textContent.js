@@ -64,6 +64,7 @@ const textContent = {
     "Enter your email to stay updated with the latest news and exclusive insights from me.",
   enterEmail: "Enter your email",
   viewFigma: "View Figma",
+  viewGithub: "View Github",
   projectOverviewTitle: "Project Overview",
   projectDetail1:
     "ProHire is a recruitment web platform that simplifies hiring for businesses and agencies. It features job listings, candidate profiles, CV builder, and tracking tools, offering a clean and user-friendly experience for both recruiters and applicants.",

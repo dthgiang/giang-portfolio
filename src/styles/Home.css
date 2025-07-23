@@ -832,6 +832,12 @@
   gap: 1vh; /* hoặc 0.5rem tùy bạn */
 }
 
+.button-group {
+  display: flex;
+  gap: 1vw; /* Khoảng cách giữa các nút */
+  margin-top: 1vh; /* Khoảng cách trên */
+}
+
 .view-figma-button {
   display: flex;
   align-items: center;
@@ -843,22 +849,45 @@
   padding: 1.5vh 2vw;
   border-radius: 3vh;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .view-figma-button:hover {
   color: #5d5cdc;
-  border-color: #5d5cdc;
   background-color: transparent;
   border: 2px solid #5d5cdc; /* Viền */
   border-radius: 3vh; /* Bo tròn */
   font-weight: 600;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
 }
 
 .figma-icon {
   width: auto;
   height: auto;
   transition: all 0.3s ease;
+}
+
+.view-github-button {
+  display: flex;
+  align-items: center;
+  gap: 0.8vw;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 2vh;
+  background-color: #feb12f; /* Màu nền đen xám của GitHub */
+  color: #fff8f2;
+  padding: 1.5vh 2vw;
+  border-radius: 3vh;
+  cursor: pointer;
+  text-decoration: none; /* Đảm bảo không có gạch chân */
+}
+
+.view-github-button:hover {
+  color: #feb12f;
+  background-color: transparent;
+  border: 2px solid #feb12f;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .title-text-overlay {
