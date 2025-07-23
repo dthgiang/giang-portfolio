@@ -6,8 +6,16 @@ import Lottie from "lottie-react";
 import ButtonUp from "../../lotties/button-up.json";
 import Up from "../../lotties/up.json";
 import Cheer from "../../lotties/cheer.json";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
+  const handleAboutClick = () => {
+    navigate("/about");
+  };
   const projects = [
     {
       id: 1,
@@ -371,8 +379,12 @@ const Home = () => {
           />
           <div className="logo-name">{textContent.logoName}</div>
           <nav className="nav-menu">
-            <span className="nav-item">{textContent.about}</span>
-            <span className="nav-item">{textContent.contact}</span>
+            <span className="nav-item" onClick={handleAboutClick}>
+              {textContent.about}
+            </span>
+            <span className="nav-item" onClick={handleContactClick}>
+              {textContent.contact}
+            </span>
           </nav>
           <div className="downloadCVButton">{textContent.downloadCV}</div>
         </div>
@@ -483,7 +495,7 @@ const Home = () => {
             </div>
           </div>
           <div className="downloadCVArrow">
-            <span>{textContent.readMore}</span>
+            <span onClick={handleAboutClick}>{textContent.readMore}</span>
             <i className="arrow-icon">→</i>
           </div>
         </div>
@@ -558,23 +570,7 @@ const Home = () => {
                     {activeProject.subtitle}
                   </div>
                 </div>
-                {/* <a
-                  href={activeProject.figmaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="view-figma-button"
-                  onMouseEnter={() => setIsFigmaHovered(true)}
-                  onMouseLeave={() => setIsFigmaHovered(false)}
-                >
-                  <img
-                    src={
-                      isFigmaHovered ? images.figmaPurple : images.figmaWhite
-                    }
-                    alt="Figma Icon"
-                    className="figma-icon"
-                  />
-                  <div>{textContent.viewFigma}</div>
-                </a> */}
+
                 <div className="button-group">
                   {/* View Github button */}
                   {activeProject.githubUrl && (
@@ -710,7 +706,10 @@ const Home = () => {
             <div className="contact-title">{textContent.contactTitle}</div>
             <div className="contact-content">{textContent.contactContent}</div>
           </div>
-          <div className="contact-button">{textContent.contact}</div>
+          {/* <div className="contact-button">{textContent.contact}</div> */}
+          <span className="contact-button" onClick={handleContactClick}>
+            {textContent.contact}
+          </span>
         </div>
         <img src={images.introArrow} alt="introArrow" className="intro-arrow" />
         <img
@@ -763,9 +762,12 @@ const Home = () => {
       <div className="footer-container">
         <div className="logo-name">{textContent.logoName}</div>
         <nav className="nav-menu">
-          <span className="nav-item-footer">{textContent.about}</span>
-          <span className="nav-item-footer">{textContent.projects}</span>
-          <span className="nav-item-footer">{textContent.contact}</span>
+          <span className="nav-item-footer" onClick={handleAboutClick}>
+            {textContent.about}
+          </span>
+          <span className="nav-item-footer" onClick={handleContactClick}>
+            {textContent.contact}
+          </span>
         </nav>
         <Lottie
           animationData={ButtonUp}

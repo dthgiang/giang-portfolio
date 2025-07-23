@@ -1,0 +1,45 @@
+.about-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.about-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.about-images img {
+  max-width: 48%;
+  border-radius: 8px;
+}
+.about-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.about-content {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.about-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+.about-footer img {
+  max-width: 100%;
+  height: auto;
+}
+.about-footer p {
+  font-size: 14px;
+  color: #666;
+}
+.about-footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+.about-footer a:hover {
+  text-decoration: underline;
+}
+.about-form {
+  margin-bottom: 20px;
+}
