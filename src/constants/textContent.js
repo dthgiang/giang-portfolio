@@ -47,11 +47,11 @@ const textContent = {
   project1Title: "ProHire",
   project1SubTitle: "Website/Landing Page",
   project2Title: "Rabbi",
-  project2SubTitle: "Mobile App",
+  project2SubTitle: "Mobile Application",
   project3Title: "Famfund",
-  project3SubTitle: "Cross Platform App",
+  project3SubTitle: "Cross Platform Application",
   project4Title: "TripMate",
-  project4SubTitle: "Mobile App",
+  project4SubTitle: "Mobile Application",
   project5Title: "Thanh Giang Portfolio",
   project5SubTitle: "Website",
   contactTitle: "Got A Project! Let's Talk",
@@ -67,9 +67,21 @@ const textContent = {
   projectOverviewTitle: "Project Overview",
   projectDetail1:
     "ProHire is a recruitment web platform that simplifies hiring for businesses and agencies. It features job listings, candidate profiles, CV builder, and tracking tools, offering a clean and user-friendly experience for both recruiters and applicants.",
+  projectDetail3:
+    "A family app named Famfund which manages family life with features including group chat, event calendar, daily task checklist, shopping list, receipt scanning, education management system, household tools, and comprehensive expense and income tracking with detailed financial analysis.",
   technologiesUsed: "Technologies Used",
   keyResponsibilities: "Key Responsibilities",
   projectVisuals: "Project Visuals",
+  figmaUrl1:
+    "https://www.figma.com/community/file/1477737118163437539/prohire-recruitment-web-design",
+  figmaUrl2: "Rabbi",
+  figmaUrl3:
+    "https://www.figma.com/community/file/1426618657567946776/fam-fund-app",
+  figmaUrl4:
+    "https://www.figma.com/community/file/1440846372821665172/tripmate-booking-travel-app-design",
+  figmaUrl5: "Thanh Giang Portfolio",
+  githubUrl3: "https://github.com/bhtoan2204/family-frontend-mobile",
+  githubUrl5: "https://github.com/dthgiang/giang-portfolio",
 };
 
 export default textContent;

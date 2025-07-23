@@ -1058,17 +1058,9 @@
 
 .slide-container {
   position: relative;
-  max-width: 800px;
-  margin: 40px auto;
+  width: 100%;
+  margin: 0 auto;
   overflow: hidden;
-}
-
-.project-visual-title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 16px;
-  font-weight: bold;
-  color: #333;
 }
 
 .slide-wrapper {
@@ -1076,6 +1068,10 @@
   display: flex;
   transition: transform 0.5s ease-in-out;
   height: 500px;
+  width: 90%; /* Đặt chiều rộng của slide-wrapper */
+  overflow: hidden; /* Ẩn phần tràn */
+  margin: 0 auto; /* Căn giữa slide-wrapper */
+  border-radius: 10px; /* Bo tròn góc */
 }
 
 .slide {
@@ -1102,42 +1098,49 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 40px;
-  color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 8px 16px;
+  color: white;
+  border-radius: 50%;
   cursor: pointer;
-  z-index: 10;
-  user-select: none;
-  border-radius: 4px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .arrow-left {
-  left: 10px;
+  left: 4vw;
 }
 
 .arrow-right {
-  right: 10px;
+  right: 4vw;
 }
 
 .dots {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 3vh; /* Khoảng cách trên */
+  margin-bottom: 3vh; /* Khoảng cách dưới */
 }
 
 .dot {
   height: 12px;
   width: 12px;
   margin: 0 6px;
-  background-color: #bbb;
+  background-color: #d9d9d9;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .dot.active {
-  background-color: #333;
+  background-color: #5d5cdc;
 }
 
 /* OVERLAY END */

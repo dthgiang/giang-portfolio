@@ -10,6 +10,7 @@ import Cheer from "../../lotties/cheer.json";
 const Home = () => {
   const projects = [
     {
+      id: 1,
       title: textContent.project1Title,
       subtitle: textContent.project1SubTitle,
       image: images.project1,
@@ -32,8 +33,11 @@ const Home = () => {
       ],
       projectVisuals1: images.famfundVisual1,
       projectVisuals2: images.famfundVisual2,
+      githubUrl: undefined,
+      figmaUrl: textContent.figmaUrl1,
     },
     {
+      id: 2,
       title: textContent.project2Title,
       subtitle: textContent.project2SubTitle,
       image: images.project2,
@@ -56,8 +60,11 @@ const Home = () => {
       ],
       projectVisuals1: images.famfundVisual1,
       projectVisuals2: images.famfundVisual2,
+      githubUrl: undefined,
+      figmaUrl: undefined,
     },
     {
+      id: 3,
       title: textContent.project3Title,
       subtitle: textContent.project3SubTitle,
       image: images.project3,
@@ -80,8 +87,11 @@ const Home = () => {
       ],
       projectVisuals1: images.famfundVisual1,
       projectVisuals2: images.famfundVisual2,
+      githubUrl: textContent.githubUrl3,
+      figmaUrl: textContent.figmaUrl3,
     },
     {
+      id: 4,
       title: textContent.project4Title,
       subtitle: textContent.project4SubTitle,
       image: images.project4,
@@ -104,8 +114,11 @@ const Home = () => {
       ],
       projectVisuals1: images.famfundVisual1,
       projectVisuals2: images.famfundVisual2,
+      githubUrl: undefined,
+      figmaUrl: textContent.figmaUrl4,
     },
     {
+      id: 5,
       title: textContent.project5Title,
       subtitle: textContent.project5SubTitle,
       image: images.project5,
@@ -128,6 +141,8 @@ const Home = () => {
       ],
       projectVisuals1: images.famfundVisual1,
       projectVisuals2: images.famfundVisual2,
+      githubUrl: textContent.githubUrl5,
+      figmaUrl: textContent.figmaUrl5,
     },
   ];
 
@@ -603,7 +618,9 @@ const Home = () => {
                 </div>
               </div>
               <div className="slide-container">
-                <div className="project-visual-title">Project Visuals</div>
+                <div className="project-visual-title">
+                  {textContent.projectVisuals}
+                </div>
                 <div className="slide-wrapper">
                   {imagesArray.map((imgSrc, index) => (
                     <div
