@@ -706,7 +706,6 @@ const Home = () => {
             <div className="contact-title">{textContent.contactTitle}</div>
             <div className="contact-content">{textContent.contactContent}</div>
           </div>
-          {/* <div className="contact-button">{textContent.contact}</div> */}
           <span className="contact-button" onClick={handleContactClick}>
             {textContent.contact}
           </span>
