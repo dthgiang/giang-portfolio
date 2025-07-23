@@ -70,6 +70,10 @@ const textContent = {
     "ProHire is a recruitment web platform that simplifies hiring for businesses and agencies. It features job listings, candidate profiles, CV builder, and tracking tools, offering a clean and user-friendly experience for both recruiters and applicants.",
   projectDetail3:
     "A family app named Famfund which manages family life with features including group chat, event calendar, daily task checklist, shopping list, receipt scanning, education management system, household tools, and comprehensive expense and income tracking with detailed financial analysis.",
+  projectDetail4:
+    "TripMate is a modern, user-friendly UI template for booking flights, trains, buses, and hotels. It features intuitive navigation, advanced search filters, booking management, and secure payment integration. Perfect for startups and developers looking to build professional travel apps quickly.",
+  projectDetail5:
+    "This is my personal portfolio website designed to showcase my work, skills, and projects. Built with a focus on clean design, responsive layout, and smooth user experience, the site serves as a central hub for my professional identity. It features sections for project highlights, about me, contact information, and more—crafted to reflect both creativity and clarity.",
   technologiesUsed: "Technologies Used",
   keyResponsibilities: "Key Responsibilities",
   projectVisuals: "Project Visuals",

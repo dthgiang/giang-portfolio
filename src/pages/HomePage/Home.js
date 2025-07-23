@@ -124,15 +124,7 @@ const Home = () => {
       image: images.project5,
       time: "03/2025 - 06/2025",
       detail: textContent.projectDetail5,
-      technologies: [
-        "Figma",
-        "TypeScript",
-        "Javascript",
-        "Bun",
-        "Tailwind CSS",
-        "React",
-        "HTML",
-      ],
+      technologies: ["Javascript", "Figma", "React", "HTML", "CSS"],
       responsibilities: [
         "Developed responsive frontend for web and mobile platform",
         "Created app logo and ensured consistent visual identity.",
