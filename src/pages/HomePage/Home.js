@@ -144,7 +144,7 @@ const Home = () => {
   const [isFigmaHovered, setIsFigmaHovered] = useState(false);
   const [isGithubHovered, setIsGithubHovered] = useState(false);
 
-  const [activeProject, setActiveProject] = useState(projects[0]);
+  const [activeProject, setActiveProject] = useState(false);
   const imagesArray = activeProject
     ? [activeProject.projectVisuals1, activeProject.projectVisuals2].filter(
         Boolean
