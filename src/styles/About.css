@@ -1,45 +1,45 @@
-.about-container {
+.about-page-container {
   padding: 20px;
   background-color: #f9f9f9;
 }
 
-.about-images {
+.about-page-container {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-.about-images img {
+.about-page-images img {
   max-width: 48%;
   border-radius: 8px;
 }
-.about-title {
+.about-page-title {
   font-size: 24px;
   margin-bottom: 10px;
 }
-.about-content {
+.about-page-content {
   font-size: 16px;
   margin-bottom: 20px;
 }
-.about-footer {
+.about-page-footer {
   text-align: center;
   margin-top: 20px;
 }
-.about-footer img {
+.about-page-footer img {
   max-width: 100%;
   height: auto;
 }
-.about-footer p {
+.about-page-footer p {
   font-size: 14px;
   color: #666;
 }
-.about-footer a {
+.about-page-footer a {
   color: #007bff;
   text-decoration: none;
 }
-.about-footer a:hover {
+.about-page-footer a:hover {
   text-decoration: underline;
 }
-.about-form {
+.about-page-form {
   margin-bottom: 20px;
 }

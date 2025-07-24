@@ -1,148 +1,45 @@
-.header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 5vh 4vw;
-  /* background-image: url("../assets/images/header-contact.svg"); */
-  background-color: #5d5cdc;
-  color: #fff8f2;
+.contact-page {
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 
-.nav-menu {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 2vw;
+.contact-page-title {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.logo-header {
-  font-family: "Lemon", sans-serif; /* Sử dụng font Lemon */
-  font-size: 2vw; /* Font size theo viewport width */
-}
-
-.logo-header:hover {
-  color: #feb12f; /* Màu chữ khi hover */
-}
-
-.nav-item {
-  color: #fff8f2;
-  cursor: pointer;
-  font-family: "SegoeUI", sans-serif;
-  font-size: 1vw; /* Kích thước font, bạn có thể điều chỉnh theo nhu cầu */
-  padding: 1vh 2vh; /* Khoảng cách bên trong */
-  transition: background-color 0.3s, color 0.3s;
-  font-weight: 600; /* Đặt trọng số font là semi-bold */
-  line-height: 1; /* Đảm bảo chiều cao dòng nhất quán */
-}
-
-.nav-item:hover {
-  color: #feb12f; /* Màu chữ khi hover */
-  /* Không thay đổi font-weight ở đây */
-}
-
-.social-icons {
-  display: flex;
-  gap: 2vw;
-  align-items: center;
-  margin-left: auto; /* đẩy icon sang phải nếu cần */
-}
-
-.social-icons img {
-  width: 2vw;
-  height: 2vw;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.social-icons img:hover {
-  transform: scale(1.1);
-}
-
-.gmail-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
-  height: 40px; /* đảm bảo chiều cao cố định */
-}
-
-.gmail-img,
-.gmail-img-hover {
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gmail-img-hover {
-  opacity: 0;
-}
-
-.gmail-wrapper:hover .gmail-img-hover {
-  opacity: 1;
-}
-
-.gmail-wrapper:hover .gmail-img {
-  opacity: 0;
-}
-
-.email-text {
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-  opacity: 0;
-  margin-left: 50px;
+.contact-page-content {
   font-size: 16px;
-  font-weight: 600;
-
-  /* hiệu ứng */
-  transition: width 1s ease, opacity 0.5s ease;
-
-  /* phần quan trọng để hiển thị chữ với hình nền */
-  /* background-image: url("../assets/images/gmail-header.svg"); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  margin-bottom: 20px;
 }
 
-.gmail-wrapper:hover .email-text {
-  width: 180px;
-  opacity: 1;
+.contact-page-form {
+  margin-bottom: 20px;
 }
 
-.github-img {
-  width: auto;
+.contact-page-form input,
+.contact-page-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-page-form button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-page-footer {
+  text-align: center;
+}
+
+.contact-page-footer img {
+  max-width: 100%;
   height: auto;
-}
-
-.github-img:hover {
-  content: url("../assets/images/github-header.svg");
-  transition: content 0.3s ease;
-}
-
-.linkedin-img {
-  width: auto;
-  height: auto;
-}
-
-.linkedin-img:hover {
-  content: url("../assets/images/in-header.svg");
-  transition: content 0.3s ease;
-}
-
-.figma-img {
-  width: auto;
-  height: auto;
-}
-
-.figma-img:hover {
-  content: url("../assets/images/figma-header.svg");
-  transition: content 0.3s ease;
 }
