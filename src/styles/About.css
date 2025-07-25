@@ -221,6 +221,7 @@
   cursor: pointer;
   stroke: white; /* Màu viền trắng */
   border: 0.5vw solid white; /* Viền trắng */
+  margin-bottom: 3vh; /* Khoảng cách dưới */
 }
 
 .mini-image:hover {
@@ -228,11 +229,23 @@
 }
 
 .about-page-first-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5vh 0; /* Padding cho khoảng cách bên trong */
+  padding: 2vh 0; /* Padding cho khoảng cách bên trong */
   background-color: #fff; /* Màu nền trắng */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-decor-first-block {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: auto;
+  height: auto;
+  z-index: 5; /* Đặt dưới các phần tử khác */
+  background-size: cover; /* Đảm bảo hình nền phủ đầy */
+  background-position: center; /* Căn giữa hình nền */
 }

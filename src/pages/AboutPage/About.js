@@ -139,6 +139,11 @@ const About = () => {
           <img src={images.aboutIMG5} className="mini-image" alt="img5" />
           <img src={images.aboutIMG6} className="mini-image" alt="img6" />
         </div>
+        <img
+          src={images.aboutDecorFirstBlock}
+          className="about-decor-first-block"
+          alt="Decorative Element"
+        />
       </div>
       <div>Giang</div>
     </div>
