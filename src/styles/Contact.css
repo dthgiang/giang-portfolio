@@ -249,6 +249,7 @@
   overflow: hidden;
   margin-top: 2vw;
   background-color: #fdfdfd; /* Màu nền nhẹ */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
 }
 
 .subscribe-content-wrapper-contact-page {
@@ -414,4 +415,36 @@
   bottom: 15%;
   left: 26%;
   z-index: 1;
+}
+
+/* FOOTER */
+.footer-container-contact-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh 8vw;
+  font-size: 1vw;
+  text-align: center;
+  color: #616161;
+  margin-top: 3vh; /* Khoảng cách trên */
+  margin-bottom: 3vh; /* Khoảng cách dưới */
+}
+
+.nav-menu-contact-page-footer {
+  display: flex;
+  gap: 2vw; /* Khoảng cách giữa các mục */
+}
+
+.nav-item-footer-contact-page {
+  color: #616161; /* Màu chữ */
+  cursor: pointer; /* Hiển thị con trỏ khi hover */
+  font-family: "SegoeUI", sans-serif; /* Font chữ */
+  font-size: 1vw; /* Kích thước font */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+  line-height: 1; /* Chiều cao dòng */
+  font-weight: 600; /* Trọng số font */
+}
+
+.nav-item-footer-contact-page:hover {
+  color: #feb12f; /* Màu chữ khi hover */
 }

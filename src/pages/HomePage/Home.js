@@ -720,44 +720,6 @@ const Home = () => {
         <img src={images.real} alt="real" className="real-image-contact" />
       </div>
 
-      {/* Contact Block */}
-      {/* <div className="subscribe-block">
-        <div className="subscribe-content-wrapper">
-          <div className="subscribe-text-container">
-            <div className="subscribe-title">{textContent.SUBSCRIBE}</div>
-            <div className="subscribe-content">
-              {textContent.subscribeContent}
-            </div>
-          </div>
-          <div className="enter-email-container">
-            <div className="bg-overlay"></div>
-            <img
-              src={images.bgSubscribe}
-              alt="bgSubscribe"
-              className="bg-subscribe"
-            />
-            <Lottie animationData={Email} className="email-footer" />
-            <img src={images.earth} alt="earth" className="earth" />
-            <img
-              src={images.subscribeArrow}
-              alt="subscribeArrow"
-              className="subscribe-arrow"
-            />
-            <div className="email-subtext">{textContent.enterEmailSubtext}</div>
-            <div className="email-input-wrapper">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="email-input"
-              />
-              <button className="subscribe-button">
-                {textContent.subscribe}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       {/* Footer */}
       <div className="footer-container">
         <div className="logo-name">{textContent.logoName}</div>

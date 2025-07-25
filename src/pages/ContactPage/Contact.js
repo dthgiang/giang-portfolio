@@ -162,6 +162,7 @@ const Contact = () => {
           className="contact-giang-avatar-img"
         />
       </div>
+
       {/* Contact Block */}
       <div className="subscribe-block-contact-page">
         <div className="subscribe-content-wrapper-contact-page">
@@ -208,11 +209,32 @@ const Contact = () => {
                 className="email-input3-contact-page"
               />
               <button className="subscribe-button-contact-page">
-                {textContent.subscribe}
+                {textContent.sendEmail}
               </button>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Footer */}
+      <div className="footer-container-contact-page">
+        <div className="logo-name" onClick={handleLogoClick}>
+          {textContent.logoName}
+        </div>
+        <nav className="nav-menu-contact-page-footer">
+          <span
+            className="nav-item-footer-contact-page"
+            onClick={handleAboutClick}
+          >
+            {textContent.about}
+          </span>
+          <span
+            className="nav-item-footer-contact-page"
+            onClick={handleContactClick}
+          >
+            {textContent.contact}
+          </span>
+        </nav>
       </div>
     </div>
   );

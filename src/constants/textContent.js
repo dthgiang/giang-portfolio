@@ -96,6 +96,7 @@ const textContent = {
   figma: "Figma",
   contactPageTitle2: "LET'S STAY IN TOUCH",
   contactPageSubTitle2: "Drop Your Email, I'll Send Cool Stuff",
+  sendEmail: "Send email",
 };
 
 export default textContent;
