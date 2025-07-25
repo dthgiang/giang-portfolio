@@ -145,7 +145,45 @@ const About = () => {
           alt="Decorative Element"
         />
       </div>
-      <div>Giang</div>
+
+      {/* GRAPH SECTION */}
+      <div className="about-graph-container">
+        <div className="designer-part-container">
+          <div className="title-graph">{textContent.partDesignerTitle}</div>
+          <div className="subtitle-graph">
+            <p>{textContent.UIDesign}</p>
+            <p>{textContent.UXDesign}</p>
+            <p>{textContent.DesignThinking}</p>
+            <p>{textContent.InteractionDesign}</p>
+            <p>{textContent.MakingItWow}</p>
+          </div>
+        </div>
+
+        <div class="graph-pie-wrapper">
+          <svg class="custom-pie" viewBox="0 0 200 200">
+            <path
+              class="pie-slice purple"
+              d="M100,100 L100,0 A100,100 0 0,1 13.4,50 Z"
+            />
+
+            <path
+              class="pie-slice orange"
+              d="M100,100 L13.4,50 A100,100 0 0,1 100,0 Z"
+            />
+          </svg>
+        </div>
+
+        <div className="coder-part-container">
+          <div className="title-graph">{textContent.partCoderTitle}</div>
+          <div className="subtitle-graph">
+            <p>{textContent.frontendDevelopment}</p>
+            <p>{textContent.HTMLCSS}</p>
+            <p>{textContent.JavaScript}</p>
+            <p>{textContent.Typescript}</p>
+            <p>{textContent.SwearingAtMyComputer}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -102,6 +102,20 @@ const textContent = {
   aboutPageTitle: "about.",
   aboutPageSubTitle:
     "I'm a frontend developer and UI/UX designer living in Vietnam.",
+  partDesignerTitle: "Part designer",
+  partCoderTitle: "Part coder",
+  UIDesign: "UI Design",
+  UXDesign: "UX Design",
+  DesignThinking: "Design Thinking",
+  InteractionDesign: "Interaction Design",
+  MakingItWow: "'Making it wow'",
+  frontendDevelopment: "Front-end Development",
+  HTMLCSS: "HTML5 / CSS3",
+  JavaScript: "JavaScript",
+  Typescript: "TypeScript",
+  SwearingAtMyComputer: "Swearing at my computer",
+  Designer: "Designer",
+  Coder: "Coder",
 };
 
 export default textContent;

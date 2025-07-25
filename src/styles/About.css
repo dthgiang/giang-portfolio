@@ -245,7 +245,100 @@
   right: 5%;
   width: auto;
   height: auto;
-  z-index: 5; /* Đặt dưới các phần tử khác */
   background-size: cover; /* Đảm bảo hình nền phủ đầy */
   background-position: center; /* Căn giữa hình nền */
 }
+
+/*  GRAPH SECTION */
+.about-graph-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  padding: 10vh 20vw; /* Padding cho khoảng cách bên trong */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.designer-part-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  text-align: left;
+}
+
+.coder-part-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  text-align: left;
+}
+
+.title-graph {
+  font-family: "SegoeUI", sans-serif;
+  font-size: 2.8vw; /* Kích thước chữ theo viewport width */
+  color: #333333;
+  font-weight: 500;
+  text-align: center;
+}
+
+.subtitle-graph {
+  font-family: "SegoeUI", sans-serif;
+  font-size: 1.1vw; /* Kích thước chữ theo viewport width */
+  color: #333333;
+  font-weight: 300;
+  text-align: left;
+}
+
+/*DRAW GRAPH*/
+.graph-pie-wrapper {
+  width: 250px;
+  height: 250px;
+  margin: 5vh auto;
+  animation: spinPie 1.2s ease-out forwards;
+  transform: rotate(0deg);
+}
+
+.custom-pie {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg); /* Để bắt đầu từ đỉnh */
+}
+
+.pie-slice {
+  transform-origin: center;
+  transform: scale(0);
+  animation: growPie 1s ease-out forwards;
+}
+
+.purple {
+  fill: #6c63ff;
+  animation-delay: 0.2s;
+}
+
+.orange {
+  fill: #feb12f;
+  animation-delay: 0.6s;
+}
+
+@keyframes growPie {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes spinPie {
+  0% {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/*DRAW GRAPH END*/
+
+/*  GRAPH SECTION END */
