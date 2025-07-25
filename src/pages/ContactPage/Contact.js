@@ -3,6 +3,8 @@ import "../../styles/Contact.css";
 import textContent from "../../constants/textContent";
 import images from "../../constants/images";
 import { useNavigate } from "react-router-dom";
+import Lottie from "lottie-react";
+import Email from "../../lotties/email.json"; // Assuming you have an email animation in L
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -159,6 +161,58 @@ const Contact = () => {
           alt="Giang Avatar"
           className="contact-giang-avatar-img"
         />
+      </div>
+      {/* Contact Block */}
+      <div className="subscribe-block-contact-page">
+        <div className="subscribe-content-wrapper-contact-page">
+          <div className="subscribe-text-container-contact-page">
+            <div className="subscribe-title-contact-page">
+              {textContent.contactPageTitle2}
+            </div>
+            <div className="subscribe-content-contact-page">
+              {textContent.contactPageSubTitle2}
+            </div>
+            <Lottie
+              animationData={Email}
+              className="email-footer-contact-page"
+            />
+          </div>
+          <div className="enter-email-container-contact-page">
+            <img
+              src={images.earth}
+              alt="earth"
+              className="earth-contact-page"
+            />
+            <img
+              src={images.subscribeArrow}
+              alt="subscribeArrow"
+              className="subscribe-arrow-contact-page"
+            />
+            <div className="email-input1-wrapper-contact-page">
+              <input
+                type="email"
+                placeholder="Your name"
+                className="email-input1-contact-page"
+              />
+            </div>
+            <div className="email-input2-wrapper-contact-page">
+              <textarea
+                placeholder="Your message"
+                className="email-input2-contact-page"
+              />
+            </div>
+            <div className="email-input3-wrapper-contact-page">
+              <input
+                type="email"
+                placeholder="Your email"
+                className="email-input3-contact-page"
+              />
+              <button className="subscribe-button-contact-page">
+                {textContent.subscribe}
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

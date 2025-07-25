@@ -94,6 +94,8 @@ const textContent = {
   github: "GitHub",
   linkedin: "LinkedIn",
   figma: "Figma",
+  contactPageTitle2: "LET'S STAY IN TOUCH",
+  contactPageSubTitle2: "Drop Your Email, I'll Send Cool Stuff",
 };
 
 export default textContent;
