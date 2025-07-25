@@ -16,3 +16,24 @@
 .logo-contact-page:hover {
   color: #feb12f; /* Màu chữ khi hover */
 }
+
+.nav-menu-contact-page {
+  display: flex;
+  gap: 2vw; /* Khoảng cách giữa các mục */
+}
+
+.nav-item-contact-page {
+  color: #fff8f2;
+  cursor: pointer;
+  font-family: "SegoeUI", sans-serif;
+  font-size: 1vw; /* Kích thước font, bạn có thể điều chỉnh theo nhu cầu */
+  padding: 1vh 2vh; /* Khoảng cách bên trong */
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 600; /* Đặt trọng số font là semi-bold */
+  line-height: 1; /* Đảm bảo chiều cao dòng nhất quán */
+}
+
+.nav-item-contact-page:hover {
+  color: #feb12f; /* Màu chữ khi hover */
+  /* Không thay đổi font-weight ở đây */
+}
