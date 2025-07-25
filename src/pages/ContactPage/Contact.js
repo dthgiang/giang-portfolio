@@ -28,7 +28,79 @@ const Contact = () => {
           {textContent.contact}
         </span>
       </nav>
-      <div>Icons</div>
+      <div className="social-icons-contact-page">
+        <div className="gmail-wrapper-contact-page">
+          <div className="gmail-img-container-contact-page">
+            <img
+              src={images.gmailDefault}
+              className="gmail-img-contact-page default"
+              alt="Gmail"
+            />
+            <img
+              src={images.gmailHeader}
+              className="gmail-img-contact-page hover"
+              alt="Gmail Hover"
+            />
+          </div>
+          <span className="email-text-contact-page">{textContent.email}</span>
+        </div>
+        <a
+          href="https://github.com/dthgiang"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="icon-wrapper-contact-page">
+            <img
+              src={images.githubFill}
+              className="icon-img-contact-page default"
+              alt="GitHub"
+            />
+            <img
+              src={images.githubColor}
+              className="icon-img-contact-page hover"
+              alt="GitHub Hover"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="icon-wrapper-contact-page">
+            <img
+              src={images.linkedinFill}
+              className="icon-img-contact-page default"
+              alt="LinkedIn"
+            />
+            <img
+              src={images.linkedinColor}
+              className="icon-img-contact-page hover"
+              alt="LinkedIn Hover"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.figma.com/@zangah"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="icon-wrapper-contact-page">
+            <img
+              src={images.figmaFill}
+              className="icon-img-contact-page default"
+              alt="Figma"
+            />
+            <img
+              src={images.figmaColor}
+              className="icon-img-contact-page hover"
+              alt="Figma Hover"
+            />
+          </div>
+        </a>
+      </div>
     </div>
   );
 };

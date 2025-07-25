@@ -87,6 +87,7 @@ const textContent = {
   figmaUrl5: "Thanh Giang Portfolio",
   githubUrl3: "https://github.com/bhtoan2204/family-frontend-mobile",
   githubUrl5: "https://github.com/dthgiang/giang-portfolio",
+  email: "dtgiang.cv@gmail.com",
 };
 
 export default textContent;

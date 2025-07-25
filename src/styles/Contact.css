@@ -18,8 +18,11 @@
 }
 
 .nav-menu-contact-page {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 2vw; /* Khoảng cách giữa các mục */
+  gap: 2vw;
 }
 
 .nav-item-contact-page {
@@ -36,4 +39,109 @@
 .nav-item-contact-page:hover {
   color: #feb12f; /* Màu chữ khi hover */
   /* Không thay đổi font-weight ở đây */
+}
+
+.social-icons-contact-page {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* Gmail wrapper tổng */
+.gmail-wrapper-contact-page {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+/* Container chứa 2 ảnh chồng nhau */
+.gmail-img-container-contact-page {
+  position: relative;
+  width: 40px; /* Hoặc 32px tùy kích thước icon mong muốn */
+  height: 40px; /* 👈 QUAN TRỌNG: fix chiều cao */
+  flex-shrink: 0;
+}
+
+.gmail-img-contact-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Đảm bảo full chiều rộng container */
+  height: 100%; /* 👈 QUAN TRỌNG: fit vào container */
+  object-fit: contain; /* hoặc 'cover' nếu muốn fill */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gmail-img-contact-page.default {
+  opacity: 1;
+  z-index: 1;
+}
+
+.gmail-img-contact-page.hover {
+  opacity: 0;
+  z-index: 2;
+}
+
+.gmail-wrapper-contact-page:hover .gmail-img-contact-page.default {
+  opacity: 0;
+}
+
+.gmail-wrapper-contact-page:hover .gmail-img-contact-page.hover {
+  opacity: 1;
+  transform: translateX(-2px);
+}
+
+/* Hiện email khi hover */
+.email-text-contact-page {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  opacity: 0;
+  color: white;
+  transition: width 0.5s ease, opacity 0.5s ease;
+  font-size: 1vw; /* Kích thước chữ theo viewport width */
+  font-weight: bold;
+}
+
+.gmail-wrapper-contact-page:hover .email-text-contact-page {
+  width: 240px;
+  opacity: 1;
+}
+
+/* Icon khác */
+.icon-wrapper-contact-page {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.icon-img-contact-page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.icon-img-contact-page.default {
+  opacity: 1;
+}
+
+.icon-img-contact-page.hover {
+  opacity: 0;
+}
+
+.icon-wrapper-contact-page:hover .icon-img-contact-page.default {
+  opacity: 0;
+}
+
+.icon-wrapper-contact-page:hover .icon-img-contact-page.hover {
+  opacity: 1;
+  transform: scale(1.5); /* Tăng kích thước khi hover */
+  transition: transform 0.3s ease;
 }

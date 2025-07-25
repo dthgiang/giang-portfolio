@@ -32,6 +32,15 @@ import famfundVisual1 from "../assets/images/project-visual-famfund1.svg";
 import famfundVisual2 from "../assets/images/project-visual-famfund2.svg";
 import githubYellow from "../assets/images/github-yellow.svg";
 import githubWhite from "../assets/images/github-white.svg";
+import figmaFill from "../assets/images/figma-fill.svg";
+import gmailDefault from "../assets/images/gmail-default.svg";
+import gmailHeader from "../assets/images/gmail-header.svg";
+import linkedinIcon from "../assets/images/linkedin-icon.svg";
+import linkedinFill from "../assets/images/linkedin-fill.svg";
+import linkedinColor from "../assets/images/linkedin-color.svg";
+import figmaColor from "../assets/images/figma-header.svg";
+import githubColor from "../assets/images/github-header.svg";
+import githubFill from "../assets/images/github-fill.svg";
 
 const images = {
   circlePlay,
@@ -68,6 +77,15 @@ const images = {
   famfundVisual2,
   githubYellow,
   githubWhite,
+  linkedinIcon,
+  figmaFill,
+  gmailDefault,
+  gmailHeader,
+  linkedinFill,
+  linkedinColor,
+  figmaColor,
+  githubColor,
+  githubFill,
 };
 
 export default images;
