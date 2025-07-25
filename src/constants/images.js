@@ -45,6 +45,12 @@ import figmaCircle from "../assets/images/figma-circle.svg";
 import linkedinCircle from "../assets/images/linkedin-circle.svg";
 import githubCircle from "../assets/images/github-circle.svg";
 import gmailCircle from "../assets/images/gmail-circle.svg";
+import aboutIMG1 from "../assets/images/about-img1.svg";
+import aboutIMG2 from "../assets/images/about-img2.svg";
+import aboutIMG3 from "../assets/images/about-img3.svg";
+import aboutIMG4 from "../assets/images/about-img4.svg";
+import aboutIMG5 from "../assets/images/about-img5.svg";
+import aboutIMG6 from "../assets/images/about-img6.svg";
 
 const images = {
   circlePlay,
@@ -94,6 +100,12 @@ const images = {
   linkedinCircle,
   githubCircle,
   gmailCircle,
+  aboutIMG1,
+  aboutIMG2,
+  aboutIMG3,
+  aboutIMG4,
+  aboutIMG5,
+  aboutIMG6,
 };
 
 export default images;

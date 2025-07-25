@@ -120,6 +120,8 @@ const Contact = () => {
           </a>
         </div>
       </div>
+
+      {/* Middle Section */}
       <div className="contact-middle-container">
         <div className="contact-text-container">
           <div className="contact-page-title">

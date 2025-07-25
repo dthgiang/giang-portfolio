@@ -97,6 +97,11 @@ const textContent = {
   contactPageTitle2: "LET'S STAY IN TOUCH",
   contactPageSubTitle2: "Drop Your Email, I'll Send Cool Stuff",
   sendEmail: "Send email",
+  aboutSubText:
+    "Since 2023, I've been blending design and code to craft clean, user-friendly experiences. When I’m not designing or coding, you’ll probably find me playing badminton or reading a good book with a cup of tea nearby.",
+  aboutPageTitle: "about.",
+  aboutPageSubTitle:
+    "I'm a frontend developer and UI/UX designer living in Vietnam.",
 };
 
 export default textContent;
