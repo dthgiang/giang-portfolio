@@ -1,45 +1,18 @@
-.contact-page {
-  padding: 20px;
-  background-color: #f9f9f9;
-}
-
-.contact-page-title {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.contact-page-content {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.contact-page-form {
-  margin-bottom: 20px;
-}
-
-.contact-page-form input,
-.contact-page-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.contact-page-form button {
-  padding: 10px 15px;
-  background-color: #007bff;
+.header-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh 7vw;
+  background-color: #5d5cdc;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  background-image: url("../assets/images/contact-bg-header.svg");
 }
 
-.contact-page-footer {
-  text-align: center;
+.logo-contact-page {
+  font-family: "Lemon", sans-serif; /* Sử dụng font Lemon */
+  font-size: 2vw; /* Font size theo viewport width */
 }
 
-.contact-page-footer img {
-  max-width: 100%;
-  height: auto;
+.logo-contact-page:hover {
+  color: #feb12f; /* Màu chữ khi hover */
 }
