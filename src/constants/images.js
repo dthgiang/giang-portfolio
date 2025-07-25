@@ -41,6 +41,10 @@ import linkedinColor from "../assets/images/linkedin-color.svg";
 import figmaColor from "../assets/images/figma-header.svg";
 import githubColor from "../assets/images/github-header.svg";
 import githubFill from "../assets/images/github-fill.svg";
+import figmaCircle from "../assets/images/figma-circle.svg";
+import linkedinCircle from "../assets/images/linkedin-circle.svg";
+import githubCircle from "../assets/images/github-circle.svg";
+import gmailCircle from "../assets/images/gmail-circle.svg";
 
 const images = {
   circlePlay,
@@ -86,6 +90,10 @@ const images = {
   figmaColor,
   githubColor,
   githubFill,
+  figmaCircle,
+  linkedinCircle,
+  githubCircle,
+  gmailCircle,
 };
 
 export default images;

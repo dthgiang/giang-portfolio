@@ -88,6 +88,12 @@ const textContent = {
   githubUrl3: "https://github.com/bhtoan2204/family-frontend-mobile",
   githubUrl5: "https://github.com/dthgiang/giang-portfolio",
   email: "dtgiang.cv@gmail.com",
+  contactPageTitle: "contact.",
+  contactSubTitle: "Get in touch with me via social media or send me an email",
+  gmail: "Gmail",
+  github: "GitHub",
+  linkedin: "LinkedIn",
+  figma: "Figma",
 };
 
 export default textContent;
