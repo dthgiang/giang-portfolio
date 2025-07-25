@@ -199,6 +199,11 @@
   width: auto;
   height: auto;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.contact-menu-social div:hover img {
+  transform: scale(1.15);
 }
 
 .contact-menu-social div {
@@ -206,6 +211,13 @@
   flex-direction: row;
   align-items: center;
   gap: 1vw; /* Khoảng cách giữa icon và text */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transform: translateY(0);
+}
+
+.contact-menu-social div:hover {
+  transform: translateY(-0.3vw); /* Nhấc lên */
 }
 
 .contact-menu-social span {
@@ -222,10 +234,12 @@
   -webkit-background-clip: text; /* Cho Safari và Chrome */
   -webkit-text-fill-color: transparent; /* Cần cho hiệu ứng đẹp */
   display: inline-block;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 .linkedin-text-contact-middle {
   color: #007ab9; /* Màu xanh LinkedIn */
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 .figma-text-contact-middle {
@@ -237,6 +251,11 @@
   -webkit-background-clip: text; /* Cho Safari và Chrome */
   -webkit-text-fill-color: transparent; /* Cần cho hiệu ứng đẹp */
   display: inline-block;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.github-text-contact-middle {
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 /* CONTACT BLOCK */
@@ -422,12 +441,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3vh 8vw;
+  padding: 6vh 8vw;
   font-size: 1vw;
   text-align: center;
   color: #616161;
-  margin-top: 3vh; /* Khoảng cách trên */
-  margin-bottom: 3vh; /* Khoảng cách dưới */
+  background-color: #fafafa;
 }
 
 .nav-menu-contact-page-footer {

@@ -17,6 +17,18 @@ const Contact = () => {
   const handleLogoClick = () => {
     navigate("/");
   };
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${textContent.email}`;
+  };
+  const handleGitHubClick = () => {
+    window.open("https://github.com/dthgiang", "_blank");
+  };
+  const handleLinkedInClick = () => {
+    window.open("https://linkedin.com", "_blank");
+  };
+  const handleFigmaClick = () => {
+    window.open("https://www.figma.com/@zangah", "_blank");
+  };
   return (
     <div className="contact-page-container">
       <div className="header-contact">
@@ -32,7 +44,10 @@ const Contact = () => {
           </span>
         </nav>
         <div className="social-icons-contact-page">
-          <div className="gmail-wrapper-contact-page">
+          <div
+            className="gmail-wrapper-contact-page"
+            onClick={handleEmailClick}
+          >
             <div className="gmail-img-container-contact-page">
               <img
                 src={images.gmailDefault}
@@ -40,7 +55,7 @@ const Contact = () => {
                 alt="Gmail"
               />
               <img
-                src={images.gmailHeader}
+                src={images.gmailCircle}
                 className="gmail-img-contact-page hover"
                 alt="Gmail Hover"
               />
@@ -114,7 +129,7 @@ const Contact = () => {
             {textContent.contactSubTitle}
           </div>
           <div className="contact-menu-social">
-            <div className="gmail-element">
+            <div className="gmail-element" onClick={handleEmailClick}>
               <img
                 src={images.gmailCircle}
                 className="middle-gmail-img-contact-page"
@@ -124,7 +139,7 @@ const Contact = () => {
                 {textContent.gmail}
               </span>
             </div>
-            <div className="github-element">
+            <div className="github-element" onClick={handleGitHubClick}>
               <img
                 src={images.githubCircle}
                 className="middle-github-img-contact-page"
@@ -134,7 +149,7 @@ const Contact = () => {
                 {textContent.github}
               </span>
             </div>
-            <div className="linkedin-element">
+            <div className="linkedin-element" onClick={handleLinkedInClick}>
               <img
                 src={images.linkedinCircle}
                 className="middle-linkedin-img-contact-page"
@@ -144,7 +159,7 @@ const Contact = () => {
                 {textContent.linkedin}
               </span>
             </div>
-            <div className="figma-element">
+            <div className="figma-element" onClick={handleFigmaClick}>
               <img
                 src={images.figmaCircle}
                 className="middle-figma-img-contact-page"
