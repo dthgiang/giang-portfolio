@@ -259,7 +259,9 @@ const About = () => {
 
       {/* RANDOM FACT SECTION */}
       <div className="random-fact-container">
-        <img src={images.randomFact} alt="Random Fact" className="hitman" />
+        <div className="random-fact-left-block">
+          <img src={images.randomFact} alt="Random Fact" className="hitman" />
+        </div>
         <div className="random-fact-right-block">
           <div className="random-fact-title">{textContent.randomFactTitle}</div>
           <p>{textContent.randomFact1}</p>
@@ -272,10 +274,23 @@ const About = () => {
           <p>{textContent.randomFact8}</p>
         </div>
         <div className="random-fact-decor">
-          <img src={images.blackSign} alt="Black Sign" />
-          <img src={images.projectStar} alt="Project Star" />
+          <div className="decor-black-sign">
+            <img
+              src={images.blackSign}
+              alt="Black Sign"
+              className="black-sign-about-page"
+            />
+          </div>
+          <div className="decor-project-star">
+            <img
+              src={images.projectStar}
+              alt="Project Star"
+              className="project-star-about-page"
+            />
+          </div>
         </div>
       </div>
+      <div>Giang</div>
     </div>
   );
 };

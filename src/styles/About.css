@@ -260,6 +260,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #c4bebe;
+  background-color: #fafafa;
 }
 
 .designer-part-container {
@@ -371,16 +372,12 @@
 .random-fact-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 3vh 2vw; /* Padding cho khoảng cách bên trong */
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10vh 21vw; /* Padding cho khoảng cách bên trong */
   background-color: #ffffff;
   position: relative;
   border-bottom: 1px solid #c4bebe;
-}
-
-.random-fact-decor {
-  position: absolute;
 }
 
 .random-fact-right-block {
@@ -394,6 +391,7 @@
   color: #333333;
   font-weight: 400;
   margin-bottom: 4vh; /* Khoảng cách dưới */
+  z-index: 5;
 }
 
 .random-fact-right-block p {
@@ -405,6 +403,48 @@
 }
 
 .hitman {
-  width: 40%;
-  height: 40%;
+  position: absolute;
+  bottom: -51vh;
+  left: 0;
+  width: 40vw;
+  height: auto;
+}
+
+.random-fact-left-block {
+  position: relative;
+}
+
+.random-fact-decor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Cho phép click xuyên qua */
+  top: 0;
+  left: 0;
+}
+
+/* Tùy chỉnh Black Sign */
+.decor-black-sign {
+  position: absolute;
+  top: -6vh;
+  right: 19vw;
+  z-index: 10;
+  /* Đảm bảo nó nằm trên cùng */
+}
+
+.black-sign-about-page {
+  width: 14vw; /* Kích thước tùy chỉnh */
+  height: auto;
+}
+
+/* Tùy chỉnh Project Star */
+.decor-project-star {
+  position: absolute;
+  top: 9vh;
+  right: 24vw;
+}
+
+.project-star-about-page {
+  width: 3vw; /* Kích thước tùy chỉnh */
+  height: auto;
 }
