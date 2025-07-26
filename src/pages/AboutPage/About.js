@@ -199,6 +199,30 @@ const About = () => {
           <svg className="pie-chart" viewBox="-20 -20 240 240">
             <path className="pie-slice purple" d={dPurple} />
             <path className="pie-slice orange" d={dOrange} />
+            {/* Group xoay ngược lại để giữ chữ đứng thẳng */}
+            <g transform="rotate(-145, 100, 100)">
+              {/* Label tím (60%) */}
+              <text
+                x={polarToCartesian(100, 100, 55, 108).x}
+                y={polarToCartesian(100, 100, 55, 108).y - 28}
+                textAnchor="middle"
+                alignmentBaseline="middle"
+                className="label-text-graph"
+              >
+                {textContent.Coder}
+              </text>
+
+              {/* Label cam (40%) — dịch y xuống 8px để cân tâm miếng cam nhỏ hơn */}
+              <text
+                x={polarToCartesian(100, 100, 45, 288).x - 5}
+                y={polarToCartesian(100, 100, 45, 288).y + 15}
+                textAnchor="middle"
+                alignmentBaseline="middle"
+                className="label-text-graph"
+              >
+                {textContent.Designer}
+              </text>
+            </g>
           </svg>
         </div>
 

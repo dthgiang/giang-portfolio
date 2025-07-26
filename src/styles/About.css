@@ -313,13 +313,27 @@
 
 /* Miếng tím (60%) - dịch sang trái */
 .purple {
-  fill: #6c63ff;
+  fill: #5d5cdc;
+  stroke-width: 1.5; /* Đặt độ dày viền */
+  stroke: #4f4fc7; /* Màu viền tím */
+  filter: drop-shadow(0 0 6px rgba(93, 92, 220, 0.4));
 }
 
 /* Miếng cam (40%) - dịch sang phải */
 .orange {
   fill: #feb12f;
   transform: translate(-10px, -3px); /* Dịch ra ngược lại */
+  stroke-width: 1.5; /* Đặt độ dày viền */
+  stroke: #e4a027; /* Màu viền trắng */
+  filter: drop-shadow(0 0 6px rgba(254, 177, 47, 0.4));
+}
+
+.label-text-graph {
+  font-family: "SegoeUI", sans-serif;
+  font-size: 0.7vw; /* Kích thước chữ theo viewport width */
+  fill: #ffffff;
+  font-weight: bold;
+  text-align: center;
 }
 
 /*DRAW GRAPH END*/
