@@ -256,9 +256,10 @@
   justify-content: center;
   align-items: center;
   gap: 5vw;
-  padding: 10vh 20vw; /* Padding cho khoảng cách bên trong */
+  padding: 3vh 20vw; /* Padding cho khoảng cách bên trong */
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #c4bebe;
 }
 
 .designer-part-container {
@@ -279,13 +280,13 @@
   font-family: "SegoeUI", sans-serif;
   font-size: 2vw; /* Kích thước chữ theo viewport width */
   color: #333333;
-  font-weight: 500;
-  text-align: center;
+  font-weight: 400;
+  text-align: left;
 }
 
 .subtitle-graph {
   font-family: "SegoeUI", sans-serif;
-  font-size: 0.8vw; /* Kích thước chữ theo viewport width */
+  font-size: 1vw; /* Kích thước chữ theo viewport width */
   color: #333333;
   font-weight: 300;
   text-align: left;
@@ -314,28 +315,96 @@
 /* Miếng tím (60%) - dịch sang trái */
 .purple {
   fill: #5d5cdc;
-  stroke-width: 1.5; /* Đặt độ dày viền */
-  stroke: #4f4fc7; /* Màu viền tím */
-  filter: drop-shadow(0 0 6px rgba(93, 92, 220, 0.4));
+  stroke-width: 1.5;
+  stroke: #4f4fc7;
+  filter: drop-shadow(0 0 6px rgba(54, 54, 54, 0.4));
+  opacity: 0;
+  transform: translateX(-60px) rotateZ(-6deg) scale(0.95);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease;
 }
 
 /* Miếng cam (40%) - dịch sang phải */
 .orange {
   fill: #feb12f;
-  transform: translate(-10px, -3px); /* Dịch ra ngược lại */
-  stroke-width: 1.5; /* Đặt độ dày viền */
-  stroke: #e4a027; /* Màu viền trắng */
-  filter: drop-shadow(0 0 6px rgba(254, 177, 47, 0.4));
+  transform: translate(-10px, -3px) translateX(50px); /* Giữ transform cũ + slide */
+  stroke-width: 1.5;
+  stroke: #e4a027;
+  filter: drop-shadow(0 0 6px rgba(54, 54, 54, 0.4));
+  opacity: 0;
+  transform: translate(-10px, -3px) translateX(60px) rotateZ(6deg) scale(0.95);
+  transition: transform 0.8s 0.15s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.8s 0.15s ease;
+}
+
+/* Khi hiện trong viewport */
+.graph-pie-wrapper.animate .purple {
+  opacity: 1;
+  transform: translateX(0) rotateZ(0deg) scale(1);
+}
+
+.graph-pie-wrapper.animate .orange {
+  opacity: 1;
+  transform: translate(-10px, -3px) translateX(0) rotateZ(0deg) scale(1);
 }
 
 .label-text-graph {
   font-family: "SegoeUI", sans-serif;
-  font-size: 0.7vw; /* Kích thước chữ theo viewport width */
+  font-size: 0.7vw;
   fill: #ffffff;
   font-weight: bold;
   text-align: center;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease 0.6s, transform 0.5s ease 0.6s;
+}
+
+.graph-pie-wrapper.animate .label-text-graph {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /*DRAW GRAPH END*/
 
 /*  GRAPH SECTION END */
+
+/* RANDOM FACTS */
+.random-fact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 3vh 2vw; /* Padding cho khoảng cách bên trong */
+  background-color: #ffffff;
+  position: relative;
+  border-bottom: 1px solid #c4bebe;
+}
+
+.random-fact-decor {
+  position: absolute;
+}
+
+.random-fact-right-block {
+  flex-direction: column;
+  text-align: left;
+}
+
+.random-fact-title {
+  font-family: "SegoeUI", sans-serif;
+  font-size: 2vw; /* Kích thước chữ theo viewport width */
+  color: #333333;
+  font-weight: 400;
+  margin-bottom: 4vh; /* Khoảng cách dưới */
+}
+
+.random-fact-right-block p {
+  font-family: "SegoeUI", sans-serif;
+  font-size: 1vw; /* Kích thước chữ theo viewport width */
+  color: #333333;
+  font-weight: 300;
+  line-height: 1.2; /* Khoảng cách dòng */
+}
+
+.hitman {
+  width: 40%;
+  height: 40%;
+}

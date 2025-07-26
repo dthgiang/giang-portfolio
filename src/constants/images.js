@@ -52,6 +52,7 @@ import aboutIMG4 from "../assets/images/about-img4.svg";
 import aboutIMG5 from "../assets/images/about-img5.svg";
 import aboutIMG6 from "../assets/images/about-img6.svg";
 import aboutDecorFirstBlock from "../assets/images/about-decor-first-block.svg";
+import randomFact from "../assets/images/random-fact-image.png";
 
 const images = {
   circlePlay,
@@ -108,6 +109,7 @@ const images = {
   aboutIMG5,
   aboutIMG6,
   aboutDecorFirstBlock,
+  randomFact,
 };
 
 export default images;

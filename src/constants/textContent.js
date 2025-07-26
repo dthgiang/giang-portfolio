@@ -116,6 +116,15 @@ const textContent = {
   SwearingAtMyComputer: "Swearing at my computer",
   Designer: "Designer",
   Coder: "Coder",
+  randomFactTitle: "Random facts",
+  randomFact1: "Badminton is the therapy",
+  randomFact2: "I'm a bit of a clean freak",
+  randomFact3: "Renaissance soul, Van Gogh heart",
+  randomFact4: "Agent 47 is my mentor",
+  randomFact5: "Cooking is my love language",
+  randomFact6: "Vanilla sunsets & 8-bit vibes calm me",
+  randomFact7: "Gunpla brain, bookworm, music hands",
+  randomFact8: "Graphite speaks what I can't",
 };
 
 export default textContent;

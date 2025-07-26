@@ -3,6 +3,7 @@ import "../../styles/About.css";
 import textContent from "../../constants/textContent";
 import images from "../../constants/images";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const About = () => {
   const navigate = useNavigate();
@@ -53,6 +54,24 @@ const About = () => {
 
   const dPurple = describeArc(100, 100, 99, 0, 216); // Miếng tím 60%
   const dOrange = describeArc(100, 100, 89, 216, 360); // Miếng cam 40%
+
+  useEffect(() => {
+    const wrapper = document.querySelector(".graph-pie-wrapper");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            wrapper.classList.add("animate");
+            observer.unobserve(wrapper);
+          }
+        });
+      },
+      { threshold: 0.75 } // Khi khoảng 40% chart vào viewport
+    );
+
+    if (wrapper) observer.observe(wrapper);
+  }, []);
 
   return (
     <div className="about-page-container">
@@ -235,6 +254,26 @@ const About = () => {
             <p>{textContent.Typescript}</p>
             <p>{textContent.SwearingAtMyComputer}</p>
           </div>
+        </div>
+      </div>
+
+      {/* RANDOM FACT SECTION */}
+      <div className="random-fact-container">
+        <img src={images.randomFact} alt="Random Fact" className="hitman" />
+        <div className="random-fact-right-block">
+          <div className="random-fact-title">{textContent.randomFactTitle}</div>
+          <p>{textContent.randomFact1}</p>
+          <p>{textContent.randomFact2}</p>
+          <p>{textContent.randomFact3}</p>
+          <p>{textContent.randomFact4}</p>
+          <p>{textContent.randomFact5}</p>
+          <p>{textContent.randomFact6}</p>
+          <p>{textContent.randomFact7}</p>
+          <p>{textContent.randomFact8}</p>
+        </div>
+        <div className="random-fact-decor">
+          <img src={images.blackSign} alt="Black Sign" />
+          <img src={images.projectStar} alt="Project Star" />
         </div>
       </div>
     </div>
