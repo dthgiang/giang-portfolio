@@ -277,7 +277,7 @@
 
 .title-graph {
   font-family: "SegoeUI", sans-serif;
-  font-size: 2.8vw; /* Kích thước chữ theo viewport width */
+  font-size: 2vw; /* Kích thước chữ theo viewport width */
   color: #333333;
   font-weight: 500;
   text-align: center;
@@ -285,7 +285,7 @@
 
 .subtitle-graph {
   font-family: "SegoeUI", sans-serif;
-  font-size: 1.1vw; /* Kích thước chữ theo viewport width */
+  font-size: 0.8vw; /* Kích thước chữ theo viewport width */
   color: #333333;
   font-weight: 300;
   text-align: left;
@@ -293,50 +293,33 @@
 
 /*DRAW GRAPH*/
 .graph-pie-wrapper {
-  width: 250px;
-  height: 250px;
+  width: 25vw;
+  height: 25vw;
   margin: 5vh auto;
-  animation: spinPie 1.2s ease-out forwards;
-  transform: rotate(0deg);
 }
 
-.custom-pie {
+.pie-chart {
   width: 100%;
   height: 100%;
-  transform: rotate(-90deg); /* Để bắt đầu từ đỉnh */
+  transform: rotate(145deg); /* Xoay để bắt đầu từ trên cùng */
 }
 
+/* Base style */
 .pie-slice {
-  transform-origin: center;
-  transform: scale(0);
-  animation: growPie 1s ease-out forwards;
+  transition: transform 0.5s ease;
+  stroke: none;
+  overflow: visible;
 }
 
+/* Miếng tím (60%) - dịch sang trái */
 .purple {
   fill: #6c63ff;
-  animation-delay: 0.2s;
 }
 
+/* Miếng cam (40%) - dịch sang phải */
 .orange {
   fill: #feb12f;
-  animation-delay: 0.6s;
-}
-
-@keyframes growPie {
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes spinPie {
-  0% {
-    transform: rotate(-180deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
+  transform: translate(-10px, -3px); /* Dịch ra ngược lại */
 }
 
 /*DRAW GRAPH END*/

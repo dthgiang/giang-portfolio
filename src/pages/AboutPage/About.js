@@ -18,6 +18,42 @@ const About = () => {
   const handleEmailClick = () => {
     window.location.href = `mailto:${textContent.email}`;
   };
+
+  function polarToCartesian(cx, cy, r, angleInDegrees) {
+    const angleInRadians = ((angleInDegrees - 90) * Math.PI) / 180.0;
+    return {
+      x: cx + r * Math.cos(angleInRadians),
+      y: cy + r * Math.sin(angleInRadians),
+    };
+  }
+
+  function describeArc(cx, cy, r, startAngle, endAngle) {
+    const start = polarToCartesian(cx, cy, r, endAngle);
+    const end = polarToCartesian(cx, cy, r, startAngle);
+    const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+
+    return [
+      "M",
+      cx,
+      cy,
+      "L",
+      start.x,
+      start.y,
+      "A",
+      r,
+      r,
+      0,
+      largeArcFlag,
+      0,
+      end.x,
+      end.y,
+      "Z",
+    ].join(" ");
+  }
+
+  const dPurple = describeArc(100, 100, 99, 0, 216); // Miếng tím 60%
+  const dOrange = describeArc(100, 100, 89, 216, 360); // Miếng cam 40%
+
   return (
     <div className="about-page-container">
       {/* Header Section */}
@@ -159,17 +195,10 @@ const About = () => {
           </div>
         </div>
 
-        <div class="graph-pie-wrapper">
-          <svg class="custom-pie" viewBox="0 0 200 200">
-            <path
-              class="pie-slice purple"
-              d="M100,100 L100,0 A100,100 0 0,1 13.4,50 Z"
-            />
-
-            <path
-              class="pie-slice orange"
-              d="M100,100 L13.4,50 A100,100 0 0,1 100,0 Z"
-            />
+        <div className="graph-pie-wrapper">
+          <svg className="pie-chart" viewBox="-20 -20 240 240">
+            <path className="pie-slice purple" d={dPurple} />
+            <path className="pie-slice orange" d={dOrange} />
           </svg>
         </div>
 
