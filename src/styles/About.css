@@ -3,7 +3,36 @@
   height: 100%;
 }
 
-.header-contact {
+.fade-in {
+  opacity: 0;
+  animation: fadeInSmooth 0.8s ease forwards;
+}
+
+@keyframes fadeInSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: nhẹ nhàng lên từ dưới */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-header {
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: slideDownHeader 0.7s ease-out forwards;
+}
+
+@keyframes slideDownHeader {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header-about {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,18 +40,27 @@
   background-color: #5d5cdc;
   color: white;
   background-image: url("../assets/images/contact-bg-header.svg");
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
-.logo-contact-page {
+/* Khi trang load xong thì thêm class này */
+.header-about.slide-down {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-about-page {
   font-family: "Lemon", sans-serif; /* Sử dụng font Lemon */
   font-size: 2vw; /* Font size theo viewport width */
 }
 
-.logo-contact-page:hover {
+.logo-about-page:hover {
   color: #feb12f; /* Màu chữ khi hover */
 }
 
-.nav-menu-contact-page {
+.nav-menu-about-page {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -30,7 +68,7 @@
   gap: 2vw;
 }
 
-.nav-item-contact-page {
+.nav-item-about-page {
   color: #fff8f2;
   cursor: pointer;
   font-family: "SegoeUI", sans-serif;
@@ -41,12 +79,12 @@
   line-height: 1; /* Đảm bảo chiều cao dòng nhất quán */
 }
 
-.nav-item-contact-page:hover {
+.nav-item-about-page:hover {
   color: #feb12f; /* Màu chữ khi hover */
   /* Không thay đổi font-weight ở đây */
 }
 
-.social-icons-contact-page {
+.social-icons-about-page {
   display: flex;
   gap: 2vw;
   align-items: center;
@@ -55,7 +93,7 @@
 }
 
 /* Gmail wrapper tổng */
-.gmail-wrapper-contact-page {
+.gmail-wrapper-about-page {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -63,14 +101,14 @@
 }
 
 /* Container chứa 2 ảnh chồng nhau */
-.gmail-img-container-contact-page {
+.gmail-img-container-about-page {
   position: relative;
   width: 40px; /* Hoặc 32px tùy kích thước icon mong muốn */
   height: 40px; /* 👈 QUAN TRỌNG: fix chiều cao */
   flex-shrink: 0;
 }
 
-.gmail-img-contact-page {
+.gmail-img-about-page {
   position: absolute;
   top: 0;
   left: 0;
@@ -80,27 +118,27 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.gmail-img-contact-page.default {
+.gmail-img-about-page.default {
   opacity: 1;
   z-index: 1;
 }
 
-.gmail-img-contact-page.hover {
+.gmail-img-about-page.hover {
   opacity: 0;
   z-index: 2;
 }
 
-.gmail-wrapper-contact-page:hover .gmail-img-contact-page.default {
+.gmail-wrapper-about-page:hover .gmail-img-about-page.default {
   opacity: 0;
 }
 
-.gmail-wrapper-contact-page:hover .gmail-img-contact-page.hover {
+.gmail-wrapper-about-page:hover .gmail-img-about-page.hover {
   opacity: 1;
   transform: translateX(-2px);
 }
 
 /* Hiện email khi hover */
-.email-text-contact-page {
+.email-text-about-page {
   white-space: nowrap;
   overflow: hidden;
   width: 0;
@@ -111,20 +149,20 @@
   font-weight: bold;
 }
 
-.gmail-wrapper-contact-page:hover .email-text-contact-page {
+.gmail-wrapper-about-page:hover .email-text-about-page {
   width: 240px;
   opacity: 1;
 }
 
 /* Icon khác */
-.icon-wrapper-contact-page {
+.icon-wrapper-about-page {
   position: relative;
   width: 40px;
   height: 40px;
   cursor: pointer;
 }
 
-.icon-img-contact-page {
+.icon-img-about-page {
   position: absolute;
   left: 0;
   top: 0;
@@ -133,19 +171,19 @@
   transition: opacity 0.3s ease;
 }
 
-.icon-img-contact-page.default {
+.icon-img-about-page.default {
   opacity: 1;
 }
 
-.icon-img-contact-page.hover {
+.icon-img-about-page.hover {
   opacity: 0;
 }
 
-.icon-wrapper-contact-page:hover .icon-img-contact-page.default {
+.icon-wrapper-about-page:hover .icon-img-about-page.default {
   opacity: 0;
 }
 
-.icon-wrapper-contact-page:hover .icon-img-contact-page.hover {
+.icon-wrapper-about-page:hover .icon-img-about-page.hover {
   opacity: 1;
   transform: scale(1.5); /* Tăng kích thước khi hover */
   transition: transform 0.3s ease;
@@ -165,6 +203,25 @@
   flex-direction: column;
   gap: 2vh;
   text-align: left;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.about-text-container.slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-giang-avatar-img {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.about-giang-avatar-img.slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .about-page-title {
@@ -213,7 +270,7 @@
 .mini-image {
   width: 13%; /* 6 ảnh x 14% ≈ 84%, cộng khoảng cách là đủ 100% */
   height: 10vh; /* Chiều cao theo viewport width */
-  aspect-ratio: 1/1; /* Giữ hình vuông */
+
   object-fit: cover; /* Hình không méo */
   border-radius: 0.5vw; /* Bo góc nhẹ */
   box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.2);
@@ -222,10 +279,18 @@
   stroke: white; /* Màu viền trắng */
   border: 0.5vw solid white; /* Viền trắng */
   margin-bottom: 3vh; /* Khoảng cách dưới */
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.mini-image.visible {
+  opacity: 1;
+  transform: scale(1); /* Hiện ảnh với kích thước bình thường */
 }
 
 .mini-image:hover {
-  transform: scale(1.05);
+  box-shadow: 0 0.4vw 0.7vw rgba(0, 0, 0, 0.2);
 }
 
 .about-page-first-container {
@@ -236,7 +301,7 @@
   justify-content: center;
   padding: 2vh 0; /* Padding cho khoảng cách bên trong */
   background-color: #fff; /* Màu nền trắng */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about-decor-first-block {
