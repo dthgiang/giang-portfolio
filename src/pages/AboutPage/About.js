@@ -63,14 +63,39 @@ const About = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             wrapper.classList.add("animate");
+            console.log("Graph animated ✅");
             observer.unobserve(wrapper);
           }
         });
       },
-      { threshold: 0.75 } // Khi khoảng 40% chart vào viewport
+      { threshold: 0.75 }
     );
 
     if (wrapper) observer.observe(wrapper);
+  }, []);
+
+  useEffect(() => {
+    const target = document.querySelector(".random-fact-container");
+    const hitman = document.getElementById("hitmanImage");
+
+    if (!target || !hitman) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          hitman.classList.add("slide-in");
+          console.log("✅ Hitman triggered at 50% visibility");
+          observer.unobserve(target); // chỉ trigger 1 lần
+        }
+      },
+      {
+        threshold: 0.5, // Kích hoạt khi 50% container hiển thị trong viewport
+      }
+    );
+
+    observer.observe(target);
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -259,10 +284,13 @@ const About = () => {
 
       {/* RANDOM FACT SECTION */}
       <div className="random-fact-container">
-        <div className="random-fact-left-block">
-          <img src={images.randomFact} alt="Random Fact" className="hitman" />
-        </div>
-        <div className="random-fact-right-block">
+        <img
+          src={images.randomFact}
+          alt="Hitman"
+          id="hitmanImage"
+          className="hitman"
+        />
+        <div className="random-fact-right-block" id="randomFactContainer">
           <div className="random-fact-title">{textContent.randomFactTitle}</div>
           <p>{textContent.randomFact1}</p>
           <p>{textContent.randomFact2}</p>

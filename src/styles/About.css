@@ -370,19 +370,14 @@
 
 /* RANDOM FACTS */
 .random-fact-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   padding: 10vh 21vw; /* Padding cho khoảng cách bên trong */
   background-color: #ffffff;
-  position: relative;
   border-bottom: 1px solid #c4bebe;
-}
-
-.random-fact-right-block {
-  flex-direction: column;
-  text-align: left;
 }
 
 .random-fact-title {
@@ -392,6 +387,25 @@
   font-weight: 400;
   margin-bottom: 4vh; /* Khoảng cách dưới */
   z-index: 5;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.random-fact-right-block {
+  flex-direction: column;
+  text-align: left;
+  z-index: 1;
+  margin-left: 40vw; /* Đẩy block sang phải */
+  width: 55%; /* Hoặc dùng max-width nếu responsive */
 }
 
 .random-fact-right-block p {
@@ -404,14 +418,20 @@
 
 .hitman {
   position: absolute;
-  bottom: -51vh;
-  left: 0;
+  bottom: 0;
+  left: 20vw; /* Đặt vị trí bên trái */
   width: 40vw;
   height: auto;
+  /* animation: slideInLeft 1s ease-out forwards; */
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease, opacity 1s ease;
+  will-change: transform, opacity;
 }
 
-.random-fact-left-block {
-  position: relative;
+.hitman.slide-in {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .random-fact-decor {
@@ -441,7 +461,7 @@
 .decor-project-star {
   position: absolute;
   top: 9vh;
-  right: 24vw;
+  right: 10vw;
 }
 
 .project-star-about-page {
