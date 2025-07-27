@@ -3,6 +3,40 @@
   height: 100%;
 }
 
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-header {
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: slideDownHeader 0.7s ease-out forwards;
+}
+
+@keyframes slideDownHeader {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .header-contact {
   display: flex;
   justify-content: space-between;
@@ -11,6 +45,15 @@
   background-color: #5d5cdc;
   color: white;
   background-image: url("../assets/images/contact-bg-header.svg");
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Khi trang load xong thì thêm class này */
+.header-about.slide-down {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .logo-contact-page {
@@ -166,6 +209,47 @@
   flex-direction: column;
   gap: 2vh;
   text-align: left;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.contact-text-container.slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.contact-giang-avatar-img {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.contact-giang-avatar-img.slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .contact-page-title {
