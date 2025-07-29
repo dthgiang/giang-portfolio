@@ -487,7 +487,6 @@
   left: 20vw; /* Đặt vị trí bên trái */
   width: 40vw;
   height: auto;
-  /* animation: slideInLeft 1s ease-out forwards; */
   opacity: 0;
   transform: translateX(-100%);
   transition: transform 1s ease, opacity 1s ease;
@@ -533,3 +532,58 @@
   width: 3vw; /* Kích thước tùy chỉnh */
   height: auto;
 }
+
+/* FOOTER BLOCK START*/
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh 8vw;
+  font-size: 1vw;
+  text-align: center;
+  color: #616161;
+  margin-top: 2vh; /* Khoảng cách trên */
+  margin-bottom: 2vh; /* Khoảng cách dưới */
+  position: relative;
+}
+
+.nav-item-footer {
+  color: #616161; /* Màu chữ */
+  cursor: pointer; /* Hiển thị con trỏ khi hover */
+  font-family: "SegoeUI", sans-serif; /* Font chữ */
+  font-size: 1vw; /* Kích thước font */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu */
+  line-height: 1; /* Chiều cao dòng */
+  font-weight: 600; /* Trọng số font */
+}
+
+.nav-item-footer:hover {
+  color: #feb12f; /* Màu chữ khi hover */
+}
+
+.button-up {
+  width: 15vw; /* Chiều rộng */
+  height: 15vw; /* Chiều cao */
+  position: fixed; /* Để nút luôn ở vị trí cố định */
+  bottom: -90%; /* Bắt đầu ở dưới ngoài màn hình */
+  left: 40%; /* Căn giữa theo chiều ngang */
+  padding: 1vh 2vh; /* Khoảng cách bên trong */
+  border: none; /* Không có viền */
+  border-radius: 1vh; /* Bo tròn */
+  cursor: pointer; /* Con trỏ khi hover */
+  transition: bottom 0.8s ease; /* Hiệu ứng chuyển đổi cho vị trí */
+}
+
+.hoverable {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  filter: brightness(1);
+  transform-origin: center; /* ✅ Giúp xoay tại tâm */
+}
+
+.hoverable:hover {
+  filter: brightness(1.2) drop-shadow(0 0 10px #ffcc00);
+  transform: scale(1.05) rotate(-5deg);
+}
+
+/* FOOTER BLOCK END*/

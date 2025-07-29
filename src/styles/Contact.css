@@ -352,7 +352,7 @@
   overflow: hidden;
   margin-top: 2vw;
   background-color: #fdfdfd; /* Màu nền nhẹ */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  border-bottom: 1px solid #c4bebe;
 }
 
 .subscribe-content-wrapper-contact-page {

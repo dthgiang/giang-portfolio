@@ -378,7 +378,31 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div>Giang</div>
+
+            {/* MY SKILL SECTION */}
+
+            {/* MY STORY SECTION */}
+
+            {/* Footer */}
+            <div className="footer-container-contact-page fade-in">
+              <div className="logo-name" onClick={handleLogoClick}>
+                {textContent.logoName}
+              </div>
+              <nav className="nav-menu-contact-page-footer">
+                <span
+                  className="nav-item-footer-contact-page"
+                  onClick={handleAboutClick}
+                >
+                  {textContent.about}
+                </span>
+                <span
+                  className="nav-item-footer-contact-page"
+                  onClick={handleContactClick}
+                >
+                  {textContent.contact}
+                </span>
+              </nav>
+            </div>
           </>
         )}
       </>
