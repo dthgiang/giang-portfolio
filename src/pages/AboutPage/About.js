@@ -380,6 +380,105 @@ const About = () => {
             </div>
 
             {/* MY SKILL SECTION */}
+            <div className="skill-chart-container">
+              <div className="area-container">
+                <div className="skill-levels">
+                  <span>Silent Agent</span>
+                  <span>Starcrafter</span>
+                  <span>Pixel Dreamer</span>
+                  <span>Sketchling</span>
+                </div>
+
+                <div className="chart-area">
+                  <div className="left-vertical-line"></div>
+                  <div className="chart-lines">
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                  </div>
+                  <div className="bars">
+                    <div
+                      className="bar"
+                      style={{
+                        height: "95%",
+                        background:
+                          "linear-gradient(180deg, #AEE2DC 0%, #67B6AD 100%)",
+                        border: "1px solid #67B6AD",
+                      }}
+                    >
+                      <div className="percentage-wrapper">
+                        <span className="percentage-number">95</span>
+                        <span className="percentage-symbol">%</span>
+                      </div>
+                      <span className="title-bar-text">Design Thinking</span>
+                    </div>
+                    <div
+                      className="bar"
+                      style={{
+                        height: "90%",
+                        background:
+                          "linear-gradient(180deg, #F0D1D1 0%, #EAABAB 100%)",
+                        border: "1px solid #EAABAB",
+                      }}
+                    >
+                      <div className="percentage-wrapper">
+                        <span className="percentage-number">90</span>
+                        <span className="percentage-symbol">%</span>
+                      </div>
+                      <span className="title-bar-text">Coding</span>
+                    </div>
+                    <div
+                      className="bar"
+                      style={{
+                        height: "95%",
+                        background:
+                          "linear-gradient(180deg, #F0D594 0%, #E0AF38 100%)",
+                        border: "1px solid #E0AF38",
+                      }}
+                    >
+                      <div className="percentage-wrapper">
+                        <span className="percentage-number">95</span>
+                        <span className="percentage-symbol">%</span>
+                      </div>
+                      <span className="title-bar-text">Figma</span>
+                    </div>
+                    <div
+                      className="bar"
+                      style={{
+                        height: "75%",
+                        background:
+                          "linear-gradient(180deg, #DBAF7E 0%, #BD8F5C 100%)",
+                        border: "1px solid #BD8F5C",
+                      }}
+                    >
+                      <div className="percentage-wrapper">
+                        <span className="percentage-number">75</span>
+                        <span className="percentage-symbol">%</span>
+                      </div>
+                      <span className="title-bar-text">Cooking</span>
+                    </div>
+                    <div
+                      className="bar"
+                      style={{
+                        height: "40%",
+                        background:
+                          "linear-gradient(180deg, #DE8483 0%, #CB4746 100%)",
+                        border: "1px solid #CB4746",
+                      }}
+                    >
+                      <div className="percentage-wrapper">
+                        <span className="percentage-number">40</span>
+                        <span className="percentage-symbol">%</span>
+                      </div>
+                      <span className="title-bar-text">Badminton</span>
+                    </div>
+                  </div>
+                  <div className="chart-title">My skills</div>
+                </div>
+              </div>
+            </div>
 
             {/* MY STORY SECTION */}
 
