@@ -125,6 +125,19 @@ const textContent = {
   randomFact6: "Vanilla sunsets & 8-bit vibes calm me",
   randomFact7: "Gunpla brain, bookworm, music hands",
   randomFact8: "Graphite speaks what I can't",
+  SilentAgent: "Silent Agent",
+  Starcrafter: "Starcrafter",
+  PixelDreamer: "Pixel Dreamer",
+  Sketchling: "Sketchling",
+  95: "95",
+  90: "90",
+  75: "75",
+  40: "40",
+  "%": "%",
+  Coding: "Coding",
+  Cooking: "Cooking",
+  Badminton: "Badminton",
+  MySkills: "My skills",
 };
 
 export default textContent;

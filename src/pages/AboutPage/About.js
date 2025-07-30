@@ -382,11 +382,18 @@ const About = () => {
             {/* MY SKILL SECTION */}
             <div className="skill-chart-container">
               <div className="area-container">
+                <div className="floating-image image-1">
+                  <img src={images.bluePlant} alt="Floating 1" />
+                </div>
+
+                <div className="floating-image image-2">
+                  <img src={images.star} alt="Floating 2" />
+                </div>
                 <div className="skill-levels">
-                  <span>Silent Agent</span>
-                  <span>Starcrafter</span>
-                  <span>Pixel Dreamer</span>
-                  <span>Sketchling</span>
+                  <span>{textContent.SilentAgent}</span>
+                  <span>{textContent.Starcrafter}</span>
+                  <span>{textContent.PixelDreamer}</span>
+                  <span>{textContent.Sketchling}</span>
                 </div>
 
                 <div className="chart-area">
@@ -399,83 +406,73 @@ const About = () => {
                     <div className="line"></div>
                   </div>
                   <div className="bars">
-                    <div
-                      className="bar"
-                      style={{
-                        height: "95%",
-                        background:
-                          "linear-gradient(180deg, #AEE2DC 0%, #67B6AD 100%)",
-                        border: "1px solid #67B6AD",
-                      }}
-                    >
+                    <div className="bar design-thinking-bar">
                       <div className="percentage-wrapper">
-                        <span className="percentage-number">95</span>
-                        <span className="percentage-symbol">%</span>
+                        <span className="percentage-number">
+                          {textContent[95]}
+                        </span>
+                        <span className="percentage-symbol">
+                          {textContent["%"]}
+                        </span>
                       </div>
-                      <span className="title-bar-text">Design Thinking</span>
+                      <span className="title-bar-text">
+                        {textContent.DesignThinking}
+                      </span>
                     </div>
-                    <div
-                      className="bar"
-                      style={{
-                        height: "90%",
-                        background:
-                          "linear-gradient(180deg, #F0D1D1 0%, #EAABAB 100%)",
-                        border: "1px solid #EAABAB",
-                      }}
-                    >
+                    <div className="bar coding-bar">
                       <div className="percentage-wrapper">
-                        <span className="percentage-number">90</span>
-                        <span className="percentage-symbol">%</span>
+                        <span className="percentage-number">
+                          {textContent[90]}
+                        </span>
+                        <span className="percentage-symbol">
+                          {textContent["%"]}
+                        </span>
                       </div>
-                      <span className="title-bar-text">Coding</span>
+                      <span className="title-bar-text">
+                        {textContent.Coding}
+                      </span>
                     </div>
-                    <div
-                      className="bar"
-                      style={{
-                        height: "95%",
-                        background:
-                          "linear-gradient(180deg, #F0D594 0%, #E0AF38 100%)",
-                        border: "1px solid #E0AF38",
-                      }}
-                    >
+                    <div className="bar figma-bar">
                       <div className="percentage-wrapper">
-                        <span className="percentage-number">95</span>
-                        <span className="percentage-symbol">%</span>
+                        <span className="percentage-number">
+                          {textContent[95]}
+                        </span>
+                        <span className="percentage-symbol">
+                          {textContent["%"]}
+                        </span>
                       </div>
-                      <span className="title-bar-text">Figma</span>
+                      <span className="title-bar-text">
+                        {textContent.figma}
+                      </span>
                     </div>
-                    <div
-                      className="bar"
-                      style={{
-                        height: "75%",
-                        background:
-                          "linear-gradient(180deg, #DBAF7E 0%, #BD8F5C 100%)",
-                        border: "1px solid #BD8F5C",
-                      }}
-                    >
+                    <div className="bar cooking-bar">
                       <div className="percentage-wrapper">
-                        <span className="percentage-number">75</span>
-                        <span className="percentage-symbol">%</span>
+                        <span className="percentage-number">
+                          {textContent[75]}
+                        </span>
+                        <span className="percentage-symbol">
+                          {textContent["%"]}
+                        </span>
                       </div>
-                      <span className="title-bar-text">Cooking</span>
+                      <span className="title-bar-text">
+                        {textContent.Cooking}
+                      </span>
                     </div>
-                    <div
-                      className="bar"
-                      style={{
-                        height: "40%",
-                        background:
-                          "linear-gradient(180deg, #DE8483 0%, #CB4746 100%)",
-                        border: "1px solid #CB4746",
-                      }}
-                    >
+                    <div className="bar badminton-bar">
                       <div className="percentage-wrapper">
-                        <span className="percentage-number">40</span>
-                        <span className="percentage-symbol">%</span>
+                        <span className="percentage-number">
+                          {textContent[40]}
+                        </span>
+                        <span className="percentage-symbol">
+                          {textContent["%"]}
+                        </span>
                       </div>
-                      <span className="title-bar-text">Badminton</span>
+                      <span className="title-bar-text">
+                        {textContent.Badminton}
+                      </span>
                     </div>
                   </div>
-                  <div className="chart-title">My skills</div>
+                  <div className="chart-title">{textContent.MySkills}</div>
                 </div>
               </div>
             </div>

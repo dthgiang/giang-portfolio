@@ -553,6 +553,25 @@
   height: 25vw; /* Chiều cao của biểu đồ */
 }
 
+.floating-image {
+  position: absolute;
+  width: 5vw; /* hoặc tuỳ kích thước hình */
+  height: auto;
+  z-index: 5; /* đảm bảo nổi lên trên */
+  cursor: grab;
+  transition: transform 0.3s ease;
+}
+
+.image-1 {
+  bottom: -10%;
+  left: 10%;
+}
+
+.image-2 {
+  top: 8%;
+  right: 15%;
+}
+
 .skill-levels {
   display: flex;
   flex-direction: column;
@@ -561,6 +580,7 @@
   margin-right: 2vw;
   margin-bottom: 7vw; /* Khoảng cách dưới */
   font-size: 1vw;
+  font-weight: 500;
   color: #333;
 }
 
@@ -628,6 +648,36 @@
   border-radius: 0.5vw 0.5vw 0 0;
   position: relative;
   gap: 0.5vw;
+}
+
+.design-thinking-bar {
+  height: 95%;
+  background: linear-gradient(180deg, #aee2dc 0%, #67b6ad 100%);
+  border: 1px solid #67b6ad;
+}
+
+.coding-bar {
+  height: 90%;
+  background: linear-gradient(180deg, #f0d1d1 0%, #eaabab 100%);
+  border: 1px solid #eaabab;
+}
+
+.figma-bar {
+  height: 95%;
+  background: linear-gradient(180deg, #f0d594 0%, #e0af38 100%);
+  border: 1px solid #e0af38;
+}
+
+.cooking-bar {
+  height: 75%;
+  background: linear-gradient(180deg, #dbaf7e 0%, #bd8f5c 100%);
+  border: 1px solid #bd8f5c;
+}
+
+.badminton-bar {
+  height: 40%;
+  background: linear-gradient(180deg, #de8483 0%, #cb4746 100%);
+  border: 1px solid #cb4746;
 }
 
 .percentage-wrapper {
