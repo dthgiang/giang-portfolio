@@ -761,6 +761,7 @@
   padding: 12vh 22vw; /* Padding cho khoảng cách bên trong */
   background-color: #ffffff; /* Màu nền sáng */
   position: relative;
+  border-bottom: #c4bebe 1px solid; /* Viền dưới */
 }
 
 .my-story-left-container {
