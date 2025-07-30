@@ -1352,7 +1352,7 @@ html {
 }
 
 .hoverable:hover {
-  filter: brightness(1.2) drop-shadow(0 0 10px #ffcc00);
+  filter: brightness(1.2) drop-shadow(0 0 10px #1f0352);
   transform: scale(1.05) rotate(-5deg);
 }
 

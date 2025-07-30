@@ -4,12 +4,16 @@ import textContent from "../../constants/textContent";
 import images from "../../constants/images";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Lottie from "lottie-react";
+import ButtonUp from "../../lotties/button-up.json";
 
 const About = () => {
   const navigate = useNavigate();
   const [headerVisible, setHeaderVisible] = useState(false);
   const [skillVisible, setSkillVisible] = useState(false);
   const [storyVisible, setStoryVisible] = useState(false);
+  const [atBottom, setAtBottom] = useState(false);
+
   const handleContactClick = () => {
     navigate("/contact");
   };
@@ -21,6 +25,10 @@ const About = () => {
   };
   const handleEmailClick = () => {
     window.location.href = `mailto:${textContent.email}`;
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   function polarToCartesian(cx, cy, r, angleInDegrees) {
@@ -218,6 +226,17 @@ const About = () => {
 
     return () => observer.disconnect();
   }, [headerVisible]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 50;
+      setAtBottom(isBottom);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const bars = [
     {
@@ -573,6 +592,18 @@ const About = () => {
                   {textContent.contact}
                 </span>
               </nav>
+              <Lottie
+                animationData={ButtonUp}
+                className="button-up hoverable"
+                style={{
+                  position: "fixed",
+                  bottom: atBottom ? "5%" : "-90%", // hiện hoặc ẩn
+                  right: "5%",
+                  transition: "bottom 0.6s ease-in-out", // mượt
+                  zIndex: 1000,
+                }}
+                onClick={scrollToTop}
+              />
             </div>
           </>
         )}
