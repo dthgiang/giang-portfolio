@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 const About = () => {
   const navigate = useNavigate();
   const [headerVisible, setHeaderVisible] = useState(false);
+  const [skillVisible, setSkillVisible] = useState(false);
   const handleContactClick = () => {
     navigate("/contact");
   };
@@ -148,6 +149,82 @@ const About = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (!headerVisible) return;
+
+    setTimeout(() => {
+      const skillSection = document.querySelector(".skill-chart-container");
+      console.log("👀 skillSection after headerVisible:", skillSection);
+
+      if (!skillSection) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setSkillVisible(true);
+            console.log("✅ skillVisible triggered");
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.5 }
+      );
+
+      observer.observe(skillSection);
+    }, 100); // delay tí để chắc chắn render xong
+  }, [headerVisible]);
+
+  useEffect(() => {
+    if (!skillVisible) return;
+
+    const bars = document.querySelectorAll(".bar");
+
+    bars.forEach((bar, index) => {
+      const delay = index * 200; // delay theo thứ tự
+
+      setTimeout(() => {
+        bar.classList.add("grow-up");
+
+        // Sau khi animation xong (800ms), thì hiển thị text
+        setTimeout(() => {
+          bar.classList.add("show-text");
+        }, 400);
+      }, delay);
+    });
+  }, [skillVisible]);
+
+  const bars = [
+    {
+      label: "Design Thinking",
+      value: 95,
+      className: "design-thinking-bar",
+      delay: "0s",
+    },
+    {
+      label: "Coding",
+      value: 90,
+      className: "coding-bar",
+      delay: "0.2s",
+    },
+    {
+      label: "Figma",
+      value: 95,
+      className: "figma-bar",
+      delay: "0.4s",
+    },
+    {
+      label: "Cooking",
+      value: 75,
+      className: "cooking-bar",
+      delay: "0.6s",
+    },
+    {
+      label: "Badminton",
+      value: 40,
+      className: "badminton-bar",
+      delay: "0.8s",
+    },
+  ];
 
   return (
     <div className="about-page-container">
@@ -389,6 +466,7 @@ const About = () => {
                 <div className="floating-image image-2">
                   <img src={images.star} alt="Floating 2" />
                 </div>
+
                 <div className="skill-levels">
                   <span>{textContent.SilentAgent}</span>
                   <span>{textContent.Starcrafter}</span>
@@ -399,79 +477,33 @@ const About = () => {
                 <div className="chart-area">
                   <div className="left-vertical-line"></div>
                   <div className="chart-lines">
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
+                    {Array(5)
+                      .fill(0)
+                      .map((_, i) => (
+                        <div key={i} className="line"></div>
+                      ))}
                   </div>
+
                   <div className="bars">
-                    <div className="bar design-thinking-bar">
-                      <div className="percentage-wrapper">
-                        <span className="percentage-number">
-                          {textContent[95]}
-                        </span>
-                        <span className="percentage-symbol">
-                          {textContent["%"]}
-                        </span>
+                    {bars.map((bar, i) => (
+                      <div
+                        key={i}
+                        className={`bar ${bar.className} ${
+                          skillVisible ? "grow-up" : ""
+                        }`}
+                        style={{
+                          animationDelay: skillVisible ? bar.delay : "0s",
+                        }}
+                      >
+                        <div className="percentage-wrapper">
+                          <span className="percentage-number">{bar.value}</span>
+                          <span className="percentage-symbol">%</span>
+                        </div>
+                        <span className="title-bar-text">{bar.label}</span>
                       </div>
-                      <span className="title-bar-text">
-                        {textContent.DesignThinking}
-                      </span>
-                    </div>
-                    <div className="bar coding-bar">
-                      <div className="percentage-wrapper">
-                        <span className="percentage-number">
-                          {textContent[90]}
-                        </span>
-                        <span className="percentage-symbol">
-                          {textContent["%"]}
-                        </span>
-                      </div>
-                      <span className="title-bar-text">
-                        {textContent.Coding}
-                      </span>
-                    </div>
-                    <div className="bar figma-bar">
-                      <div className="percentage-wrapper">
-                        <span className="percentage-number">
-                          {textContent[95]}
-                        </span>
-                        <span className="percentage-symbol">
-                          {textContent["%"]}
-                        </span>
-                      </div>
-                      <span className="title-bar-text">
-                        {textContent.figma}
-                      </span>
-                    </div>
-                    <div className="bar cooking-bar">
-                      <div className="percentage-wrapper">
-                        <span className="percentage-number">
-                          {textContent[75]}
-                        </span>
-                        <span className="percentage-symbol">
-                          {textContent["%"]}
-                        </span>
-                      </div>
-                      <span className="title-bar-text">
-                        {textContent.Cooking}
-                      </span>
-                    </div>
-                    <div className="bar badminton-bar">
-                      <div className="percentage-wrapper">
-                        <span className="percentage-number">
-                          {textContent[40]}
-                        </span>
-                        <span className="percentage-symbol">
-                          {textContent["%"]}
-                        </span>
-                      </div>
-                      <span className="title-bar-text">
-                        {textContent.Badminton}
-                      </span>
-                    </div>
+                    ))}
                   </div>
+
                   <div className="chart-title">{textContent.MySkills}</div>
                 </div>
               </div>
