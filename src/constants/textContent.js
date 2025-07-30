@@ -138,6 +138,9 @@ const textContent = {
   Cooking: "Cooking",
   Badminton: "Badminton",
   MySkills: "My skills",
+  MyStory: "My story",
+  MyStoryText:
+    "Learn a little bit more about me — how I found my spark in sketching, fell in love with visual design, and turned curiosity into craft. I’ve included lessons I’ve picked up, my favorite books, and even some early artworks and concepts that started it all.",
 };
 
 export default textContent;

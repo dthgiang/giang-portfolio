@@ -542,6 +542,8 @@
   padding: 0 22vw;
   box-sizing: border-box;
   position: relative;
+  border-bottom: #c4bebe 1px solid; /* Viền dưới */
+  background-color: #fafafa; /* Màu nền sáng */
 }
 
 .area-container {
@@ -579,7 +581,7 @@
   margin-bottom: 8vw; /* Khoảng cách dưới */
   font-size: 1vw;
   font-weight: 500;
-  color: #333;
+  color: #757575;
 }
 
 .skill-levels span {
@@ -750,6 +752,57 @@
 }
 
 /* MY SKILL SECTION END */
+
+/* MY STORY SECTION START*/
+.my-story-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12vh 22vw; /* Padding cho khoảng cách bên trong */
+  background-color: #ffffff; /* Màu nền sáng */
+  position: relative;
+}
+
+.my-story-left-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  width: 43%;
+  gap: 1.5vh;
+}
+
+.my-story-left-container h2 {
+  font-family: "SegoeUI", sans-serif;
+  font-size: 2vw; /* Kích thước chữ theo viewport width */
+  color: #333333;
+  font-weight: 400;
+  margin: 0; /* Không có khoảng cách trên và dưới */
+}
+
+.my-story-left-container p {
+  font-family: "SegoeUI", sans-serif;
+  font-size: 1vw; /* Kích thước chữ theo viewport width */
+  color: #333333;
+  font-weight: 300;
+  line-height: 1.5; /* Khoảng cách dòng */
+  margin: 0; /* Không có khoảng cách trên và dưới */
+}
+.my-story-right-container {
+  position: relative;
+  height: 30vh; /* Chiều cao của hình ảnh */
+  display: flex;
+  justify-content: center;
+}
+.my-story-right-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  border: 10px solid #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 5px; /* Bo góc nhẹ */
+}
+/* MY STORY SECTION END */
 
 /* FOOTER BLOCK START*/
 .footer-container {

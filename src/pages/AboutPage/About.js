@@ -510,6 +510,19 @@ const About = () => {
             </div>
 
             {/* MY STORY SECTION */}
+            <div className="my-story-container">
+              <div className="my-story-left-container">
+                <h2>{textContent.MyStory}</h2>
+                <p>{textContent.MyStoryText}</p>
+              </div>
+              <div className="my-story-right-container">
+                <img
+                  src={images.myStory}
+                  alt="My Story"
+                  className="my-story-image"
+                />
+              </div>
+            </div>
 
             {/* Footer */}
             <div className="footer-container-contact-page fade-in">
