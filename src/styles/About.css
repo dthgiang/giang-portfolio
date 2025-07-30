@@ -793,7 +793,16 @@
   height: 30vh; /* Chiều cao của hình ảnh */
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
+.my-story-right-container.slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .my-story-right-container img {
   width: 100%;
   height: auto;

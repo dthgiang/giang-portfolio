@@ -9,6 +9,7 @@ const About = () => {
   const navigate = useNavigate();
   const [headerVisible, setHeaderVisible] = useState(false);
   const [skillVisible, setSkillVisible] = useState(false);
+  const [storyVisible, setStoryVisible] = useState(false);
   const handleContactClick = () => {
     navigate("/contact");
   };
@@ -192,6 +193,31 @@ const About = () => {
       }, delay);
     });
   }, [skillVisible]);
+
+  useEffect(() => {
+    if (!headerVisible) return; // đảm bảo header xong rồi mới trigger
+
+    const section = document.querySelector(".my-story-container");
+
+    if (!section) {
+      console.warn("⚠️ .my-story-container not found");
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStoryVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(section);
+
+    return () => observer.disconnect();
+  }, [headerVisible]);
 
   const bars = [
     {
@@ -515,7 +541,11 @@ const About = () => {
                 <h2>{textContent.MyStory}</h2>
                 <p>{textContent.MyStoryText}</p>
               </div>
-              <div className="my-story-right-container">
+              <div
+                className={`my-story-right-container ${
+                  headerVisible && storyVisible ? "slide-in-right" : ""
+                }`}
+              >
                 <img
                   src={images.myStory}
                   alt="My Story"
