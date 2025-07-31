@@ -26,12 +26,10 @@ const Home = () => {
       detail: textContent.projectDetail1,
       technologies: [
         "Figma",
-        "TypeScript",
-        "Javascript",
-        "Bun",
-        "Tailwind CSS",
-        "React",
-        "HTML",
+        "Auto Layout",
+        "Component & Variants",
+        "Prototyping",
+        "Color & Typography Systems",
       ],
       responsibilities: [
         "Developed responsive frontend for web and mobile platform",
@@ -43,6 +41,8 @@ const Home = () => {
       projectVisuals2: images.prohireVisual2,
       githubUrl: undefined,
       figmaUrl: textContent.figmaUrl1,
+      techColor:
+        "linear-gradient(270deg, rgba(176, 232, 66, 0.70) 0%, rgba(119, 150, 136, 0.61) 48.6%, rgba(64, 72, 203, 0.70) 100%)",
     },
     {
       id: 2,
@@ -86,6 +86,7 @@ const Home = () => {
         "Tailwind CSS",
         "React",
         "HTML",
+        "Color & Typography Systems",
       ],
       responsibilities: [
         "Developed responsive frontend for web and mobile platform",
@@ -97,6 +98,8 @@ const Home = () => {
       projectVisuals2: images.famfundVisual2,
       githubUrl: textContent.githubUrl3,
       figmaUrl: textContent.figmaUrl3,
+      techColor:
+        "linear-gradient(90deg, rgba(102, 192, 244, 0.90) 0%, rgba(178, 185, 145, 0.70) 50%, rgba(254, 177, 47, 0.90) 100%)",
     },
     {
       id: 4,
@@ -107,12 +110,10 @@ const Home = () => {
       detail: textContent.projectDetail4,
       technologies: [
         "Figma",
-        "TypeScript",
-        "Javascript",
-        "Bun",
-        "Tailwind CSS",
-        "React",
-        "HTML",
+        "Auto Layout",
+        "Component & Variants",
+        "Prototyping",
+        "Color & Typography Systems",
       ],
       responsibilities: [
         "Developed responsive frontend for web and mobile platform",
@@ -120,10 +121,12 @@ const Home = () => {
         "Converted designs into clean, scalable code.",
         "Designed full UI/UX for both web and mobile, from wireframes to final mockups.",
       ],
-      projectVisuals1: images.famfundVisual1,
-      projectVisuals2: images.famfundVisual2,
+      projectVisuals1: images.tripmateVisual1,
+      projectVisuals2: images.tripmateVisual2,
       githubUrl: undefined,
       figmaUrl: textContent.figmaUrl4,
+      techColor:
+        "linear-gradient(90deg, rgba(251, 137, 137, 0.70) 0%, rgba(199, 153, 192, 0.61) 51.92%, rgba(151, 167, 243, 0.70) 100%)",
     },
     {
       id: 5,
@@ -132,17 +135,29 @@ const Home = () => {
       image: images.project5,
       time: "03/2025 - 06/2025",
       detail: textContent.projectDetail5,
-      technologies: ["Javascript", "Figma", "React", "HTML", "CSS"],
-      responsibilities: [
-        "Developed responsive frontend for web and mobile platform",
-        "Created app logo and ensured consistent visual identity.",
-        "Converted designs into clean, scalable code.",
-        "Designed full UI/UX for both web and mobile, from wireframes to final mockups.",
+      technologies: [
+        "Javascript",
+        "Figma",
+        "React",
+        "HTML",
+        "CSS",
+        "Component",
+        "Variants",
+        "Color & Typography Systems",
+        "Design Tokens",
       ],
-      projectVisuals1: images.famfundVisual1,
-      projectVisuals2: images.famfundVisual2,
+      responsibilities: [
+        "Coded a fully responsive frontend from scratch.",
+        "Created all custom visuals and layouts.",
+        "Built and deployed the entire site independently.",
+        "Designed a full web UI/UX experience, from initial wireframes to polished mockups.",
+      ],
+      projectVisuals1: images.portfolioVisual1,
+      projectVisuals2: images.portfolioVisual2,
       githubUrl: textContent.githubUrl5,
       figmaUrl: textContent.figmaUrl5,
+      techColor:
+        "linear-gradient(90deg, rgba(93, 92, 220, 0.70) 0%, rgba(163, 129, 145, 0.61) 51.44%, rgba(254, 177, 47, 0.50) 100%)",
     },
   ];
 
@@ -639,7 +654,15 @@ const Home = () => {
                   <div className="technologies-list-container">
                     <ul className="technology-list">
                       {activeProject.technologies?.map((tech, index) => (
-                        <li key={index}>{tech}</li>
+                        <li
+                          key={index}
+                          style={{
+                            background: activeProject.techColor,
+                            "--custom-gradient": activeProject.techColor,
+                          }}
+                        >
+                          {tech}
+                        </li>
                       ))}
                     </ul>
                   </div>

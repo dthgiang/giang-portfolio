@@ -56,6 +56,11 @@ import randomFact from "../assets/images/random-fact-image.png";
 import myStory from "../assets/images/my-story-image.svg";
 import prohireVisual1 from "../assets/images/prohire1.svg";
 import prohireVisual2 from "../assets/images/prohire2.svg";
+import tripmateVisual1 from "../assets/images/tripmate1.svg";
+import tripmateVisual2 from "../assets/images/tripmate2.svg";
+import portfolioVisual1 from "../assets/images/portfolio1.svg";
+import portfolioVisual2 from "../assets/images/portfolio2.svg";
+import project5 from "../assets/images/project5.png";
 
 const images = {
   circlePlay,
@@ -116,6 +121,11 @@ const images = {
   myStory,
   prohireVisual1,
   prohireVisual2,
+  tripmateVisual1,
+  tripmateVisual2,
+  portfolioVisual1,
+  portfolioVisual2,
+  project5,
 };
 
 export default images;
