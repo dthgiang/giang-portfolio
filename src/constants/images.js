@@ -35,7 +35,6 @@ import githubWhite from "../assets/images/github-white.svg";
 import figmaFill from "../assets/images/figma-fill.svg";
 import gmailDefault from "../assets/images/gmail-default.svg";
 import gmailHeader from "../assets/images/gmail-header.svg";
-import linkedinIcon from "../assets/images/linkedin-icon.svg";
 import linkedinFill from "../assets/images/linkedin-fill.svg";
 import linkedinColor from "../assets/images/linkedin-color.svg";
 import figmaColor from "../assets/images/figma-header.svg";
@@ -98,7 +97,6 @@ const images = {
   famfundVisual2,
   githubYellow,
   githubWhite,
-  linkedinIcon,
   figmaFill,
   gmailDefault,
   gmailHeader,
