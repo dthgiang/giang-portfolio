@@ -1,4 +1,4 @@
-import React from "react";
+
 import "../../styles/About.css";
 import textContent from "../../constants/textContent";
 import images from "../../constants/images";

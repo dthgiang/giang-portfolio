@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import "../../styles/Contact.css";
 import textContent from "../../constants/textContent";

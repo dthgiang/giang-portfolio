@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../../styles/Home.css";
 import textContent from "../../constants/textContent";
 import images from "../../constants/images";
@@ -6,6 +6,7 @@ import Lottie from "lottie-react";
 import ButtonUp from "../../lotties/button-up.json";
 import Up from "../../lotties/up.json";
 import Cheer from "../../lotties/cheer.json";
+import BlueCat from "../../lotties/blue-cat.json";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -576,146 +577,172 @@ const Home = () => {
               className="project-overlay-content"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="header-overlay">
-                <div className="title-overlay">
-                  <div className="title-text-overlay">
-                    {activeProject.title}
-                  </div>
-                  <div className="subtext-text-overlay">
-                    {activeProject.subtitle}
-                  </div>
+              {activeProject.id === 2 ? (
+                // 🔹 Nếu là project 2 → chỉ hiện chữ Coming Soon
+                <div className="coming-soon-container">
+                  <h1>🚧 COMING SOON 🚧</h1>
+                  <p>This project is currently under development</p>
+                  <Lottie
+                    animationData={BlueCat}
+                    loop={true}
+                    autoplay={true}
+                    className="blue-cat"
+                    style={{
+                      width: "25vw",
+                      height: "25vw",
+                    }}
+                  />
                 </div>
-
-                <div className="button-group">
-                  {/* View Github button */}
-                  {activeProject.githubUrl && (
-                    <a
-                      href={activeProject.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="view-github-button"
-                      onMouseEnter={() => setIsGithubHovered(true)}
-                      onMouseLeave={() => setIsGithubHovered(false)}
-                    >
-                      <img
-                        src={
-                          isGithubHovered
-                            ? images.githubYellow
-                            : images.githubWhite
-                        }
-                        alt="Github Icon"
-                        className="github-icon"
-                      />
-                      <div>{textContent.viewGithub}</div>
-                    </a>
-                  )}
-                  {/* View Figma button */}
-                  <a
-                    href={activeProject.figmaUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="view-figma-button"
-                    onMouseEnter={() => setIsFigmaHovered(true)}
-                    onMouseLeave={() => setIsFigmaHovered(false)}
-                  >
-                    <img
-                      src={
-                        isFigmaHovered ? images.figmaPurple : images.figmaWhite
-                      }
-                      alt="Figma Icon"
-                      className="figma-icon"
-                    />
-                    <div>{textContent.viewFigma}</div>
-                  </a>
-                </div>
-              </div>
-              <div className="overlay-line"></div>
-              <div className="project-overview-container">
-                <div className="project-overview-title-container">
-                  <div className="project-overview-title">
-                    {textContent.projectOverviewTitle}
-                  </div>
-                  <div className="project-overview-time">
-                    <img
-                      src={images.calendarIcon}
-                      alt="Time Icon"
-                      className="time-icon"
-                    />
-                    {activeProject.time}
-                  </div>
-                </div>
-                <div className="project-detail">{activeProject.detail}</div>
-              </div>
-              <div className="project-middle-container">
-                <div className="project-tech-block">
-                  <div className="technologies-text">
-                    {textContent.technologiesUsed}
-                  </div>
-                  <div className="technologies-list-container">
-                    <ul className="technology-list">
-                      {activeProject.technologies?.map((tech, index) => (
-                        <li
-                          key={index}
-                          style={{
-                            background: activeProject.techColor,
-                            "--custom-gradient": activeProject.techColor,
-                          }}
-                        >
-                          {tech}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="key-responsibilities-text">
-                  {textContent.keyResponsibilities}
-                  <ul className="responsibilities-list">
-                    {activeProject.responsibilities?.map((resp, index) => (
-                      <li key={index}>{resp}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="slide-container">
-                <div className="project-visual-title">
-                  {textContent.projectVisuals}
-                </div>
-                <div className="slide-wrapper">
-                  {imagesArray.map((imgSrc, index) => (
-                    <div
-                      key={index}
-                      className={`slide ${
-                        index === currentSlide ? "active" : ""
-                      }`}
-                    >
-                      <img src={imgSrc} alt={`Project Visual ${index + 1}`} />
+              ) : (
+                // 🔹 Các project khác → giữ nguyên toàn bộ nội dung gốc
+                <>
+                  <div className="header-overlay">
+                    <div className="title-overlay">
+                      <div className="title-text-overlay">
+                        {activeProject.title}
+                      </div>
+                      <div className="subtext-text-overlay">
+                        {activeProject.subtitle}
+                      </div>
                     </div>
-                  ))}
-                </div>
-                <div
-                  className="arrow-button arrow-left"
-                  onClick={showPrevImage}
-                >
-                  &#10094;
-                </div>
-                <div
-                  className="arrow-button arrow-right"
-                  onClick={showNextImage}
-                >
-                  &#10095;
-                </div>
-                <div className="dots">
-                  {imagesArray.map((_, index) => (
-                    <span
-                      key={index}
-                      className={`dot ${
-                        index === currentSlide ? "active" : ""
-                      }`}
-                      onClick={() => setCurrentSlide(index)}
-                    ></span>
-                  ))}
-                </div>
-              </div>
+
+                    <div className="button-group">
+                      {/* View Github button */}
+                      {activeProject.githubUrl && (
+                        <a
+                          href={activeProject.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="view-github-button"
+                          onMouseEnter={() => setIsGithubHovered(true)}
+                          onMouseLeave={() => setIsGithubHovered(false)}
+                        >
+                          <img
+                            src={
+                              isGithubHovered
+                                ? images.githubYellow
+                                : images.githubWhite
+                            }
+                            alt="Github Icon"
+                            className="github-icon"
+                          />
+                          <div>{textContent.viewGithub}</div>
+                        </a>
+                      )}
+                      {/* View Figma button */}
+                      <a
+                        href={activeProject.figmaUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="view-figma-button"
+                        onMouseEnter={() => setIsFigmaHovered(true)}
+                        onMouseLeave={() => setIsFigmaHovered(false)}
+                      >
+                        <img
+                          src={
+                            isFigmaHovered
+                              ? images.figmaPurple
+                              : images.figmaWhite
+                          }
+                          alt="Figma Icon"
+                          className="figma-icon"
+                        />
+                        <div>{textContent.viewFigma}</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="overlay-line"></div>
+                  <div className="project-overview-container">
+                    <div className="project-overview-title-container">
+                      <div className="project-overview-title">
+                        {textContent.projectOverviewTitle}
+                      </div>
+                      <div className="project-overview-time">
+                        <img
+                          src={images.calendarIcon}
+                          alt="Time Icon"
+                          className="time-icon"
+                        />
+                        {activeProject.time}
+                      </div>
+                    </div>
+                    <div className="project-detail">{activeProject.detail}</div>
+                  </div>
+                  <div className="project-middle-container">
+                    <div className="project-tech-block">
+                      <div className="technologies-text">
+                        {textContent.technologiesUsed}
+                      </div>
+                      <div className="technologies-list-container">
+                        <ul className="technology-list">
+                          {activeProject.technologies?.map((tech, index) => (
+                            <li
+                              key={index}
+                              style={{
+                                background: activeProject.techColor,
+                                "--custom-gradient": activeProject.techColor,
+                              }}
+                            >
+                              {tech}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="key-responsibilities-text">
+                      {textContent.keyResponsibilities}
+                      <ul className="responsibilities-list">
+                        {activeProject.responsibilities?.map((resp, index) => (
+                          <li key={index}>{resp}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="slide-container">
+                    <div className="project-visual-title">
+                      {textContent.projectVisuals}
+                    </div>
+                    <div className="slide-wrapper">
+                      {imagesArray.map((imgSrc, index) => (
+                        <div
+                          key={index}
+                          className={`slide ${
+                            index === currentSlide ? "active" : ""
+                          }`}
+                        >
+                          <img
+                            src={imgSrc}
+                            alt={`Project Visual ${index + 1}`}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    <div
+                      className="arrow-button arrow-left"
+                      onClick={showPrevImage}
+                    >
+                      &#10094;
+                    </div>
+                    <div
+                      className="arrow-button arrow-right"
+                      onClick={showNextImage}
+                    >
+                      &#10095;
+                    </div>
+                    <div className="dots">
+                      {imagesArray.map((_, index) => (
+                        <span
+                          key={index}
+                          className={`dot ${
+                            index === currentSlide ? "active" : ""
+                          }`}
+                          onClick={() => setCurrentSlide(index)}
+                        ></span>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         )}

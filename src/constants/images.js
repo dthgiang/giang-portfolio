@@ -61,6 +61,7 @@ import tripmateVisual2 from "../assets/images/tripmate2.svg";
 import portfolioVisual1 from "../assets/images/portfolio1.svg";
 import portfolioVisual2 from "../assets/images/portfolio2.svg";
 import project5 from "../assets/images/project5.png";
+import project2 from "../assets/images/project2.png";
 
 const images = {
   circlePlay,
@@ -126,6 +127,7 @@ const images = {
   portfolioVisual1,
   portfolioVisual2,
   project5,
+  project2,
 };
 
 export default images;
