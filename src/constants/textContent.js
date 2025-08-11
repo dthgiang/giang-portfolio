@@ -84,7 +84,7 @@ const textContent = {
     "https://www.figma.com/community/file/1426618657567946776/fam-fund-app",
   figmaUrl4:
     "https://www.figma.com/community/file/1440846372821665172/tripmate-booking-travel-app-design",
-  figmaUrl5: "Thanh Giang Portfolio",
+  figmaUrl5: "https://www.figma.com/community/file/1536634493388227263",
   githubUrl3: "https://github.com/bhtoan2204/family-frontend-mobile",
   githubUrl5: "https://github.com/dthgiang/giang-portfolio",
   email: "dtgiang.cv@gmail.com",
