@@ -402,7 +402,9 @@ const Home = () => {
               {textContent.contact}
             </span>
           </nav>
-          <div className="downloadCVButton">{textContent.downloadCV}</div>
+          <a href="/cv.pdf" download style={{ textDecoration: "none" }}>
+            <div className="downloadCVButton">{textContent.downloadCV}</div>
+          </a>
         </div>
 
         <div className="coder-title-wrapper">

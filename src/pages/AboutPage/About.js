@@ -1,4 +1,3 @@
-
 import "../../styles/About.css";
 import textContent from "../../constants/textContent";
 import images from "../../constants/images";
@@ -13,6 +12,8 @@ const About = () => {
   const [skillVisible, setSkillVisible] = useState(false);
   const [storyVisible, setStoryVisible] = useState(false);
   const [atBottom, setAtBottom] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const email = "dtgiang.cv@gmail.com";
 
   const handleContactClick = () => {
     navigate("/contact");
@@ -23,8 +24,21 @@ const About = () => {
   const handleLogoClick = () => {
     navigate("/");
   };
+
   const handleEmailClick = () => {
-    window.location.href = `mailto:${textContent.email}`;
+    if (navigator.clipboard) {
+      navigator.clipboard
+        .writeText(email)
+        .then(() => {
+          setShowPopup(true);
+          setTimeout(() => setShowPopup(false), 1500); // 1.5s tự tắt popup
+        })
+        .catch(() => {
+          alert("Copy thất bại, bạn copy thủ công nhé!");
+        });
+    } else {
+      alert("Trình duyệt không hỗ trợ chức năng copy tự động!");
+    }
   };
 
   const scrollToTop = () => {
@@ -306,6 +320,25 @@ const About = () => {
               </div>
               <span className="email-text-about-page">{textContent.email}</span>
             </div>
+            {showPopup && (
+              <div
+                style={{
+                  position: "fixed",
+                  top: "30px", // thay 30px thành 5vh
+                  right: "30px", // thay 30px thành 5vw
+                  background: "#333",
+                  color: "#fff",
+                  padding: "1vh 1.5vw", // padding cũng đổi tí cho vừa vặn
+                  borderRadius: "0.5vw",
+                  boxShadow: "0 0.2vw 0.6vw rgba(0,0,0,0.3)",
+                  opacity: 0.9,
+                  zIndex: 1000,
+                  transition: "opacity 0.3s ease-in-out",
+                }}
+              >
+                Đã copy email vào clipboard!
+              </div>
+            )}
             <a
               href="https://github.com/dthgiang"
               target="_blank"
